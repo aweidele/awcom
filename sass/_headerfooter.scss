@@ -1,0 +1,53 @@
+$headerHeight: 79px;
+header {
+  background-color: $primary;
+  height: $headerHeight;
+  > div {
+    > a {
+      display: block;
+      float: left;
+      @extend %clearfix;
+      > svg {
+        width: 56px;
+        height: auto;
+        display: block;
+        float: left;
+      }
+      h1 {
+        float: left;
+      }
+    }
+  
+    > nav {
+      
+      @media screen and (max-width: $breakpoint - 1) {
+        background-color: $primary;
+        position: fixed;
+        width: 100%;
+        height: calc(100vh - #{$headerHeight});
+        top: $headerHeight;
+        left: 100%;
+        transition: left 0.25s;
+        &.open {
+          left: 0;
+        }
+      }
+      
+      @media screen and (min-width: $breakpoint) {
+        float: right;
+          li {
+            float: left;
+          }
+      }
+    }
+    
+    > button {
+      float: right;
+      margin-left: $gutter;
+      @media screen and (min-width: $breakpoint) {
+        //display: none;
+      }
+    }
+
+  }
+}

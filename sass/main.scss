@@ -1,1 +1,58 @@
-/* CSS */
+// INITIALIZE
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+ul,ol {
+  list-style: none;
+}
+
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    height: 0;
+    clear: both;
+  }
+}
+
+// COLORS
+$primary: #ff9800;
+$secondary: #f3833d;
+$tertiary: #383838;
+$lgray: #9B9B9B;
+
+// DIMENSIONS
+$pageWidth: 1180px;
+$cols: 12;
+$gutter: 20px;
+$breakpoint: 481px;
+
+.content-fluid {
+  max-width: $pageWidth + $gutter;
+  width: 100%;
+  margin: auto;
+  @extend %clearfix;
+}
+
+%gridPadding {
+  @media screen and (min-width: $breakpoint) {
+    padding: 0 $gutter / 2;
+    float: left;
+  }
+}
+
+@media screen and (min-width: $breakpoint) {
+@for $i from 1 through $cols {
+  .col-#{$i} {
+    width: 100% / $cols * $i;
+    @extend %gridPadding;
+  }
+}
+}
+
+@import 'headerfooter';
