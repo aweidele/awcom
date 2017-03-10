@@ -48,7 +48,7 @@
           <?php } ?>
         </ul>
       </nav>
-      <button><span>Menu</span></button>
+      <button><span>Menu</span><i class="icon-bars"></i></button>
     </div>
   </header>
   <main>

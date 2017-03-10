@@ -43,7 +43,13 @@ header {
     
     > button {
       float: right;
-      margin-left: $gutter;
+      background-color: transparent;
+      border: 0;
+      
+      > span {
+        @extend %positionOff;
+      }
+      
       @media screen and (min-width: $breakpoint) {
         //display: none;
       }
