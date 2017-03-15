@@ -1,12 +1,10 @@
-$headerHeight: 79px;
-
-@keyframes menuTopOpen {
-  0% { }
-}
-
 header {
   background-color: $primary;
   height: $headerHeight;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
   > div {
     > a {
       display: block;
@@ -18,8 +16,9 @@ header {
         height: auto;
         display: block;
         float: left;
-        @media screen and (max-width: $breakpoint - 1) {
-          margin-left: 4px;
+        margin-left: 4px;
+        @media screen and (min-width: $pageWidth + 4) {
+          margin-left: 0;
         }
         
         polygon,path {

@@ -8,4 +8,12 @@ $(document).ready(function() {
       $(this).addClass('open').removeClass('closed');
     }
   });
+  
+ /* 
+    $("#feedback").html( $(window).width());
+  $(window).resize(function() {
+    $("#feedback").html( $(window).width());
+  });
+  */
+  
 });

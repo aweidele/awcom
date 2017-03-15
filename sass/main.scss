@@ -99,7 +99,8 @@ $lgray: #9B9B9B;
 $pageWidth: 1180px;
 $cols: 12;
 $gutter: 20px;
-$breakpoint: 481px;
+$breakpoint: 668px;
+$headerHeight: 79px;
 
 .content-fluid {
   max-width: $pageWidth + $gutter;
@@ -125,4 +126,6 @@ $breakpoint: 481px;
 }
 
 @import 'keyframes';
-@import 'headerfooter';
+@import 'header';
+@import 'body';
+@import 'footer';
