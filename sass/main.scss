@@ -5,6 +5,7 @@
   border: 0;
   outline: none;
   box-sizing: border-box;
+  font-weight: 300;
 }
 
 ul,ol {
@@ -12,7 +13,12 @@ ul,ol {
 }
 
 html { font-size: 62.5%; }
-body { font-size: 1em; }
+body { font-size: 1em; font-family: 'Open Sans', sans-serif; }
+   
+a {
+  text-decoration: none;
+  transition: all 0.25s;
+}
 
 %clearfix {
   &:after {
@@ -26,6 +32,13 @@ body { font-size: 1em; }
 %positionOff {
   position: absolute;
   left: -999999px;
+}
+
+%centerV {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 // ICON FONT
@@ -111,4 +124,5 @@ $breakpoint: 481px;
 }
 }
 
+@import 'keyframes';
 @import 'headerfooter';
