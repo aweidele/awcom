@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
   <meta charset="utf-8">
   <title><?php echo $nav[$p]; ?> | <?php echo $page_title; ?></title>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="<?php echo $root_url.'templates/'.$theme.'/main.css'; ?>">
 </head>
 
@@ -32,7 +32,9 @@
     </div>
   </header>
   <main id="<?php echo $p; ?>">
+
 <?php require_once($root_uri.'/content/'.$content[$p]); ?>
+
   </main>
   <footer>
     <div class="content-fluid">
