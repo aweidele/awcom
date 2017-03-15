@@ -9,5 +9,10 @@
       break;
     }
   }
-  require_once(getcwd().'/templates/'.$theme.'/headerfooter.php');
+
+  if(!isset($content[$p]) || !file_exists($root_uri.'/content/'.$content[$p])) {
+    $p = '404';
+  }
+
+  require_once($root_uri.'/templates/'.$theme.'/headerfooter.php');
 ?>

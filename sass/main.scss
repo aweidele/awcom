@@ -118,6 +118,21 @@ $headerHeight: 79px;
   }
 }
 
+%hexBorder {
+  position: relative;
+  &:before {
+    height: 51px;
+    width: 100%;
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: -34px;
+    display: block;
+    background-image: url("images/hex.svg");
+    background-repeat: repeat-x;
+  }
+}
+
 @media screen and (min-width: $breakpoint) {
   @for $i from 1 through $cols {
     .col-#{$i} {
@@ -135,4 +150,5 @@ $headerHeight: 79px;
 @import 'keyframes';
 @import 'header';
 @import 'body';
+@import 'home';
 @import 'footer';

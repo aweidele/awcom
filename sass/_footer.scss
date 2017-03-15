@@ -2,6 +2,9 @@ footer {
   background-color: $tertiary;
   color: #FFFFFF;
   padding: 57px 7px;
+  margin-top: 34px;
+  @extend %hexBorder;
+  
   @media screen and (min-width: $breakpoint) {
     padding: 57px 0; 
   }

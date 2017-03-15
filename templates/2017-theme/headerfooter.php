@@ -4,7 +4,7 @@
 <head>
   <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
   <meta charset="utf-8">
-  <title><?php echo $page_title; ?></title>
+  <title><?php echo $nav[$p]; ?> | <?php echo $page_title; ?></title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="<?php echo $root_url.'templates/'.$theme.'/main.css'; ?>">
 </head>
@@ -21,7 +21,7 @@
         <ul>
           <?php foreach($nav as $key => $navName) { ?>
           <li>
-            <a href="<?php echo $root_url . $key != $default ? "?p=$key" : ""; ?>">
+            <a href="<?php echo $root_url . ($key != $default ? "?p=$key" : ""); ?>">
               <?php echo $navName; ?>
             </a>
           </li>
@@ -31,8 +31,8 @@
       <button><span>Menu</span><i></i></button>
     </div>
   </header>
-  <main>
-This is the Main.
+  <main id="<?php echo $p; ?>">
+<?php require_once($root_uri.'/content/'.$content[$p]); ?>
   </main>
   <footer>
     <div class="content-fluid">
