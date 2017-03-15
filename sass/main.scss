@@ -1,4 +1,6 @@
 // INITIALIZE
+$speed: 0.25s;
+
 * {
   margin: 0;
   padding: 0;
@@ -17,7 +19,7 @@ body { font-size: 1em; font-family: 'Open Sans', sans-serif; }
    
 a {
   text-decoration: none;
-  transition: all 0.25s;
+  transition: all $speed;
 }
 
 %clearfix {

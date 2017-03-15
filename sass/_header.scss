@@ -22,7 +22,9 @@ header {
         }
         
         polygon,path {
-          transition: all 0.25s;
+          -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+          transition: all $speed;
           -webkit-transform-origin: center;
           transform-origin: center;
         }
@@ -64,7 +66,7 @@ header {
         height: calc(100vh - #{$headerHeight});
         top: $headerHeight;
         left: 100%;
-        transition: left 0.25s;
+        transition: left $speed;
         &.open {
           left: 0;
         }
@@ -140,35 +142,35 @@ header {
       &.open {
         i {
           opacity: 0;
-          -webkit-animation: buttonMiddleOpen 0.25s;
-          animation: buttonMiddleOpen 0.25s;
+          -webkit-animation: buttonMiddleOpen $speed;
+          animation: buttonMiddleOpen $speed;
         }
         &:before {
           -webkit-transform: translateY(12px) rotate(45deg);
           transform: translateY(12px) rotate(45deg);
-          -webkit-animation: buttonTopOpen 0.25s;
-          animation: buttonTopOpen 0.25s;
+          -webkit-animation: buttonTopOpen $speed;
+          animation: buttonTopOpen $speed;
         }
         &:after {
           -webkit-transform: translateY(-12px) rotate(-45deg);
           transform: translateY(-12px) rotate(-45deg);
-          -webkit-animation: buttonBottomOpen 0.25s;
-          animation: buttonBottomOpen 0.25s;
+          -webkit-animation: buttonBottomOpen $speed;
+          animation: buttonBottomOpen $speed;
         }
       }
   
       &.closed {
         i {
-          -webkit-animation: buttonMiddleClose 0.25s;
-          animation: buttonMiddleClose 0.25s;
+          -webkit-animation: buttonMiddleClose $speed;
+          animation: buttonMiddleClose $speed;
         }
         &:before {
-          -webkit-animation: buttonTopClose 0.25s;
-          animation: buttonTopClose 0.25s;
+          -webkit-animation: buttonTopClose $speed;
+          animation: buttonTopClose $speed;
         }
         &:after {
-          -webkit-animation: buttonBottomClose 0.25s;
-          animation: buttonBottomClose 0.25s;
+          -webkit-animation: buttonBottomClose $speed;
+          animation: buttonBottomClose $speed;
         }
       }
       
