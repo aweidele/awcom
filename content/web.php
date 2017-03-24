@@ -4,7 +4,16 @@
       here.
     </div>
     <div class="col-5 offset-1">
-      <img src="<?php echo $root_url.'templates/'.$theme.'/images/ipad.svg'; ?>">
+      <div class="web-preview">
+        <img src="<?php echo $root_url.'templates/'.$theme.'/images/ipad.svg'; ?>">
+        <div>
+          <ul>
+            <li><img src="<?php echo $root_url.'templates/'.$theme.'/images/preview-bt.jpg'; ?>"></li>
+            <li><img src="<?php echo $root_url.'templates/'.$theme.'/images/preview-bt.jpg'; ?>"></li>
+            <li><img src="<?php echo $root_url.'templates/'.$theme.'/images/preview-bt.jpg'; ?>"></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </section>
