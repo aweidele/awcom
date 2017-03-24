@@ -1,14 +1,17 @@
 <?php
   $content = array(
     'home' => 'home.php',
-    'portfolio' => 'portfolio.php',
-    '404' => '404.php'
+    'web' => 'web.php',
+    'motion' => 'motion.php',
+    'experience' => 'experience.php',
   );
 
   $default = 'home';
 
   $nav = array(
-    'home' => 'Home',
-    'portfolio' => 'Porfolio'
+    'web' => 'Web Development',
+    'motion' => 'Motion',
+    'experience' => 'Work Experience',
+    'contact' => 'Contact',
   );
 ?>

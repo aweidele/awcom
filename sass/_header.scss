@@ -85,19 +85,28 @@ body > header {
       }
       
       @media screen and (min-width: $breakpoint) {
+        font-size: 1.2rem;
+
         float: right;
           li {
             float: left;
           }
         
         a {
-          padding: 0 25px;
+          padding: 0 8px;
           color: #FFFFFF;
           line-height: $headerHeight;
           display: inline-block;
           &:hover {
             color: $tertiary;
           }
+        }
+      }
+      
+      @media screen and (min-width: 1180px) {
+        font-size: 1.4rem;
+        a {
+          padding: 0 25px;
         }
       }
     }

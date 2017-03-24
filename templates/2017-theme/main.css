@@ -98,10 +98,10 @@ body > header > div > button > span, footer .social a span {
   }
 }
 
-#home section, footer {
+main > section, footer {
   position: relative;
 }
-#home section:before, footer:before {
+main > section:before, footer:before {
   height: 51px;
   width: 100%;
   content: " ";
@@ -430,19 +430,28 @@ body > header > div > nav {
 }
 @media screen and (min-width: 668px) {
   body > header > div > nav {
+    font-size: 1.2rem;
     float: right;
   }
   body > header > div > nav li {
     float: left;
   }
   body > header > div > nav a {
-    padding: 0 25px;
+    padding: 0 8px;
     color: #FFFFFF;
     line-height: 79px;
     display: inline-block;
   }
   body > header > div > nav a:hover {
     color: #383838;
+  }
+}
+@media screen and (min-width: 1180px) {
+  body > header > div > nav {
+    font-size: 1.4rem;
+  }
+  body > header > div > nav a {
+    padding: 0 25px;
   }
 }
 body > header > div > button {
@@ -516,8 +525,11 @@ main {
   margin-top: 79px;
   padding-bottom: 34px;
 }
+main > section {
+  padding: 110px 0;
+}
 
-#home > header {
+#home {
   padding: 1em 0 100px 0;
   background-color: #383838;
   color: #9B9B9B;
@@ -525,16 +537,16 @@ main {
   position: relative;
   text-transform: uppercase;
 }
-#home > header > p {
+#home > p {
   padding: 0 7px;
 }
-#home > header > span {
+#home > span {
   display: block;
 }
-#home > header a {
+#home a {
   color: #ff9800;
 }
-#home > header a:hover {
+#home a:hover {
   color: #f3833d;
 }
 #home .scrolldown {
@@ -588,7 +600,7 @@ main {
 }
 
 @media screen and (min-width: 668px) {
-  #home > header {
+  #home {
     padding: 82px 0 212px 0;
   }
   #home .scrolldown {

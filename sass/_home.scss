@@ -1,5 +1,4 @@
 #home {
-  > header {
     padding: 1em 0 100px 0;
     background-color: $tertiary;
     color: $lgray;
@@ -22,8 +21,6 @@
         color: $secondary;
       }
     }
-    
-  }
   
   .scrolldown {
     position: absolute;
@@ -61,10 +58,6 @@
     
   }
   
-  section {
-    @extend %hexBorder;
-  }
-  
 }
 
 .hello {
@@ -91,11 +84,8 @@
 
 @media screen and (min-width: $breakpoint) {
   #home {
-    > header {
       padding: 82px 0 212px 0;
-    }
-    
-    .scrolldown { display: block; }
+      .scrolldown { display: block; }
   }
   
   .hello {
