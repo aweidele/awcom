@@ -1,5 +1,8 @@
 .web-preview {
-    position: relative;
+  position: relative;
+  max-width: 480px;
+  width: 100%;
+  margin: auto;
   > img {
     position: relative;
     z-index: 10;
@@ -15,7 +18,6 @@
     z-index: 0;
     width: 81%;
     height: 91%;
-    background: $primary;
     overflow: hidden;
     
     ul {
@@ -34,6 +36,19 @@
       width: 100%;
       height: auto;
       display: block;
+    }
+  }
+  
+  @media screen and (max-width: $breakpoint - 1) {
+    display: none;
+  }
+}
+
+.skills {
+  > li {
+    display: inline-block;
+    &:after {
+      content: ", ";
     }
   }
 }

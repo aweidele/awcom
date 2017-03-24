@@ -96,6 +96,7 @@ $primary: #ff9800;
 $secondary: #f3833d;
 $tertiary: #383838;
 $lgray: #9B9B9B;
+$tgray: #6D6D6D;
 
 // DIMENSIONS
 $pageWidth: 1180px;
@@ -108,7 +109,11 @@ $headerHeight: 79px;
   max-width: $pageWidth + $gutter;
   width: 100%;
   margin: auto;
+  padding: 0 10px;
   @extend %clearfix;
+  @media screen and (min-width: $breakpoint) {
+    padding: 0;
+  }
 }
 
 %gridPadding {

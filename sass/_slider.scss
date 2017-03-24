@@ -8,7 +8,7 @@ $tot: ($time + $trans) * $slides;
     $t: ($time + $trans) * $i;
     $n: $t + $time;
     #{($t / $tot) * 100}% { -webkit-transform: translateX($i * -100%); transform: translateX($i * -100%); }
-    #{($n / $tot) * 100}% { -webkit-transform: translateX($i * -100%);transform: translateX($i * -100%); }
+    #{($n / $tot) * 100}% { -webkit-transform: translateX($i * -100%); transform: translateX($i * -100%); }
   }
   100% { -webkit-transform: translateX($slides * -100%); transform: translateX($slides * -100%); }
 }
@@ -18,7 +18,7 @@ $tot: ($time + $trans) * $slides;
     $t: ($time + $trans) * $i;
     $n: $t + $time;
     #{($t / $tot) * 100}% { -webkit-transform: translateX($i * -100%); transform: translateX($i * -100%); }
-    #{($n / $tot) * 100}% { -webkit-transform: translateX($i * -100%);transform: translateX($i * -100%); }
+    #{($n / $tot) * 100}% { -webkit-transform: translateX($i * -100%); transform: translateX($i * -100%); }
   }
   100% { -webkit-transform: translateX($slides * -100%); transform: translateX($slides * -100%); }
 }
