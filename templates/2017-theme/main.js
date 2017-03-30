@@ -9,11 +9,10 @@ $(document).ready(function() {
     }
   });
   
- /* 
+ 
     $("#feedback").html( $(window).width());
   $(window).resize(function() {
     $("#feedback").html( $(window).width());
   });
-  */
   
 });

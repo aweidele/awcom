@@ -189,8 +189,9 @@ main h3, main p, main li { font-size: 1.4rem; line-height: 1.4em; }
 .web-preview > div li:nth-child(2) { left: 100%; z-index: 1; }
 .web-preview > div li:nth-child(3) { left: 200%; z-index: 2; }
 .web-preview > div img { width: 100%; height: auto; display: block; }
-@media screen and (max-width: 667px) { .web-preview { display: none; } }
+@media screen and (max-width: 667px) { .web-preview { max-width: 370px; } }
 
+.skills { margin-bottom: 2em; }
 .skills > li { display: inline; }
 .skills > li:after { content: ", "; }
 .skills > li:last-child:after { content: ""; }
@@ -206,3 +207,13 @@ footer .social > li:last-child { margin: 0; }
 footer .social a { display: block; width: 32px; height: 32px; line-height: 32px; color: #383838; text-align: center; background-color: #FFFFFF; transition: background-color 0.25s; }
 footer .social a:hover { background-color: #9B9B9B; }
 @media screen and (max-width: 667px) { footer [class^="col-"], footer [class*=" col-"] { margin-bottom: 2em; } }
+
+#feedback { /*
+position: fixed;
+z-index: 99999;
+bottom: 10px;
+right: 10px;
+background: black;
+color: white;
+font-size: 1.1rem;
+*/ display: none; }

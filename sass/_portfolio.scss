@@ -40,11 +40,13 @@
   }
   
   @media screen and (max-width: $breakpoint - 1) {
-    display: none;
+    //display: none;
+    max-width: 370px;
   }
 }
 
 .skills {
+  margin-bottom: 2em;
   > li {
     display: inline;
     &:after {

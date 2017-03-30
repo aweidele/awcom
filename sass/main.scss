@@ -160,3 +160,16 @@ $headerHeight: 79px;
 @import 'home';
 @import 'portfolio';
 @import 'footer';
+
+#feedback {
+  /*
+  position: fixed;
+  z-index: 99999;
+  bottom: 10px;
+  right: 10px;
+  background: black;
+  color: white;
+  font-size: 1.1rem;
+  */
+  display: none;
+}
