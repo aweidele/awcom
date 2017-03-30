@@ -103,6 +103,7 @@ $pageWidth: 1180px;
 $cols: 12;
 $gutter: 20px;
 $breakpoint: 668px;
+$breakpointM: 900px;
 $headerHeight: 79px;
 
 .content-fluid {
@@ -113,13 +114,6 @@ $headerHeight: 79px;
   @extend %clearfix;
   @media screen and (min-width: $breakpoint) {
     padding: 0;
-  }
-}
-
-%gridPadding {
-  @media screen and (min-width: $breakpoint) {
-    padding: 0 $gutter / 2;
-    float: left;
   }
 }
 
@@ -139,15 +133,40 @@ $headerHeight: 79px;
   }
 }
 
+%gridPadding {
+  @media screen and (min-width: $breakpoint) {
+    padding: 0 $gutter / 2;
+    float: left;
+  }
+}
+
+@for $i from 1 through $cols {
+    .col-#{$i},.col-md-#{$i} {
+      @extend %gridPadding;
+  }
+}
+
 @media screen and (min-width: $breakpoint) {
   @for $i from 1 through $cols {
     .col-#{$i} {
       width: 100% / $cols * $i;
-      @extend %gridPadding;
     }
   }
   @for $i from 1 through $cols - 1 {
     .offset-#{$i} {
+      margin-left: 100% / $cols * $i;
+    }
+  }
+}
+
+@media screen and (min-width: $breakpointM) {
+  @for $i from 1 through $cols {
+    .col-md-#{$i} {
+      width: 100% / $cols * $i;
+    }
+  }
+  @for $i from 1 through $cols - 1 {
+    .offset-md-#{$i} {
       margin-left: 100% / $cols * $i;
     }
   }

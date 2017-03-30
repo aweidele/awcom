@@ -1,4 +1,5 @@
 <?php
+  include('portfolio.php');
   $content = array(
     'home' => 'home.php',
     'web' => 'web.php',
