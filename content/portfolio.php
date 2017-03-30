@@ -50,4 +50,25 @@
       'image' => 'ma.jpg',
     ),
   );
+
+  $clients['motion'] = array(
+    'magpie' => array(
+      'name' => 'Bluetooth Technology Website',
+      'description' => 'Sitecore website for technology company',
+      'url' => 'https://www.bluetooth.com/',
+      'image' => 'ma.jpg',
+    ),
+    'piggy' => array(
+      'name' => 'Bluetooth Technology Website',
+      'description' => 'Sitecore website for technology company',
+      'url' => 'https://www.bluetooth.com/',
+      'image' => 'ma.jpg',
+    ),
+    'logo' => array(
+      'name' => 'Bluetooth Technology Website',
+      'description' => 'Sitecore website for technology company',
+      'url' => 'https://www.bluetooth.com/',
+      'image' => 'ma.jpg',
+    ),
+  );
 ?>

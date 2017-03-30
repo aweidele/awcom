@@ -1,15 +1,23 @@
-.web-preview {
+%preview {
   position: relative;
   max-width: 480px;
   width: 100%;
   margin: auto;
+  overflow: hidden;
   > img {
     position: relative;
     z-index: 10;
     width: 100%;
     height: auto;
     display: block;
+  }   
+  @media screen and (max-width: $breakpoint - 1) {
+    max-width: 370px;
   }
+}
+
+.web-preview {
+  @extend %preview;
   
   > div {
     position: absolute;
@@ -38,10 +46,18 @@
       display: block;
     }
   }
-  
-  @media screen and (max-width: $breakpoint - 1) {
-    //display: none;
-    max-width: 370px;
+}
+
+.motion-preview {
+  @extend %preview;
+  video {
+    display: block;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
   }
 }
 

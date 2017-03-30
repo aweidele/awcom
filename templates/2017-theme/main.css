@@ -203,8 +203,10 @@ main h3, main p, main li { font-size: 1.4rem; line-height: 1.4em; }
   .me { font-size: 2.9rem; }
   .what { font-size: 1.8rem; }
   .what > strong { font-size: 4.7rem; } }
-.web-preview { position: relative; max-width: 480px; width: 100%; margin: auto; }
-.web-preview > img { position: relative; z-index: 10; width: 100%; height: auto; display: block; }
+.web-preview, .motion-preview { position: relative; max-width: 480px; width: 100%; margin: auto; overflow: hidden; }
+.web-preview > img, .motion-preview > img { position: relative; z-index: 10; width: 100%; height: auto; display: block; }
+@media screen and (max-width: 667px) { .web-preview, .motion-preview { max-width: 370px; } }
+
 .web-preview > div { position: absolute; top: 9%; left: 10%; z-index: 0; width: 81%; height: 91%; overflow: hidden; }
 .web-preview > div ul { position: absolute; top: 0; left: 0; width: 100%; height: 100%; -webkit-animation: sliding 6.75s infinite; animation: sliding 6.75s infinite; }
 .web-preview > div li { width: 100%; position: absolute; top: 0; left: 0; }
@@ -212,7 +214,8 @@ main h3, main p, main li { font-size: 1.4rem; line-height: 1.4em; }
 .web-preview > div li:nth-child(2) { left: 100%; z-index: 1; }
 .web-preview > div li:nth-child(3) { left: 200%; z-index: 2; }
 .web-preview > div img { width: 100%; height: auto; display: block; }
-@media screen and (max-width: 667px) { .web-preview { max-width: 370px; } }
+
+.motion-preview video { display: block; z-index: 0; position: absolute; top: 0; left: 0; width: 100%; height: auto; }
 
 .skills { margin-bottom: 2em; }
 .skills > li { display: inline; }
