@@ -46,9 +46,12 @@
 
 .skills {
   > li {
-    display: inline-block;
+    display: inline;
     &:after {
       content: ", ";
+    }
+    &:last-child:after {
+      content: "";
     }
   }
 }

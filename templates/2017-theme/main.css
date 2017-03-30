@@ -191,8 +191,9 @@ main h3, main p, main li { font-size: 1.4rem; line-height: 1.4em; }
 .web-preview > div img { width: 100%; height: auto; display: block; }
 @media screen and (max-width: 667px) { .web-preview { display: none; } }
 
-.skills > li { display: inline-block; }
+.skills > li { display: inline; }
 .skills > li:after { content: ", "; }
+.skills > li:last-child:after { content: ""; }
 
 footer { background-color: #383838; color: #FFFFFF; padding: 57px 7px; }
 @media screen and (min-width: 668px) { footer { padding: 57px 0; } }
