@@ -40,7 +40,7 @@
         <div>
           <h3><?php echo $p['name']; ?></h3>
           <p><?php echo $p['description']; ?></p>
-          <div class="btn">Learn More</div>
+          <div class="btn">Launch Site</div>
         </div>
       </div>
     </a></article>

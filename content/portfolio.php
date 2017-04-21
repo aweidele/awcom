@@ -41,7 +41,7 @@
       'name' => 'Roxanne Weidele',
       'description' => 'Custom Wordpress theme for Maryland-based artist',
       'url' => 'http://www.roxanneweidele.com/',
-      'image' => 'ma.jpg',
+      'image' => 'rw.jpg',
     ),
     'fma' => array(
       'name' => 'Fradkin & McAlpin Architects',
