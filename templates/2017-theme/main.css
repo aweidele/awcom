@@ -224,13 +224,13 @@ main h3, main p, main li { font-size: 1.4rem; line-height: 1.4em; }
 
 .portfolio-grid { margin-top: 40px; }
 .portfolio-grid > article { margin-bottom: 20px; }
-.portfolio-grid > article > a { width: 100%; padding-top: 100%; border: 1px solid #383838; position: relative; overflow: hidden; display: block; }
+.portfolio-grid > article > a { width: 100%; border: 1px solid #383838; position: relative; display: block; overflow: hidden; }
 .portfolio-grid > article > a > div { position: absolute; width: 100%; height: 100%; top: 0; left: -100%; background-color: rgba(56, 56, 56, 0.8); padding: 10px; color: #FFFFFF; transition: left 0.25s; text-align: center; }
 .portfolio-grid > article > a > div > div { position: relative; top: 50%; transform: translateY(-50%); }
 .portfolio-grid > article > a > div .btn { display: inline-block; background: #ff9800; text-transform: uppercase; padding: 1em 2em; margin-top: 1em; font-size: 1.1rem; transition: background-color 0.25s; }
 .portfolio-grid > article > a > div .btn:hover { background-color: #f3833d; }
 .portfolio-grid > article > a:hover > div { left: 0; }
-.portfolio-grid > article img { min-width: 100%; min-height: 100%; width: auto; height: auto; display: block; position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); z-index: 0; }
+.portfolio-grid > article img { width: 100%; height: auto; display: block; z-index: 0; }
 
 footer { background-color: #383838; color: #FFFFFF; padding: 57px 7px; }
 @media screen and (min-width: 668px) { footer { padding: 57px 0; } }

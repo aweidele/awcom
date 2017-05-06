@@ -9,8 +9,8 @@
         <li>CSS 3</li>
         <li>PHP</li>
         <li>Javascript/JQuery</li>
-        <li>Wordpress</li>
         <li>Sitecore</li>
+        <li>Wordpress</li>
         <li>Shopify</li>
         <li>MySQL</li>
         <li>PayPal/Payflow</li>
