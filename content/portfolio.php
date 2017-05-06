@@ -16,7 +16,7 @@
     'colossus' => array(
       'name' => 'DuClaw Brewing Company: Colossus',
       'description' => 'Front-end development for brewery promotional site',
-      'url' => 'http://dorfestival.com/',
+      'url' => 'http://angrychickens.com/-subdomains/hosted.aaronweidele.com/colossus/',
       'image' => 'col.jpg',
     ),
     'ck' => array(
