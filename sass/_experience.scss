@@ -1,7 +1,12 @@
+$dot: 16px;
+
 .work-timeline {
+	@media screen and (max-width: $breakpoint - 1) {
+		display: none;
+	}
 	width: 100%;
 	position: relative;
-	padding: 300px 0;
+	padding: 200px 0;
 	
 	> li {
 		position: absolute;
@@ -14,29 +19,118 @@
 			left: 0;
 			background-color: $primary;
 			display: block;
+			z-index: 0;
+		}
+		
+		> div {
+			width: 100%;
+			position: absolute;
+			left: 0;
+			
+			&:before {
+				content: " ";
+				width: $dot;
+				height: $dot;
+				border-radius: 50%;
+				background-color: $primary;
+				display: block;
+				position: absolute;
+				left: $dot / -2;
+				z-index: 1;
+			}
+			
+			&:after {
+				content: " ";
+				width: 4px;
+				height: 100%;
+				position: absolute;
+				left: -2px;
+				z-index: 1;
+			}
+			
+			> div {
+				width: 350px;
+				padding: 1rem;
+				color: #000000;
+				position: relative;
+			}
+		}
+		
+		~ li {
+			> div {
+				> div {
+					left: -350px;
+				}
+			}
+		}
+		
+		&:nth-child(2n+1) {
+			> div { 
+				bottom: 0;
+				padding-bottom: 20px;
+				&:before {
+					bottom: $dot / -2;
+				}
+				&:after {
+					bottom: 0;
+				}
+			}
+		}
+		
+		&:nth-child(2n) {
+			> div { 
+				top: 0;
+				padding-top: 20px;
+				&:before {
+					top: $dot / -2;
+				}
+				&:after {
+					top: 0;
+				}
+			}
+		}
+		
+		&:last-child {
+			> div {
+				//text-align: right;
+			}
+		}
+		
+		&:first-child {
+			
 		}
 		
 		&:nth-child(4n+1) {
-			&:before {
-				background-color: $primary;
+			&:before, > div:before, > div:after { background-color: $primary; }
+			> div > div { 
+				border: 2px solid $primary; 
+				background: lighten($primary,20);
 			}
 		}
 		
 		&:nth-child(4n+2) {
-			&:before {
-				background-color: $tgray;
+			&:before, > div:before, > div:after  { background-color: $tgray; }
+			> div > div { 
+				border: 2px solid $tgray; 
+				background: lighten($tgray,20);
+				color: #FFFFFF;
 			}
 		}
 		
 		&:nth-child(4n+3) {
-			&:before {
-				background-color: $secondary;
+			&:before, > div:before, > div:after  { background-color: $secondary; }
+			> div > div { 
+				border: 2px solid $secondary; 
+				background: lighten($secondary,20);
 			}
 		}
 		
 		&:nth-child(4n) {
-			&:before {
-				background-color: $tertiary;
+			&:before, > div:before, > div:after  { background-color: $tertiary; }
+			> div > div { 
+				border: 2px solid $tertiary; 
+				background: lighten($tertiary,20);
+				color: #FFFFFF;
 			}
 		}
 	}
