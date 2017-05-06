@@ -34,7 +34,7 @@
   </div>
   <div class="content-fluid portfolio-grid">
 <?php foreach($clients[$a] as $key => $p) { ?>
-     <article class="col-4 col-md-3" id="portfolio-<?php echo $a.'-'.$key; ?>"><a href="<?php echo $p['url']; ?>" target="_blank">
+     <article class="col-4 col-lg-3" id="portfolio-<?php echo $a.'-'.$key; ?>"><a href="<?php echo $p['url']; ?>" target="_blank">
       <img src="<?php echo $root_url; ?>/content/screencaps/<?php echo $p['image']; ?>">
       <div>
         <div>

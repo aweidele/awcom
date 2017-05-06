@@ -104,6 +104,8 @@ $cols: 12;
 $gutter: 20px;
 $breakpoint: 668px;
 $breakpointM: 900px;
+$breakpointL: 1024px;
+$breakpointXL: 1200px;
 $headerHeight: 79px;
 
 .content-fluid {
@@ -167,6 +169,19 @@ $headerHeight: 79px;
   }
   @for $i from 1 through $cols - 1 {
     .offset-md-#{$i} {
+      margin-left: 100% / $cols * $i;
+    }
+  }
+}
+
+@media screen and (min-width: $breakpointL) {
+  @for $i from 1 through $cols {
+    .col-lg-#{$i} {
+      width: 100% / $cols * $i;
+    }
+  }
+  @for $i from 1 through $cols - 1 {
+    .offset-lg-#{$i} {
       margin-left: 100% / $cols * $i;
     }
   }

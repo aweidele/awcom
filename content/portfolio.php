@@ -5,7 +5,7 @@
       'name' => 'Bluetooth Technology Website',
       'description' => 'Sitecore website for technology company',
       'url' => 'https://www.bluetooth.com/',
-      'image' => 'ma.jpg',
+      'image' => 'bt.jpg',
     ),
     'ma' => array(
       'name' => 'Morris Adjmi Architects',
@@ -53,22 +53,22 @@
 
   $clients['motion'] = array(
     'magpie' => array(
-      'name' => 'Bluetooth Technology Website',
-      'description' => 'Sitecore website for technology company',
-      'url' => 'https://www.bluetooth.com/',
-      'image' => 'ma.jpg',
+      'name' => 'Mr Magpie',
+      'description' => 'Stop motion Radiohead music video.',
+      'url' => 'https://vimeo.com/23533394',
+      'image' => 'magpie.jpg',
     ),
     'piggy' => array(
-      'name' => 'Bluetooth Technology Website',
-      'description' => 'Sitecore website for technology company',
-      'url' => 'https://www.bluetooth.com/',
-      'image' => 'ma.jpg',
+      'name' => 'Selfish Piggy',
+      'description' => "Stop motion animation in which a little pig won't share his food.",
+      'url' => 'https://vimeo.com/36891234',
+      'image' => 'pig.jpg',
     ),
     'logo' => array(
-      'name' => 'Bluetooth Technology Website',
-      'description' => 'Sitecore website for technology company',
-      'url' => 'https://www.bluetooth.com/',
-      'image' => 'ma.jpg',
+      'name' => 'Print to Motion',
+      'description' => 'Motion graphics animation featuring my old logo.',
+      'url' => 'https://vimeo.com/19920055',
+      'image' => 'ptm.png',
     ),
   );
 ?>

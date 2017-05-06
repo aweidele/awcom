@@ -1,5 +1,6 @@
 <?php
   include('portfolio.php');
+  include('jobs.php');
   $content = array(
     'home' => 'home.php',
     'web' => 'web.php',
