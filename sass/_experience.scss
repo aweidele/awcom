@@ -1,11 +1,41 @@
 $dot: 30px;
 $line: 10px;
+$arrow: 12px;
 $items: 4;
 $p: 100% / $items;
 
 .work-timeline {
   > li {
     position: relative;
+    
+    > strong {
+      display: block;
+      font-weight: 800;
+      text-align: center;
+      font-size: 3.2rem;
+    }
+    
+    > div {
+      > div {
+        padding: 1rem 2rem;
+        color: #FFFFFF;
+        position: relative;
+        p,h3 {
+          font-size: 1.4rem;
+        }
+        &:after {
+          content: " ";
+          width: $arrow;
+          height: $arrow;
+          -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+          position: absolute;
+          bottom: $arrow / -2;
+          left: calc(50% - #{$arrow / 2});
+        }
+      }
+    }
+    
     &:before {
       content: " ";
       display: block;
@@ -25,7 +55,9 @@ $p: 100% / $items;
         background-color: $primary;
       }
       > div > div {
-        background-color: lighten($primary,10);
+        &,&:after {
+          background-color: lighten($primary,10);
+        }
       }
     }
     
@@ -34,7 +66,9 @@ $p: 100% / $items;
         background-color: $tertiary;
       }
       > div > div {
-        background-color: lighten($tertiary,10);
+        &,&:after {
+          background-color: lighten($tertiary,10);
+        }
       }
     }
     
@@ -43,7 +77,9 @@ $p: 100% / $items;
         background-color: $secondary;
       }
       > div > div {
-        background-color: lighten($secondary,10);
+        &,&:after {
+          background-color: lighten($secondary,10);
+        }
       }
     }
     
@@ -52,15 +88,17 @@ $p: 100% / $items;
         background-color: $tgray;
       }
       > div > div {
-        background-color: lighten($tgray,10);
+        &,&:after {
+          background-color: lighten($tgray,10);
+        }
       }
     }
-    
-    > strong {
-      display: block;
-      font-weight: 800;
-      text-align: center;
-      font-size: 2.4rem;
+  }
+  @media screen and (min-width: $breakpoint) {
+    > li {
+      > strong {
+        position: absolute;
+      }
     }
   }
   @media screen and (max-width: #{$breakpointM - 1}) {
@@ -79,10 +117,22 @@ $p: 100% / $items;
       > div {
         width: 50%;
       }
+
+      > strong {
+        width: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
       
       &:nth-child(2n+1) {
         > div {
           padding-right: 20px;
+        }
+
+        > strong {
+          left: 50%;
+          text-align: left;
+          padding-left: 20px;
         }
       }
       &:nth-child(2n) {
@@ -90,6 +140,12 @@ $p: 100% / $items;
           position: relative;
           left: 50%;
           padding-left: 20px;
+        }
+
+        > strong {
+          left: 0;
+          text-align: right;
+          padding-right: 20px;
         }
       }
     }
@@ -121,9 +177,7 @@ $p: 100% / $items;
     }
     
     > strong {
-      position: absolute;
       width: 100%;
-      top: 0;
     }
 
     @for $c from 1 through $items {
@@ -137,12 +191,20 @@ $p: 100% / $items;
         top: 0;
         padding-top: 20px;
       }
+    
+      > strong {
+        bottom: 30px;
+      }
     }
     
     &:nth-child(2n+1) {
       > div {
         bottom: 0;
         padding-bottom: 20px;
+      }
+    
+      > strong {
+        top: 30px;
       }
     }
   }

@@ -257,34 +257,43 @@ main h3, main p, main li { font-size: 1.4rem; line-height: 1.4em; }
 .portfolio-grid > article img { width: 100%; height: auto; display: block; z-index: 0; }
 
 .work-timeline > li { position: relative; }
+.work-timeline > li > strong { display: block; font-weight: 800; text-align: center; font-size: 3.2rem; }
+.work-timeline > li > div > div { padding: 1rem 2rem; color: #FFFFFF; position: relative; }
+.work-timeline > li > div > div p, .work-timeline > li > div > div h3 { font-size: 1.4rem; }
+.work-timeline > li > div > div:after { content: " "; width: 12px; height: 12px; -webkit-transform: rotate(45deg); transform: rotate(45deg); position: absolute; bottom: -6px; left: calc(50% - 6px); }
 .work-timeline > li:before { content: " "; display: block; position: absolute; }
 .work-timeline > li:after { content: " "; display: block; width: 30px; height: 30px; position: absolute; border-radius: 50%; }
 .work-timeline > li:nth-child(4n+1):before, .work-timeline > li:nth-child(4n+1):after { background-color: #ff9800; }
-.work-timeline > li:nth-child(4n+1) > div > div { background-color: #ffad33; }
+.work-timeline > li:nth-child(4n+1) > div > div, .work-timeline > li:nth-child(4n+1) > div > div:after { background-color: #ffad33; }
 .work-timeline > li:nth-child(4n+2):before, .work-timeline > li:nth-child(4n+2):after { background-color: #383838; }
-.work-timeline > li:nth-child(4n+2) > div > div { background-color: #525252; }
+.work-timeline > li:nth-child(4n+2) > div > div, .work-timeline > li:nth-child(4n+2) > div > div:after { background-color: #525252; }
 .work-timeline > li:nth-child(4n+3):before, .work-timeline > li:nth-child(4n+3):after { background-color: #f3833d; }
-.work-timeline > li:nth-child(4n+3) > div > div { background-color: #f6a26d; }
+.work-timeline > li:nth-child(4n+3) > div > div, .work-timeline > li:nth-child(4n+3) > div > div:after { background-color: #f6a26d; }
 .work-timeline > li:nth-child(4n+4):before, .work-timeline > li:nth-child(4n+4):after { background-color: #6D6D6D; }
-.work-timeline > li:nth-child(4n+4) > div > div { background-color: #878787; }
-.work-timeline > li > strong { display: block; font-weight: 800; text-align: center; font-size: 2.4rem; }
+.work-timeline > li:nth-child(4n+4) > div > div, .work-timeline > li:nth-child(4n+4) > div > div:after { background-color: #878787; }
+@media screen and (min-width: 668px) { .work-timeline > li > strong { position: absolute; } }
 @media screen and (max-width: 899px) { .work-timeline > li:before { width: 10px; height: 100%; top: 0; left: calc(50% - 5px); }
   .work-timeline > li:after { top: calc(50% - 15px); left: calc(50% - 15px); }
   .work-timeline > li > div { width: 50%; }
+  .work-timeline > li > strong { width: 50%; top: 50%; transform: translateY(-50%); }
   .work-timeline > li:nth-child(2n+1) > div { padding-right: 20px; }
-  .work-timeline > li:nth-child(2n) > div { position: relative; left: 50%; padding-left: 20px; } }
+  .work-timeline > li:nth-child(2n+1) > strong { left: 50%; text-align: left; padding-left: 20px; }
+  .work-timeline > li:nth-child(2n) > div { position: relative; left: 50%; padding-left: 20px; }
+  .work-timeline > li:nth-child(2n) > strong { left: 0; text-align: right; padding-right: 20px; } }
 @media screen and (min-width: 900px) { .work-timeline { padding: 100px 0; position: relative; }
   .work-timeline > li { position: absolute; width: 25%; }
   .work-timeline > li:before { height: 10px; width: 100%; left: 0; top: -5px; background: #ff9800; }
   .work-timeline > li:after { left: calc(50% - 15px); top: -15px; }
   .work-timeline > li > div { position: absolute; left: 0; width: 100%; }
-  .work-timeline > li > strong { position: absolute; width: 100%; top: 0; }
+  .work-timeline > li > strong { width: 100%; }
   .work-timeline > li:nth-child(1) { left: 0%; }
   .work-timeline > li:nth-child(2) { left: 25%; }
   .work-timeline > li:nth-child(3) { left: 50%; }
   .work-timeline > li:nth-child(4) { left: 75%; }
   .work-timeline > li:nth-child(2n) > div { top: 0; padding-top: 20px; }
-  .work-timeline > li:nth-child(2n+1) > div { bottom: 0; padding-bottom: 20px; } }
+  .work-timeline > li:nth-child(2n) > strong { bottom: 30px; }
+  .work-timeline > li:nth-child(2n+1) > div { bottom: 0; padding-bottom: 20px; }
+  .work-timeline > li:nth-child(2n+1) > strong { top: 30px; } }
 
 footer { background-color: #383838; color: #FFFFFF; padding: 57px 7px; }
 @media screen and (min-width: 668px) { footer { padding: 57px 0; } }
