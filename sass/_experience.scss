@@ -1,74 +1,151 @@
-$dot: 16px;
+$dot: 30px;
+$line: 10px;
+$items: 4;
+$p: 100% / $items;
 
 .work-timeline {
-  @extend %clearfix;
-  padding: 10rem 0;
-  li {
+  > li {
     position: relative;
-    width: 25%;
-    float: left;
-    
     &:before {
       content: " ";
       display: block;
-      height: 10px;
-      width: 100%;
       position: absolute;
+    }
+    &:after {
+      content: " ";
+      display: block;
+      width: $dot;
+      height: $dot;
+      position: absolute;
+      border-radius: 50%;
+    }
+    
+    &:nth-child(4n+1) {
+      &:before,&:after {
+        background-color: $primary;
+      }
+      > div > div {
+        background-color: lighten($primary,10);
+      }
+    }
+    
+    &:nth-child(4n+2) {
+      &:before,&:after {
+        background-color: $tertiary;
+      }
+      > div > div {
+        background-color: lighten($tertiary,10);
+      }
+    }
+    
+    &:nth-child(4n+3) {
+      &:before,&:after  {
+        background-color: $secondary;
+      }
+      > div > div {
+        background-color: lighten($secondary,10);
+      }
+    }
+    
+    &:nth-child(4n+4) {
+      &:before,&:after  {
+        background-color: $tgray;
+      }
+      > div > div {
+        background-color: lighten($tgray,10);
+      }
+    }
+    
+    > strong {
+      display: block;
+      font-weight: 800;
+      text-align: center;
+      font-size: 2.4rem;
+    }
+  }
+  @media screen and (max-width: #{$breakpointM - 1}) {
+    > li {
+      &:before {
+        width: $line;
+        height: 100%;
+        top: 0;
+        left: calc(50% - #{$line / 2});
+      }
+      &:after {
+        top: calc(50% - #{$dot / 2});
+        left: calc(50% - #{$dot / 2});
+      }
+      
+      > div {
+        width: 50%;
+      }
+      
+      &:nth-child(2n+1) {
+        > div {
+          padding-right: 20px;
+        }
+      }
+      &:nth-child(2n) {
+        > div {
+          position: relative;
+          left: 50%;
+          padding-left: 20px;
+        }
+      }
+    }
+  }
+  @media screen and (min-width: $breakpointM) {
+  padding: 100px 0;
+  position: relative;
+  > li {
+    position: absolute;
+    width: $p;
+    
+    &:before {
+      height: $line;
+      width: 100%;
       left: 0;
-      top: -5px;
+      top: $line / -2;
       background: $primary;
     }
     
-    &:first-child ~ li:after {
-      //content: " ";
-      //display: block;
-      //width: 1px;
-      //height: 100%;
-      //position: absolute;
-      //left: 0;
-      //top: 0;
-      //border-left: 1px dotted $lgray;
+    &:after {
+      left: calc(50% - #{($dot / 2)});
+      top: $dot / -2;
     }
     
     > div {
       position: absolute;
       left: 0;
+      width: 100%;
+    }
+    
+    > strong {
+      position: absolute;
+      width: 100%;
+      top: 0;
+    }
+
+    @for $c from 1 through $items {
+      &:nth-child(#{$c}) {
+        left: $p * ($c - 1);
+      }
     }
     
     &:nth-child(2n) {
       > div {
-        bottom: 0;
+        top: 0;
+        padding-top: 20px;
       }
     }
     
     &:nth-child(2n+1) {
       > div {
-        top: 0;
-      }
-    }
-    
-    &:nth-child(4n+1) {
-      &:before {
-        background-color: $primary;
-      }
-    }
-    
-    &:nth-child(4n+2) {
-      &:before {
-        background-color: $tertiary;
-      }
-    }
-    
-    &:nth-child(4n+3) {
-      &:before {
-        background-color: $secondary;
-      }
-    }
-    
-    &:nth-child(4n+4) {
-      &:before {
-        background-color: $tgray;
+        bottom: 0;
+        padding-bottom: 20px;
       }
     }
   }
+}
+  
 }

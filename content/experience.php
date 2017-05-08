@@ -4,6 +4,7 @@
   	<ul class="work-timeline">
 <?php foreach($jobs as $key => $job) { ?>
 	<li id="<?php echo $key; ?>">
+    <strong><?php echo $job['start']; ?></strong>
 		<div>
 			<div>
 				<h3><?php echo $job['company']; ?></h3>
