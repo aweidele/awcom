@@ -4,6 +4,7 @@ $arrow: 12px;
 $items: 4;
 $p: 100% / $items;
 
+#experience h2 { padding: 0 10px; }
 .work-timeline {
   > li {
     position: relative;
@@ -13,6 +14,7 @@ $p: 100% / $items;
       font-weight: 800;
       text-align: center;
       font-size: 3.2rem;
+        position: absolute;
     }
     
     > div {
@@ -30,8 +32,6 @@ $p: 100% / $items;
           -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
           position: absolute;
-          bottom: $arrow / -2;
-          left: calc(50% - #{$arrow / 2});
         }
       }
     }
@@ -97,12 +97,12 @@ $p: 100% / $items;
   @media screen and (min-width: $breakpoint) {
     > li {
       > strong {
-        position: absolute;
       }
     }
   }
   @media screen and (max-width: #{$breakpointM - 1}) {
     > li {
+      padding: 30px 0;
       &:before {
         width: $line;
         height: 100%;
@@ -126,32 +126,42 @@ $p: 100% / $items;
       
       &:nth-child(2n+1) {
         > div {
-          padding-right: 20px;
+          padding-right: 30px;
+          
+          > div:after {
+            top: calc(50% - #{$arrow / 2});
+            right: $arrow / -2;
+          }
         }
 
         > strong {
           left: 50%;
           text-align: left;
-          padding-left: 20px;
+          padding-left: 30px;
         }
       }
       &:nth-child(2n) {
         > div {
           position: relative;
           left: 50%;
-          padding-left: 20px;
+          padding-left: 30px;
+          
+          > div:after {
+            top: calc(50% - #{$arrow / 2});
+            left: $arrow / -2;
+          }
         }
 
         > strong {
           left: 0;
           text-align: right;
-          padding-right: 20px;
+          padding-right: 30px;
         }
       }
     }
   }
   @media screen and (min-width: $breakpointM) {
-  padding: 100px 0;
+  padding: 100px 10px;
   position: relative;
   > li {
     position: absolute;
@@ -174,6 +184,7 @@ $p: 100% / $items;
       position: absolute;
       left: 0;
       width: 100%;
+      padding: 30px 0;
     }
     
     > strong {
@@ -189,7 +200,13 @@ $p: 100% / $items;
     &:nth-child(2n) {
       > div {
         top: 0;
-        padding-top: 20px;
+        
+        > div {
+          &:after {
+            top: $arrow / -2;
+            left: calc(50% - #{$arrow / 2});
+          }
+        }
       }
     
       > strong {
@@ -200,7 +217,13 @@ $p: 100% / $items;
     &:nth-child(2n+1) {
       > div {
         bottom: 0;
-        padding-bottom: 20px;
+        
+        > div {
+          &:after {
+            bottom: $arrow / -2;
+            left: calc(50% - #{$arrow / 2});
+          }
+        }
       }
     
       > strong {
