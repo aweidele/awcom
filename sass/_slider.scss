@@ -1,4 +1,4 @@
-$slides: 3;
+$slides: 1;
 $time: 2;
 $trans: 0.25;
 $tot: ($time + $trans) * $slides; 
@@ -43,16 +43,20 @@ $tot: ($time + $trans) * $slides;
   left: 0;
   width: 100%;
   height: 100%;
-  -webkit-animation: sliding #{$tot}s infinite;
-  animation: sliding #{$tot}s infinite;
+  @if($slides > 1) {
+    -webkit-animation: sliding #{$tot}s infinite;
+    animation: sliding #{$tot}s infinite;
+  }
 }
 
 @mixin posElement() {
    &:first-child {
       left: 0;
       z-index: 0;
-      -webkit-animation: firstjump #{$tot}s infinite;
-      animation: firstjump #{$tot}s infinite;
+      @if($slides > 1) {
+        -webkit-animation: firstjump #{$tot}s infinite;
+        animation: firstjump #{$tot}s infinite;
+     }
     }
     
     @for $i from 1 through $slides - 1 {

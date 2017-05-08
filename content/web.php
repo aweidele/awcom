@@ -25,8 +25,8 @@
         <div>
           <ul>
             <li><img src="<?php echo $root_url.'templates/'.$theme.'/images/preview-bt.jpg'; ?>"></li>
-            <li><img src="<?php echo $root_url.'templates/'.$theme.'/images/preview-bt.jpg'; ?>"></li>
-            <li><img src="<?php echo $root_url.'templates/'.$theme.'/images/preview-bt.jpg'; ?>"></li>
+            <!-- li><img src="<?php echo $root_url.'templates/'.$theme.'/images/preview-bt.jpg'; ?>"></li>
+            <li><img src="<?php echo $root_url.'templates/'.$theme.'/images/preview-bt.jpg'; ?>"></li -->
           </ul>
         </div>
       </div>
