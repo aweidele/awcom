@@ -6,6 +6,9 @@ $p: 100% / $items;
 
 #experience h2 { padding: 0 10px; }
 .work-timeline {
+  //*,*:after,*:before {
+  //  transition: all 2s;
+  //}
   > li {
     position: relative;
     
