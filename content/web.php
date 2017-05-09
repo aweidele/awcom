@@ -6,11 +6,14 @@
       <ul class="skills">
         <li>Adobe Creative Suite (Photoshop, Illustrator, InDesign)</li>
         <li>HTML 5</li>
-        <li>CSS 3</li>
+        <li>CSS 3/SASS/LESS</li>
         <li>PHP</li>
         <li>Javascript/JQuery</li>
         <li>Sitecore</li>
         <li>Wordpress</li>
+        <li>Git</li>
+        <li>SourceTree</li>
+        <li>Jira</li>
         <li>Shopify</li>
         <li>MySQL</li>
         <li>PayPal/Payflow</li>
