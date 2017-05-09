@@ -47,7 +47,7 @@
       'name' => 'Fradkin & McAlpin Architects',
       'description' => 'Custom Wordpress theme for New York-based architect',
       'url' => 'http://www.fradkinmcalpin.com/',
-      'image' => 'ma.jpg',
+      'image' => 'fma.jpg',
     ),
   );
 
