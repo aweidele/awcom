@@ -29,6 +29,8 @@ body > header > div > button > span, footer .social a span { position: absolute;
 
 .icon-vimeo:before { content: "\f27d"; }
 
+.icon-file-text-o:before { content: "\f0f6"; }
+
 .content-fluid { max-width: 1200px; width: 100%; margin: auto; padding: 0 10px; }
 @media screen and (min-width: 668px) { .content-fluid { padding: 0; } }
 
@@ -276,7 +278,7 @@ main h3, main p, main li { font-size: 1.4rem; line-height: 1.4em; }
   .work-timeline > li:nth-child(2n) > div { position: relative; left: 50%; padding-left: 30px; }
   .work-timeline > li:nth-child(2n) > div > div:after { top: calc(50% - 6px); left: -6px; }
   .work-timeline > li:nth-child(2n) > strong { left: 0; text-align: right; padding-right: 30px; } }
-@media screen and (min-width: 900px) { .work-timeline { padding: 100px 10px; position: relative; }
+@media screen and (min-width: 900px) { .work-timeline { padding: 150px 10px; position: relative; }
   .work-timeline > li { position: absolute; width: 25%; }
   .work-timeline > li:before { height: 10px; width: 100%; left: 0; top: -5px; background: #ff9800; }
   .work-timeline > li:after { left: calc(50% - 15px); top: -15px; }
@@ -292,6 +294,9 @@ main h3, main p, main li { font-size: 1.4rem; line-height: 1.4em; }
   .work-timeline > li:nth-child(2n+1) > div { bottom: 0; }
   .work-timeline > li:nth-child(2n+1) > div > div:after { bottom: -6px; left: calc(50% - 6px); }
   .work-timeline > li:nth-child(2n+1) > strong { top: 30px; } }
+.work-timeline + p { margin-top: 2rem; text-transform: uppercase; text-align: center; }
+.work-timeline + p a { color: #f3833d; font-weight: 800; }
+@media screen and (min-width: 668px) { .work-timeline + p { text-align: left; } }
 
 footer { background-color: #383838; color: #FFFFFF; padding: 57px 7px; }
 @media screen and (min-width: 668px) { footer { padding: 57px 0; } }

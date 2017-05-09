@@ -14,5 +14,6 @@
 	</li>
 <?php } ?>
 	</ul>
+    <p><a href="<?php echo $root_url; ?>docs/Aaron-Weidele-Resume.pdf"><i class="icon-file-text-o"></i> Download resume in PDF format</a></p>
   </div>
 </section>

@@ -164,7 +164,7 @@ $p: 100% / $items;
     }
   }
   @media screen and (min-width: $breakpointM) {
-  padding: 100px 10px;
+  padding: 150px 10px;
   position: relative;
   > li {
     position: absolute;
@@ -235,5 +235,18 @@ $p: 100% / $items;
     }
   }
 }
-  
+  + p {
+    margin-top: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    
+    a {
+      color: $secondary;
+      font-weight: 800;
+    }
+    
+    @media screen and (min-width: $breakpoint) {
+      text-align: left;
+    }
+  }
 }
