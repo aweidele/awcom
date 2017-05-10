@@ -23,7 +23,7 @@ $(document).ready(function() {
     h = $(this).attr("href");
     o = $(h).offset().top - $('header').height();
     
-    s = Math.abs($(window).scrollTop() - o) * 0.75;
+    s = Math.abs($(window).scrollTop() - o) * 0.33;
     
     $("html, body").animate({
       scrollTop: o
