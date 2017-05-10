@@ -232,7 +232,11 @@ main h3, main p, main li { font-size: 1.4rem; line-height: 1.4em; }
 .web-preview > div li:nth-child(1) { left: 0%; z-index: 0; }
 .web-preview > div img { width: 100%; height: auto; display: block; }
 
-.motion-preview video { display: block; z-index: 0; position: absolute; top: 0; left: 0; width: 100%; height: auto; }
+.motion-preview video, .motion-preview .mobile-gif { z-index: 0; position: absolute; top: 0; left: 0; width: 100%; height: auto; }
+.motion-preview .mobile-gif { display: block; }
+.motion-preview video { display: none; }
+@media screen and (min-width: 668px) { .motion-preview video { display: block; }
+  .motion-preview .mobile-gif { display: none; } }
 
 .skills { margin-bottom: 2em; }
 .skills > li { display: inline; }

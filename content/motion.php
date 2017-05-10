@@ -7,6 +7,7 @@
           <source src='<?php echo $root_url.'templates/'.$theme.'/images/reel.mp4'; ?>' type='video/mp4; codecs="video/mp4"'>
           <source src='<?php echo $root_url.'templates/'.$theme.'/images/reel.webm'; ?>' type='video/webm'>
         </video>
+        <img class="mobile-gif" src='<?php echo $root_url.'templates/'.$theme.'/images/reel.gif'; ?>'>
       </div>
     </div>
     <div class="col-4 offset-1">
