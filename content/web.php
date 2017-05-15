@@ -15,6 +15,7 @@
         <li>SourceTree</li>
         <li>Jira</li>
         <li>Shopify</li>
+        <li>MailChimp/MailChimp API</li>
         <li>MySQL</li>
         <li>PayPal/Payflow</li>
         <li>Web Prototyping tools (Axure, Balsamic, HotGloo)</li>
