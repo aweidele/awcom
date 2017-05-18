@@ -9,12 +9,6 @@ $(document).ready(function() {
     }
   });
   
- 
-    $("#feedback").html( $(window).width());
-  $(window).resize(function() {
-    $("#feedback").html( $(window).width());
-  });
-  
   $('a[href^="#"]').on('click',function(e) {
     e.preventDefault();
     
@@ -30,4 +24,11 @@ $(document).ready(function() {
     },s);
   });
   
+  s = 'abcdefghijklmnopqrstuvwxyz@.';
+  e = $('#genemlink').data('em');
+  m = '';
+  for(i=0;i<e.length;i++) {
+    m += s.charAt(e[i]);
+  }
+  $('#genemlink').parent().html('<a href="mailto:'+m+'">'+m+'</a>');
 });

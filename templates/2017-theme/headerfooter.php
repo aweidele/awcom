@@ -47,7 +47,7 @@
       <div class="col-3">
         <h2>Contact</h2>
         <ul>
-          <li><a href="mailto:aweidele@gmail.com">aweidele@gmail.com</a></li>
+          <li><span id="genemlink" data-em="[0,22,4,8,3,4,11,4,26,6,12,0,8,11,27,2,14,12]"></span></li>
         </ul>
       </div>
     </div>
