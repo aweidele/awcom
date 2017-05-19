@@ -17,7 +17,7 @@ $jobs = array(
 		'start' => 2014,
 	),
 	'r2i' => array(
-		'company' => 'r2Integrated',
+		'company' => 'R2integrated',
 		'position' => 'Front End Developer',
 		'start' => 2016,
 	),
