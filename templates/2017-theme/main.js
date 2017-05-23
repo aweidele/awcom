@@ -31,4 +31,27 @@ $(document).ready(function() {
     m += s.charAt(e[i]);
   }
   $('#genemlink').parent().html('<a href="mailto:'+m+'">'+m+'</a>');
+  
+  // Fade portfolio items
+  var grid = new Array();
+  $('.portfolio-grid > article').each(function() {
+    $(this).addClass('faded');
+    grid.push($(this).offset().top);
+  });
+  
+  $(window).scroll(function() {
+    s = $(window).scrollTop();
+    $('.portfolio-grid > article.faded').each(function() {
+      if(s > ($(this).offset().top) - w + ($(this).height() * 0.66)) {
+        $(this).removeClass('faded');
+      }
+    });
+  });
+  
+  var w = $(window).height();
+  $(window).resize(function() {
+    w = $(window).height();
+  });
+  
+  
 });

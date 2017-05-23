@@ -244,7 +244,11 @@ main h3, main p, main li { font-size: 1.4rem; line-height: 1.4em; }
 .skills > li:last-child:after { content: ""; }
 
 .portfolio-grid { margin-top: 40px; }
-.portfolio-grid > article { margin-bottom: 20px; }
+.portfolio-grid > article { margin-bottom: 20px; opacity: 1; transition: opacity 0.5s; }
+.portfolio-grid > article:nth-child(4n+2) { transition-delay: 0.125s; }
+.portfolio-grid > article:nth-child(4n+3) { transition-delay: 0.25s; }
+.portfolio-grid > article:nth-child(4n) { transition-delay: 0.375s; }
+.portfolio-grid > article.faded { opacity: 0; }
 .portfolio-grid > article > a { width: 100%; border: 1px solid #383838; position: relative; display: block; overflow: hidden; }
 .portfolio-grid > article > a > div { width: 100%; background-color: rgba(56, 56, 56, 0.8); padding: 20px 10px; color: #FFFFFF; transition: left 0.25s; text-align: center; }
 @media screen and (min-width: 668px) { .portfolio-grid > article > a > div { position: absolute; height: 100%; top: 0; left: -100%; padding: 10px; }

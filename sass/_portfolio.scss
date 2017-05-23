@@ -94,6 +94,25 @@
     margin-top: $gutter * 2;
   > article {
     margin-bottom: $gutter;
+    opacity: 1;
+    transition: opacity 0.5s;
+    
+    &:nth-child(4n+2) {
+      transition-delay: 0.125s;
+    }
+    
+    &:nth-child(4n+3) {
+      transition-delay: 0.25s;
+    }
+    
+    &:nth-child(4n) {
+      transition-delay: 0.375s;
+    }
+    
+    &.faded {
+      opacity: 0;
+    }
+    
     > a {
       width: 100%;
       border: 1px solid $tertiary;
