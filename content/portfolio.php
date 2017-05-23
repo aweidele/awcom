@@ -31,6 +31,12 @@
       'url' => 'http://dorfestival.com/',
       'image' => 'dor.jpg',
     ),
+    'smw' => array(
+      'name' => 'Shen Milsom &amp; Wilke',
+      'description' => 'Custom Wordpress theme for New York-based acoustical design company',
+      'url' => 'http://www.smwllc.com/',
+      'image' => 'smw.jpg',
+    ),
     'celebrations' => array(
       'name' => 'Celebrations, LLC',
       'description' => 'Website design and custom Wordpress theme for Event Planning Agency',
@@ -48,6 +54,18 @@
       'description' => 'Custom Wordpress theme for New York-based architect',
       'url' => 'http://www.fradkinmcalpin.com/',
       'image' => 'fma.jpg',
+    ),
+    'penn' => array(
+      'name' => 'University of Pennsylvania',
+      'description' => 'Responsive web design and development for University search campaign site',
+      'url' => 'http://clients.ncsdo.com/client/u37/114_2014_spring_search/microsite_slide/',
+      'image' => 'penn.jpg',
+    ),
+    'barnard' => array(
+      'name' => 'Barnard College',
+      'description' => 'Responsive web site for University search campaign site',
+      'url' => 'http://clients.ncsdo.com/client/b07/B07535-2016-eSearch/SITE/',
+      'image' => 'barnard.jpg',
     ),
   );
 
