@@ -45,6 +45,13 @@
           <h3><?php echo $p['name']; ?></h3>
           <p><?php echo $p['description']; ?></p>
           <div class="btn">Launch Site</div>
+<?php if(isset($p['tech']) && is_array($p['tech'])) { ?>
+          <ul>
+<?php foreach($p['tech'] as $tech) { ?>
+            <li><i class="icon-<?php echo $tech; ?>"></i></li>
+<?php } ?>
+           </ul>
+<?php } ?>
         </div>
       </div>
     </a></article>

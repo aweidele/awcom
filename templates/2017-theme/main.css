@@ -31,6 +31,10 @@ body > header > div > button > span, footer .social a span { position: absolute;
 
 .icon-file-text-o:before { content: "\f0f6"; }
 
+.icon-sitecore:before { content: "\e901"; }
+
+.icon-wordpress:before { content: "\f19a"; }
+
 .content-fluid { max-width: 1200px; width: 100%; margin: auto; padding: 0 10px; }
 @media screen and (min-width: 668px) { .content-fluid { padding: 0; } }
 
@@ -250,12 +254,14 @@ main h3, main p, main li { font-size: 1.4rem; line-height: 1.4em; }
 .portfolio-grid > article:nth-child(4n) { transition-delay: 0.375s; }
 .portfolio-grid > article.faded { opacity: 0; }
 .portfolio-grid > article > a { width: 100%; border: 1px solid #383838; position: relative; display: block; overflow: hidden; }
-.portfolio-grid > article > a > div { width: 100%; background-color: rgba(56, 56, 56, 0.8); padding: 20px 10px; color: #FFFFFF; transition: left 0.25s; text-align: center; }
+.portfolio-grid > article > a > div { width: 100%; background-color: rgba(56, 56, 56, 0.8); padding: 20px 10px; color: #FFFFFF; transition: left 0.25s; text-align: center; z-index: 10; }
 @media screen and (min-width: 668px) { .portfolio-grid > article > a > div { position: absolute; height: 100%; top: 0; left: -100%; padding: 10px; }
   .portfolio-grid > article > a > div > div { position: relative; top: 50%; transform: translateY(-50%); } }
 .portfolio-grid > article > a > div .btn { display: inline-block; background: #ff9800; text-transform: uppercase; padding: 1em 2em; margin-top: 1em; font-size: 1.1rem; transition: background-color 0.25s; }
 .portfolio-grid > article > a > div .btn:hover { background-color: #f3833d; }
 .portfolio-grid > article > a:hover > div { left: 0; }
+.portfolio-grid > article > a ul { margin-top: 2em; }
+.portfolio-grid > article > a li { color: #FFFFFF; margin: 0 2px; font-size: 1.4rem; display: inline-block; }
 .portfolio-grid > article img { width: 100%; height: auto; display: block; z-index: 0; }
 
 #experience h2 { padding: 0 10px; }

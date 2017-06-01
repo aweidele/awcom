@@ -118,7 +118,7 @@
       border: 1px solid $tertiary;
       position: relative;
       display: block;
-	  overflow: hidden;
+	    overflow: hidden;
       > div {
         width: 100%;
         background-color: rgba($tertiary,0.8);
@@ -126,6 +126,7 @@
         color: #FFFFFF;
         transition: left $speed;
         text-align: center;
+        z-index: 10;
         
 		@media screen and (min-width: $breakpoint) {
         	position: absolute;
@@ -134,7 +135,7 @@
         	left: -100%;
         	padding: $gutter / 2;
 
-			> div {
+			    > div {
           		position: relative;
           		top: 50%;
           		transform: translateY(-50%);
@@ -157,7 +158,18 @@
       &:hover > div {
         left: 0;
       }
+      
+      ul {
+        margin-top: 2em;
+      }
+      li {
+        color: #FFFFFF;
+        margin: 0 2px;
+        font-size: 1.4rem;
+        display: inline-block;
+      }
     }
+
     img {
       width: 100%;
       height: auto;

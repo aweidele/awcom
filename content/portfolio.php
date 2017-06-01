@@ -6,12 +6,14 @@
       'description' => 'Sitecore website for technology company',
       'url' => 'https://www.bluetooth.com/',
       'image' => 'bt.jpg',
+      'tech' => array('sitecore'),
     ),
     'ma' => array(
       'name' => 'Morris Adjmi Architects',
       'description' => 'Custom Wordpress theme for New York-based architect',
       'url' => 'http://www.ma.com',
       'image' => 'ma.jpg',
+      'tech' => array('wordpress'),
     ),
     'colossus' => array(
       'name' => 'DuClaw Brewing Company: Colossus',
@@ -24,6 +26,7 @@
       'description' => 'Custom Wordpress theme for New York-based architect and interior deisgner',
       'url' => 'http://carolkurtharchitects.com//',
       'image' => 'ck.jpg',
+      'tech' => array('wordpress'),
     ),
     'dorfest' => array(
       'name' => 'DuClaw Brewing Company: Day of Retribution',
@@ -36,24 +39,28 @@
       'description' => 'Custom Wordpress theme for New York-based acoustical design company',
       'url' => 'http://www.smwllc.com/',
       'image' => 'smw.jpg',
+      'tech' => array('wordpress'),
     ),
     'celebrations' => array(
       'name' => 'Celebrations, LLC',
       'description' => 'Website design and custom Wordpress theme for Event Planning Agency',
       'url' => 'http://www.cuievents.com/',
       'image' => 'cui.jpg',
+      'tech' => array('wordpress'),
     ),
     'rw' => array(
       'name' => 'Roxanne Weidele',
       'description' => 'Custom Wordpress theme for Maryland-based artist',
       'url' => 'http://www.roxanneweidele.com/',
       'image' => 'rw.png',
+      'tech' => array('wordpress'),
     ),
     'fma' => array(
       'name' => 'Fradkin & McAlpin Architects',
       'description' => 'Custom Wordpress theme for New York-based architect',
       'url' => 'http://www.fradkinmcalpin.com/',
       'image' => 'fma.jpg',
+      'tech' => array('wordpress'),
     ),
     'penn' => array(
       'name' => 'University of Pennsylvania',
