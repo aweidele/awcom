@@ -2,8 +2,8 @@
   <p>
     <span class="hello">Hello.</span>
     <span class="me">I'm Aaron.</span>
-    <span class="what">I am a <strong>Web Designer</strong><br>
-      and an <strong>animator.</strong></span>
+    <span class="what">I am a <strong>Web Developer</strong><br>
+      and a <strong>Designer.</strong></span>
   </p>
   <p class="scrolldown"><a href="#<?php
     $current = false;
