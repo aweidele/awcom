@@ -24,9 +24,16 @@
     'ck' => array(
       'name' => 'Carol Kurth Architecture',
       'description' => 'Custom Wordpress theme for New York-based architect and interior deisgner',
-      'url' => 'http://carolkurtharchitects.com//',
+      'url' => 'http://carolkurtharchitects.com/',
       'image' => 'ck.jpg',
       'tech' => array('wordpress'),
+    ),
+    'max' => array(
+      'name' => 'Max Credit Union',
+      'description' => 'Built Sitecore components for Alabama-based credit union',
+      'url' => 'https://www.mymax.com/',
+      'image' => 'max.jpg',
+      'tech' => array('sitecore'),
     ),
     'dorfest' => array(
       'name' => 'DuClaw Brewing Company: Day of Retribution',
