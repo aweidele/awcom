@@ -1,8 +1,10 @@
-$slides: 3;
+$slides: 1;
 $time: 3;
 $trans: 0.25;
 $tot: ($time + $trans) * $slides; 
 
+@if($slides > 1) {
+	
 @-webkit-keyframes sliding {
   @for $i from 0 through $slides - 1 {
     $t: ($time + $trans) * $i;
@@ -37,6 +39,7 @@ $tot: ($time + $trans) * $slides;
   100% { left: $slides * 100%; }
 }
 
+}
 @mixin sliderAnim() {
   position: absolute;
   top: 0;

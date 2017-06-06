@@ -39,9 +39,9 @@
       <div class="col-3 offset-3">
         <h2>Connect</h2>
         <ul class="social">
-          <li><a href=""><span>LinkedIn</span><i class="icon-linkedin"></i></a></li>
-          <li><a href=""><span>YouTube</span><i class="icon-youtube-play"></i></a></li>
-          <li><a href=""><span>Vimeo</span><i class="icon-vimeo"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/aaron-weidele-5a42313a/"><span>LinkedIn</span><i class="icon-linkedin"></i></a></li>
+          <!-- li><a href=""><span>YouTube</span><i class="icon-youtube-play"></i></a></li>
+          <li><a href="https://vimeo.com/user980712"><span>Vimeo</span><i class="icon-vimeo"></i></a></li -->
         </ul>
       </div>
       <div class="col-3">
