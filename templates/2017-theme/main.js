@@ -53,5 +53,6 @@ $(document).ready(function() {
     w = $(window).height();
   });
   
-  
+  $("#feedback").html( $(window).width() );
+	
 });

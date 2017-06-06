@@ -111,6 +111,7 @@ $tgray: #6D6D6D;
 $pageWidth: 1180px;
 $cols: 12;
 $gutter: 20px;
+$breakpointSM: 376px;
 $breakpoint: 668px;
 $breakpointM: 900px;
 $breakpointL: 1024px;
@@ -152,19 +153,19 @@ $headerHeight: 79px;
 }
 
 @for $i from 1 through $cols {
-    .col-#{$i},.col-md-#{$i} {
+    %col-#{$i},%col-md-#{$i} {
       @extend %gridPadding;
   }
 }
 
 @media screen and (min-width: $breakpoint) {
   @for $i from 1 through $cols {
-    .col-#{$i} {
+    %col-#{$i} {
       width: 100% / $cols * $i;
     }
   }
   @for $i from 1 through $cols - 1 {
-    .offset-#{$i} {
+    %offset-#{$i} {
       margin-left: 100% / $cols * $i;
     }
   }
@@ -172,12 +173,12 @@ $headerHeight: 79px;
 
 @media screen and (min-width: $breakpointM) {
   @for $i from 1 through $cols {
-    .col-md-#{$i} {
+    %col-md-#{$i} {
       width: 100% / $cols * $i;
     }
   }
   @for $i from 1 through $cols - 1 {
-    .offset-md-#{$i} {
+    %offset-md-#{$i} {
       margin-left: 100% / $cols * $i;
     }
   }
@@ -185,16 +186,25 @@ $headerHeight: 79px;
 
 @media screen and (min-width: $breakpointL) {
   @for $i from 1 through $cols {
-    .col-lg-#{$i} {
+    %col-lg-#{$i} {
       width: 100% / $cols * $i;
     }
   }
   @for $i from 1 through $cols - 1 {
-    .offset-lg-#{$i} {
+    %offset-lg-#{$i} {
       margin-left: 100% / $cols * $i;
     }
   }
 }
+
+.col-3 { @extend %col-4; }
+.col-4 { @extend %col-4; }
+.col-5 { @extend %col-5; }
+
+.col-lg-3 { @extend %col-lg-3; }
+
+.offset-1 { @extend %offset-1; }
+.offset-3 { @extend %offset-3; }
 
 @import 'keyframes';
 @import 'slider';
@@ -206,14 +216,12 @@ $headerHeight: 79px;
 @import 'footer';
 
 #feedback {
-  /*
-  position: fixed;
-  z-index: 99999;
-  bottom: 10px;
-  right: 10px;
-  background: black;
-  color: white;
-  font-size: 1.1rem;
-  */
+  //position: fixed;
+  //z-index: 99999;
+  //bottom: 10px;
+  //right: 10px;
+  //background: black;
+  //color: white;
+  //font-size: 1.1rem;
   display: none;
 }
