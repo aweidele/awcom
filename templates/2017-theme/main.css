@@ -240,15 +240,16 @@ main h3, main p, main li { font-size: 1.4rem; line-height: 1.4em; }
   .work-timeline > li:nth-child(2n) > div > div:after { top: calc(50% - 6px); left: -6px; }
   .work-timeline > li:nth-child(2n) > strong { left: 0; text-align: right; padding-right: 30px; } }
 @media screen and (min-width: 900px) { .work-timeline { padding: 150px 10px; position: relative; }
-  .work-timeline > li { position: absolute; width: 25%; }
+  .work-timeline > li { position: absolute; width: 20%; }
   .work-timeline > li:before { height: 10px; width: 100%; left: 0; top: -5px; background: #ff9800; }
   .work-timeline > li:after { left: calc(50% - 15px); top: -15px; }
   .work-timeline > li > div { position: absolute; left: 0; width: 100%; padding: 30px 0; }
   .work-timeline > li > strong { width: 100%; }
   .work-timeline > li:nth-child(1) { left: 0%; }
-  .work-timeline > li:nth-child(2) { left: 25%; }
-  .work-timeline > li:nth-child(3) { left: 50%; }
-  .work-timeline > li:nth-child(4) { left: 75%; }
+  .work-timeline > li:nth-child(2) { left: 20%; }
+  .work-timeline > li:nth-child(3) { left: 40%; }
+  .work-timeline > li:nth-child(4) { left: 60%; }
+  .work-timeline > li:nth-child(5) { left: 80%; }
   .work-timeline > li:nth-child(2n) > div { top: 0; }
   .work-timeline > li:nth-child(2n) > div > div:after { top: -6px; left: calc(50% - 6px); }
   .work-timeline > li:nth-child(2n) > strong { bottom: 30px; }
