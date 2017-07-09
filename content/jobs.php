@@ -21,13 +21,11 @@ $jobs = array(
 		'position' => 'Front End Developer',
 		'start' => 2016,
 	),
-	/*
 	'fastspot' => array(
 		'company' => 'Fastspot',
 		'position' => 'Web Developer',
 		'start' => 2017,
 	),
-	*/
 );
 
 ?>
