@@ -1,0 +1,31 @@
+{
+  "name": "awcom",
+  "version": "1.0.0",
+  "description": "2018 theme, and redoing the site using Twig",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aweidele/awcom.git"
+  },
+  "author": "Aaron Weidele",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aweidele/awcom/issues"
+  },
+  "homepage": "https://github.com/aweidele/awcom#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-uglify": "^3.0.0",
+    "pump": "^1.0.2",
+    "gulp-twig": "^1.1.1"
+  }
+}
