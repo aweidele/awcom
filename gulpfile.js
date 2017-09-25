@@ -6,6 +6,8 @@ var uglify = require('gulp-uglify');
 var pump = require('pump');
 var twig = require('gulp-twig');
 
+var packageJSON = require('./package.json');
+
 var sassOptions = {
   errLogToConsole: true,
   outputStyle: 'expanded'
@@ -40,14 +42,7 @@ gulp.task('compile', function () {
     var twig = require('gulp-twig');
     return gulp.src('src/twig/index.twig')
         .pipe(twig({
-            data: {
-                title: 'Aaron Weidele',
-                benefits: [
-                    'Fast',
-                    'Flexible',
-                    'Secure'
-                ]
-            }
+            data: packageJSON
         }))
         .pipe(gulp.dest('./'));
 });

@@ -27,5 +27,9 @@
     "gulp-uglify": "^3.0.0",
     "pump": "^1.0.2",
     "gulp-twig": "^1.1.1"
+  },
+  "site": {
+    "title": "Aaron Weidele",
+    "subtitle": "I like to do things!"
   }
 }
