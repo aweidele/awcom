@@ -1,0 +1,36 @@
+{
+  "title": "Aaron Weidele",
+  "subtitle": "I like to do things!!!!",
+  "experience": [
+    {
+      "year": 1999,
+      "company": "University of Maryland Baltimore County",
+      "position": "New Media Specialist",
+      "url": "http://www.umbc.edu/studio"
+    },
+    {
+      "year": 2010,
+      "company": "North Charles Street Design Organization",
+      "position": "Web Designer/Developer",
+      "url": "http://www.ncsdo.com"
+    },
+    {
+      "year": 2014,
+      "company": "DuClaw Brewing Company",
+      "position": "Front End Developer",
+      "url": "http://www.duclaw.com"
+    },
+    {
+      "year": 2016,
+      "company": "R2integrated",
+      "position": "Front End Developer",
+      "url": "http://www.r2integrated.com"
+    },
+    {
+      "year": 2017,
+      "company": "Fastspot",
+      "position": "Web Developer",
+      "url": "http://www.fastspot.com"
+    }
+  ]
+}

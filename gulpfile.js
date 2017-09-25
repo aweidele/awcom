@@ -6,7 +6,7 @@ var uglify = require('gulp-uglify');
 var pump = require('pump');
 var twig = require('gulp-twig');
 
-var packageJSON = require('./package.json');
+var content = require('./src/content/content.json');
 
 var sassOptions = {
   errLogToConsole: true,
@@ -42,7 +42,7 @@ gulp.task('compile', function () {
     var twig = require('gulp-twig');
     return gulp.src('src/twig/index.twig')
         .pipe(twig({
-            data: packageJSON
+            data: content
         }))
         .pipe(gulp.dest('./'));
 });
