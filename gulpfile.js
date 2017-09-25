@@ -41,7 +41,7 @@ gulp.task('compile', function () {
     return gulp.src('src/twig/index.twig')
         .pipe(twig({
             data: {
-                title: 'Gulp and Twig',
+                title: 'Aaron Weidele',
                 benefits: [
                     'Fast',
                     'Flexible',
