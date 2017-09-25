@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-  <title>{{title}}</title>
+  <title>{{title}} | {{subtitle}}</title>
 </head>
 <body>
   <h1>{{title}}</h1>
@@ -10,6 +10,7 @@
     {% for work in experience %}
       <li>{{work.year}} - <a href="{{work.url}}" target="_blank">{{work.company}}</a> - {{work.position}}</li>
     {% endfor %}
+
   </ul>
 </body>
 </html>

@@ -47,8 +47,19 @@ gulp.task('compile', function () {
         .pipe(gulp.dest('./'));
 });
 
+gulp.task('reset',function(done) {
+  try {
+    content = require('./src/content/content.json');
+  } catch(e) {
+    console.error("Failed to reload content.json! Error: ", e);
+  }
+
+  done();
+});
+
 gulp.task('watch', function(){
   gulp.watch('src/sass/**/*.scss', ['sass']);
   gulp.watch('src/js/**/*.js', ['compress']);
   gulp.watch('src/twig/**/*.twig', ['compile']);
+  gulp.watch('src/content/content.json', ['reset','compile']);
 });
