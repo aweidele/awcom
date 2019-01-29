@@ -6,6 +6,7 @@ var pxtorem = require('gulp-pxtorem');
 var concat = require('gulp-concat');
 var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
+var twig = require('gulp-twig');
 var pump = require('pump');
 // var iconfont = require('gulp-iconfont');
 // var iconfontCss = require('gulp-iconfont-css');
@@ -60,6 +61,12 @@ gulp.task('iconfont', function(){
     .pipe(gulp.dest('docroot/fonts/'));
 });
 
+gulp.task('compile', function () {
+  'use strict';
+  return gulp.src(['src/twig/**/*.twig','!src/twig/layouts/**/*.twig','!src/twig/components/**/*.twig'])
+    .pipe(twig())
+    .pipe(gulp.dest('docroot/'));
+});
 
 gulp.task('watch', function(){
   gulp.watch('src/sass/**/*.scss', ['sass']);
