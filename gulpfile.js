@@ -22,42 +22,42 @@ var autoprefixerOptions = {
 
 var jsQueue = [
   'node_modules/jquery/dist/jquery.js',
-  'js/*.js'
+  'src/js/*.js'
 ];
 
 gulp.task('sass', function(){
   return gulp
-    .src('sass/style.scss')
+    .src('src/sass/style.scss')
     .pipe(sourcemaps.init())
     .pipe(sass(sassOptions).on('error', sass.logError))
     //.pipe(sourcemaps.write())
     .pipe(autoprefixer(autoprefixerOptions))
     .pipe(pxtorem())
-    .pipe(gulp.dest('../docroot/css/'))
+    .pipe(gulp.dest('docroot/css/'))
 });
 
 gulp.task('compress', function() {
   return gulp.src(jsQueue)
     .pipe(concat('scripts.js'))
-    .pipe(gulp.dest('../docroot/js'))
+    .pipe(gulp.dest('docroot/js'))
     .pipe(rename('site.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('../docroot/js'));
+    .pipe(gulp.dest('docroot/js'));
 });
 
 gulp.task('iconfont', function(){
   gulp.src(['src/icons/*.svg'])
     .pipe(iconfontCss({
-      fontName: 'petel_glyphs',
-      targetPath: '../src/sass/_icons.scss',
-      fontPath: '../fonts/'
+      fontName: 'aw_glyphs',
+      targetPath: 'src/sass/_icons.scss',
+      fontPath: 'fonts/'
     }))
     .pipe(iconfont({
-      fontName: 'rethink_glyphs',
+      fontName: 'aw_glyphs',
       normalize:true,
       fontHeight: 1001
      }))
-    .pipe(gulp.dest('fonts/'));
+    .pipe(gulp.dest('docroot/fonts/'));
 });
 
 
