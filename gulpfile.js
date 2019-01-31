@@ -8,6 +8,7 @@ var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
 var twig = require('gulp-twig');
 var pump = require('pump');
+var server = require('gulp-webserver');
 
 var content = require('./src/content/site.json');
 // var iconfont = require('gulp-iconfont');
@@ -72,6 +73,15 @@ gulp.task('compile', function () {
     .pipe(gulp.dest('docroot/'));
 });
 
+gulp.task('server', function() {
+  gulp.src('docroot')	// <-- your app folder
+    .pipe(server({
+      livereload: true,
+      open: true,
+      port: 1234	// set a port to avoid conflicts with other local apps
+    }));
+});
+
 gulp.task('watch', function(){
   gulp.watch('src/sass/**/*.scss', ['sass']);
   gulp.watch('src/js/**/*.js', ['compress']);
@@ -79,4 +89,4 @@ gulp.task('watch', function(){
   //gulp.watch('src/icons/**/*.svg', ['iconfont','sass']);
 });
 
-gulp.task('default', ['sass', 'compress', 'compile', 'watch']);
+gulp.task('default', ['sass', 'compress', 'compile', 'watch', 'server']);
