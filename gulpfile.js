@@ -8,7 +8,8 @@ var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
 var twig = require('gulp-twig');
 var pump = require('pump');
-var data = require('gulp-data');
+
+var content = require('./src/content/site.json');
 // var iconfont = require('gulp-iconfont');
 // var iconfontCss = require('gulp-iconfont-css');
 
@@ -65,12 +66,9 @@ gulp.task('iconfont', function(){
 gulp.task('compile', function () {
   'use strict';
   return gulp.src(['src/twig/**/*.twig','!src/twig/templates/**/*.twig'])
-    .pipe(twig(
-      data(function(file) {
-        return JSON.parse(fs.readFileSync('src/content/site.json'));
-      })
-    )
-    )
+    .pipe(twig({
+      data: content
+    }))
     .pipe(gulp.dest('docroot/'));
 });
 
