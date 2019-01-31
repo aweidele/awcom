@@ -64,7 +64,7 @@ gulp.task('iconfont', function(){
 
 gulp.task('compile', function () {
   'use strict';
-  return gulp.src(['src/twig/**/*.twig','!src/twig/layouts/**/*.twig','!src/twig/components/**/*.twig'])
+  return gulp.src(['src/twig/**/*.twig','!src/twig/templates/**/*.twig'])
     .pipe(twig(
       data(function(file) {
         return JSON.parse(fs.readFileSync('src/content/site.json'));
@@ -77,7 +77,8 @@ gulp.task('compile', function () {
 gulp.task('watch', function(){
   gulp.watch('src/sass/**/*.scss', ['sass']);
   gulp.watch('src/js/**/*.js', ['compress']);
+  gulp.watch('src/twig/**/*.twig', ['compile']);
   //gulp.watch('src/icons/**/*.svg', ['iconfont','sass']);
 });
 
-gulp.task('default', ['sass', 'compress', 'watch']);
+gulp.task('default', ['sass', 'compress', 'compile', 'watch']);
