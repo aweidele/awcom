@@ -1,0 +1,155 @@
+$headerHeight: 79px;
+
+@keyframes menuTopOpen {
+  0% { }
+}
+
+header {
+  background-color: $primary;
+  height: $headerHeight;
+  > div {
+    > a {
+      display: block;
+      float: left;
+      color: $tertiary;
+      @extend %clearfix;
+      > svg {
+        width: 56px;
+        height: auto;
+        display: block;
+        float: left;
+        margin-top: ($headerHeight - 47) / 2;
+        @media screen and (max-width: $breakpoint - 1) {
+          margin-left: 4px;
+        }
+        
+        polygon {
+          transition: all 0.25s;
+        }
+      }
+      h1 {
+        float: left;
+        font-size: 2.1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        line-height: $headerHeight;
+        margin-left: 7px;
+      }
+      
+      &:hover {
+        > svg {
+          .inner-hex {
+            fill: rgba($tertiary,0.75);
+            //transform: rotate(90deg);
+          }
+          .outer-hex {
+            //transform: rotate(-90deg);
+          }
+        }
+      }
+      
+    }
+  
+    > nav {
+      
+      @media screen and (max-width: $breakpoint - 1) {
+        background-color: $tertiary;
+        position: fixed;
+        width: 100%;
+        height: calc(100vh - #{$headerHeight});
+        top: $headerHeight;
+        left: 100%;
+        transition: left 0.25s;
+        &.open {
+          left: 0;
+        }
+      }
+      
+      @media screen and (min-width: $breakpoint) {
+        float: right;
+          li {
+            float: left;
+          }
+      }
+    }
+    
+    > button {
+      float: right;
+      background-color: transparent;
+      border: 0;
+      cursor: pointer;
+      width: 44px;
+      height: $headerHeight;
+      position: relative;
+      
+      &:before, &:after {
+        content: " ";
+      }
+      
+      > i, &:before, &:after {
+        width: 30px;
+        height: 6px;
+        background-color: #FFFFFF;
+        position: absolute;
+        left: 0px;
+      }
+      
+      > i {
+        top: 36px;
+      }
+      
+      &:before {
+        top: 24px;
+      }
+      
+      &:after {
+        top: 48px;
+      }
+      
+      > span {
+        @extend %positionOff;
+      }
+      
+      
+      &.open {
+        i {
+          opacity: 0;
+          -webkit-animation: buttonMiddleOpen 0.25s;
+          animation: buttonMiddleOpen 0.25s;
+        }
+        &:before {
+          -webkit-transform: translateY(12px) rotate(45deg);
+          transform: translateY(12px) rotate(45deg);
+          -webkit-animation: buttonTopOpen 0.25s;
+          animation: buttonTopOpen 0.25s;
+        }
+        &:after {
+          -webkit-transform: translateY(-12px) rotate(-45deg);
+          transform: translateY(-12px) rotate(-45deg);
+          -webkit-animation: buttonBottomOpen 0.25s;
+          animation: buttonBottomOpen 0.25s;
+        }
+      }
+  
+      &.closed {
+        i {
+          -webkit-animation: buttonMiddleClose 0.25s;
+          animation: buttonMiddleClose 0.25s;
+        }
+        &:before {
+          -webkit-animation: buttonTopClose 0.25s;
+          animation: buttonTopClose 0.25s;
+        }
+        &:after {
+          -webkit-animation: buttonBottomClose 0.25s;
+          animation: buttonBottomClose 0.25s;
+        }
+      }
+      
+      @media screen and (min-width: $breakpoint) {
+        display: none;
+      }
+    }
+
+  }
+}

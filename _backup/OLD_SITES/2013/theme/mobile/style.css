@@ -1,0 +1,199 @@
+/****************/
+/** INITIALIZE **/
+/****************/
+
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,700italic,400italic,200,200italic);
+
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+ul { list-style: none; }
+
+.clear { clear: both; }
+
+body { 
+  font-family: 'Source Sans Pro', sans-serif; 
+  color: #162730;
+  background-color: #8FB9CF;
+  background-image: url('../image/background.png');
+  background-attachment: fixed;
+  }
+
+#wrapper_header,#wrapper_content,#wrapper_footer {
+  width: 100%;
+}
+
+
+/** HEADER **/
+#wrapper_header {
+background-image: linear-gradient(top, rgba(37,66,82,1) 0%, rgba(22,39,48,0.9) 100%);
+background-image: -o-linear-gradient(top, rgba(37,66,82,1) 0%, rgba(22,39,48,0.9) 100%);
+background-image: -moz-linear-gradient(top, rgba(37,66,82,1) 0%, rgba(22,39,48,0.9) 100%);
+background-image: -webkit-linear-gradient(top, rgba(37,66,82,1) 0%, rgba(22,39,48,0.9) 100%);
+background-image: -ms-linear-gradient(top, rgba(37,66,82,1) 0%, rgba(22,39,48,0.9) 100%);
+
+background-image: -webkit-gradient(
+	linear,
+	right top,
+	right bottom,
+	color-stop(0, rgba(37,66,82,0.9)),
+	color-stop(1, rgba(22,39,48,0.9))
+);
+}
+
+#container_header h1 {
+  color: #FFFFFF;
+  font-weight: 200;
+  font-size: 1.313em;
+  line-height: 86px;
+  width: 260px;
+  margin: auto;
+  
+  background-image: url("image/logo.png");
+  background-repeat: no-repeat;
+  background-position: top left;
+  
+  text-shadow: 1px 1px 2px #000000;
+}
+
+#container_header h1 a {
+  color: #FFFFFF;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  display: block;
+  text-indent: 70px;
+}
+
+#container_header h1 strong {
+  font-weight: 700;
+  color: #FFB833;
+}
+
+#container_header ul { list-style: none; }
+
+#container_header ul li {
+  text-transform: uppercase;
+  font-size: 0.875em;
+  line-height: 1em;
+  font-weight: 700;
+  text-align: center;
+  
+  text-shadow: 1px 1px 2px #000000;
+  border-top: 1px solid #FFFFFF;
+}
+
+#container_header ul li a {
+  color: #FFFFFF;
+  text-decoration: none;
+  display: block;
+  padding: 0.5em 0px;
+}
+
+#container_header ul li:hover,#container_header ul li.active { background-color: #FFB833; }
+
+
+/** CONTENT **/
+#container_content {
+  width: 98%;
+  margin: auto;
+}
+
+#container_content h2 {
+  font-size: 3em;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  line-height: 1em;
+  margin: 0.5em 0;
+  
+  text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+}
+
+
+.portfolio_item {
+  margin: 1em 0;
+}
+
+.portfolio_item img {
+  width: 90%;
+  height: auto;
+  display: block;
+  margin-bottom: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid rgb(22,39,48)
+  
+  -moz-box-shadow: 0px 0px 2px rgba(0,0,0,0.8);
+  -webkit-box-shadow: 0px 0px 2px rgba(0,0,0,0.8);
+  box-shadow: 0px 0px 2px rgba(0,0,0,0.8);
+}
+
+.portfolio_item h3,
+.portfolio_item p {
+  width: 85%;
+  margin: auto;
+  text-align: center;
+}
+
+.portfolio_item h3 { font-size: 1em; }
+.portfolio_item p { font-size: 0.813em; }
+.portfolio_item a {
+  color: #162730;
+  font-weight: bold;
+}
+
+h3.cv_label {
+    font-size: 1.5em;
+}
+
+.cv_section ul {
+  margin-bottom: 2em;
+}
+
+.cv_section li { margin-bottom: 0.5em; }
+
+p.contact { font-size: 1.5em; line-height: 1em; margin: 0 auto 1em auto; }
+p.contact a { color: #2a4b5c; }
+p.contact a.linkedin {
+  display: block;
+  background-image: url("image/linkedin.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 28px;
+}
+
+
+/************/
+/** FOOTER **/
+/************/
+#wrapper_footer {
+  z-index: 100;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  margin-top: 2em;
+  font-weight: bold;
+  
+background-image: linear-gradient(top, rgba(37,66,82,1) 0%, rgba(22,39,48,0.9) 100%);
+background-image: -o-linear-gradient(top, rgba(37,66,82,1) 0%, rgba(22,39,48,0.9) 100%);
+background-image: -moz-linear-gradient(top, rgba(37,66,82,1) 0%, rgba(22,39,48,0.9) 100%);
+background-image: -webkit-linear-gradient(top, rgba(37,66,82,1) 0%, rgba(22,39,48,0.9) 100%);
+background-image: -ms-linear-gradient(top, rgba(37,66,82,1) 0%, rgba(22,39,48,0.9) 100%);
+
+background-image: -webkit-gradient(
+	linear,
+	right top,
+	right bottom,
+	color-stop(0, rgba(37,66,82,0.9)),
+	color-stop(1, rgba(22,39,48,0.9))
+);
+}
+
+#wrapper_footer a { color: #FFFFFF; display: block; padding: 0.5em 0; }
