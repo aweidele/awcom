@@ -1,5 +1,26 @@
 {
   "site": {
-    "title": "Aaron Weidele???"
+    "title": "Aaron Weidele",
+    "subtitle": "Web Developer, Web Designer, and Animator in Baltimore, Maryland"
+  },
+  "content": {
+    "sections": [
+      {
+        "id": "web",
+        "title": "Web Development"
+      },
+      {
+        "id": "motion",
+        "title": "Motion"
+      },
+      {
+        "id": "experience",
+        "title": "Work Experience"
+      },
+      {
+        "id": "contact",
+        "title": "Contact"
+      }
+    ]
   }
 }

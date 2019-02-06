@@ -1,11 +1,12 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-  <title>{{ site.title }}</title>
+  <title>{{ site.title }} | {{ site.subtitle }}</title>
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
   <header>
-    Header
+    {% include '..//components/header.twig' %}
   </header>
   <main>
     {% block page %}{% endblock %}

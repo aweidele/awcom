@@ -2,5 +2,16 @@
 {% block page %}
   <h1>It's working!!!</h1>
   <p>Potato?</p>
-  {% include 'templates/components/test.twig' %}
+  {% include 'templates/components/test.twig' with {
+    content: [
+      {
+        title: 'This is the first test',
+        description: 'A description'
+      },
+      {
+        title: 'The second test',
+        description: 'And another description'
+      }
+    ]
+  } %}
 {% endblock %}
