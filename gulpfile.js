@@ -8,6 +8,7 @@ var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
 var twig = require('gulp-twig');
 var pump = require('pump');
+var imagemin = require('gulp-imagemin');
 var server = require('gulp-webserver');
 
 var content = require('./src/content/site.json');
