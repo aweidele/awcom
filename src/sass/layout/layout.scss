@@ -1,0 +1,9 @@
+.row {
+  width: $layout-width;
+  display: flex;
+  margin: auto;
+
+  &.center {
+    justify-content: center;
+  }
+}

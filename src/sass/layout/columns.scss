@@ -1,0 +1,7 @@
+.col {
+  padding: 0 $gutter / 2;
+}
+
+.col-10 {
+  @include col(10);
+}
