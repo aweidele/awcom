@@ -74,6 +74,12 @@ gulp.task('compile', function () {
     .pipe(gulp.dest('docroot/'));
 });
 
+gulp.task('images', function() {
+    return gulp.src('src/images/**/*')
+    .pipe(imagemin())
+    .pipe(gulp.dest('docroot/images'));
+});
+
 gulp.task('server', function() {
   gulp.src('docroot')	// <-- your app folder
     .pipe(server({
@@ -87,6 +93,7 @@ gulp.task('watch', function(){
   gulp.watch('src/sass/**/*.scss', ['sass']);
   gulp.watch('src/js/**/*.js', ['compress']);
   gulp.watch('src/twig/**/*.twig', ['compile']);
+  gulp.watch('src/images/**/*', ['images']);
   //gulp.watch('src/icons/**/*.svg', ['iconfont','sass']);
 });
 

@@ -1,0 +1,20 @@
+.header_inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+
+  h1 {
+    display: flex;
+    align-items: center;
+    @include fw-bold;
+    font-size: 24px;
+    text-transform: uppercase;
+
+    svg {
+      width: 56px;
+      height: 47px;
+      margin-right: $gutter / 2;
+    }
+  }
+}
