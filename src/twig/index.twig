@@ -1,17 +1,8 @@
 {% extends "templates/layouts/layout.twig" %}
 {% block page %}
-  <h1>It's working!!!</h1>
-  <p>Potato?</p>
-  {% include 'templates/components/test.twig' with {
-    content: [
-      {
-        title: 'This is the first test',
-        description: 'A description'
-      },
-      {
-        title: 'The second test',
-        description: 'And another description'
-      }
-    ]
-  } %}
+  {% for section in content.sections %}
+    {% include "templates/components/" ~ section.layout ~ ".twig" with {
+      "content": section.content
+    } %}
+  {% endfor  %}
 {% endblock %}

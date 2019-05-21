@@ -7,19 +7,55 @@
     "sections": [
       {
         "id": "web",
-        "title": "Web Development"
+        "title": "Web Development",
+        "layout": "portfolio",
+        "content": {
+          "skills": [
+            "Adobe Creative Suite (Photoshop, Illustrator, InDesign)",
+            "HTML 5",
+            "CSS 3/SASS/LESS",
+            "PHP",
+            "Javascript/JQuery",
+            "Sitecore",
+            "Wordpress",
+            "Drupal 8",
+            "Git",
+            "SourceTree",
+            "Jira",
+            "Shopify",
+            "MailChimp/MailChimp",
+            "API",
+            "MySQL",
+            "PayPal/Payflow",
+            "Web",
+            "Prototyping tools (Axure, Balsamic, HotGloo)",
+            "UX Design",
+            "Usability Testing"
+          ]
+        }
       },
       {
         "id": "motion",
-        "title": "Motion"
+        "title": "Motion",
+        "layout": "portfolio",
+        "content": {
+          "skills": [
+            "Adobe Creative Suite (Photoshop, Illustrator, InDesign)",
+            "Blah"
+          ]
+        }
       },
       {
         "id": "experience",
-        "title": "Work Experience"
+        "title": "Work Experience",
+        "layout": "cv",
+        "content": ""
       },
       {
         "id": "contact",
-        "title": "Contact"
+        "title": "Contact",
+        "layout": "contact",
+        "content": ""
       }
     ]
   }
