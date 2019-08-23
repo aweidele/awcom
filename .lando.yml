@@ -1,0 +1,4 @@
+name: aw
+recipe: lamp
+config:
+  webroot: docroot

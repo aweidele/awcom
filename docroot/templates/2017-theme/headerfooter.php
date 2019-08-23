@@ -30,7 +30,7 @@
   <main>
 <?php foreach($content as $a => $page) { ?>
 
-<?php include($root_uri.'/content/'.$page); ?>
+<?php include($root_uri.'content/'.$page); ?>
 
 <?php } ?>
   </main>
@@ -46,7 +46,7 @@
       </div>
       <div class="col-3">
         <h2>Contact</h2>
-        <?php include($root_uri.'/content/contact.php'); ?>
+        <?php include($root_uri.'content/contact.php'); ?>
       </div>
     </div>
   </footer>

@@ -1,6 +1,9 @@
 <?php
   require_once('content/content.php');
-  require_once('content/settings.php');
+  if(!require_once('content/settings.local.php')) {
+    echo "meh";
+    require_once('content/settings.php');
+  }
   if(isset($_GET['p']) && $_GET['p'] != '') {
     $p = $_GET['p'];
   } else {
@@ -14,5 +17,5 @@
     $p = '404';
   }
 
-  require_once($root_uri.'/templates/'.$theme.'/headerfooter.php');
+  require_once($root_uri.'templates/'.$theme.'/headerfooter.php');
 ?>
