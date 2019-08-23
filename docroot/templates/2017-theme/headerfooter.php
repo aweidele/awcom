@@ -46,6 +46,7 @@
       </div>
       <div class="col-3">
         <h2>Contact</h2>
+        <?= $root_uri ?>
         <?php include($root_uri.'content/contact.php'); ?>
       </div>
     </div>
