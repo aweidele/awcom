@@ -1,19 +1,18 @@
-<section>
-  <h2>Portfolio.</h2>
-  <ul>
-    {% for skill in content.skills %}
-    <li>{{ skill }}</li>
-    {% endfor %}
-  </ul>
-  <div>
-    {% for work in content.work %}
-    <article>
-      <img src="/images/{{ work.img }}">
-      <h3>{{ work.title }}</h3>
-      <p>{{ work.description }}</p>
-      <p><a href="{{ work.url }}" target="_blank" aria-label="Launch Project: {{ work.title }}">Launch Site</a></p>
-      <div>{{ work.platform }}</div>
-    </article>
-    {% endfor %}
-  </div>
-</section>
+
+    <h2>Portfolio.</h2>
+    <ul>
+      {% for skill in content.skills %}
+      <li>{{ skill }}</li>
+      {% endfor %}
+    </ul>
+    <div>
+      {% for work in content.work %}
+      <article>
+        <img src="/images/{{ work.img }}">
+        <h3>{{ work.title }}</h3>
+        <p>{{ work.description }}</p>
+        <p><a href="{{ work.url }}" target="_blank" aria-label="Launch Project: {{ work.title }}">Launch Site</a></p>
+        <div>{{ work.platform }}</div>
+      </article>
+      {% endfor %}
+    </div>

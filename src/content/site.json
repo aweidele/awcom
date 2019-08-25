@@ -3,8 +3,23 @@
     "title": "Aaron Weidele",
     "subtitle": "Web Developer, Web Designer, and Animator in Baltimore, Maryland"
   },
+  "nav": [
+    {
+      "url": "#web",
+      "label": "Web Development"
+    }
+  ],
   "content": {
     "sections": [
+      {
+        "id": "top",
+        "title": "Intro",
+        "layout": "intro",
+        "content": {
+          "line1": "Hello",
+          "line2": "I'm Aaron. I am a web developer and a designer in Baltimore, MD."
+        }
+      },
       {
         "id": "web",
         "title": "Web Development",
@@ -16,9 +31,9 @@
             "CSS 3/SASS/LESS",
             "PHP",
             "Javascript/JQuery",
-            "Sitecore",
-            "Wordpress",
             "Drupal 8",
+            "Wordpress",
+            "Sitecore",
             "Git",
             "SourceTree",
             "Jira",

@@ -1,8 +1,10 @@
 {% extends "templates/layouts/layout.twig" %}
 {% block page %}
   {% for section in content.sections %}
+    <section id="{{ section.id }}">
     {% include "templates/components/" ~ section.layout ~ ".twig" with {
       "content": section.content
     } %}
+    </section>
   {% endfor  %}
 {% endblock %}

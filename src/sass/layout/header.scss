@@ -5,16 +5,57 @@
   padding: 16px 0;
 
   h1 {
-    display: flex;
-    align-items: center;
-    @include fw-bold;
-    font-size: 24px;
-    text-transform: uppercase;
+    a {
+      display: flex;
+      align-items: center;
+      @include fw-bold;
+      font-size: 24px;
+      text-transform: uppercase;
+      color: $secondary;
+      text-decoration: none;
+    }
 
     svg {
       width: 56px;
       height: 47px;
       margin-right: $gutter / 2;
+    }
+  }
+
+  nav {
+    font-size: 14px;
+    text-transform: uppercase;
+
+    ul {
+      display: flex;
+      list-style: none;
+      margin: 0 -10px;
+    }
+
+    a {
+      display: block;
+      position: relative;
+      color: $secondary;
+      text-decoration: none;
+      padding: 0 10px;
+
+      &:after {
+        width: calc(100% - 10px);
+        height: 0px;
+        position: absolute;
+        left: 5px;
+        bottom: -3px;
+        content: "";
+        background: $secondary;
+        transition: all .25s;
+      }
+
+      &:hover,
+      &:focus {
+        &:after {
+          height: 3px;
+        }
+      }
     }
   }
 }
