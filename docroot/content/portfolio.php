@@ -1,13 +1,13 @@
 <?php
 
   $clients['web'] = array(
-    // 'bluetooth' => array(
-    //   'name' => 'Bluetooth Technology Website',
-    //   'description' => 'Sitecore website for technology company',
-    //   'url' => 'https://www.bluetooth.com/',
-    //   'image' => 'bt.jpg',
-    //   'tech' => array('sitecore'),
-    // ),
+    'bluetooth' => array(
+      'name' => 'Bluetooth Technology Website',
+      'description' => 'Sitecore website for technology company',
+      'url' => 'https://web.archive.org/web/20170103105044/https://www.bluetooth.com/',
+      'image' => 'bt.jpg',
+      'tech' => array('sitecore'),
+    ),
     'ma' => array(
       'name' => 'Morris Adjmi Architects',
       'description' => 'Custom Wordpress theme for New York-based architect',
