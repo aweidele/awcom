@@ -1,4 +1,3 @@
-<h1>?????</h1>
 <?php
   require_once('content/content.php');
   // if(!require_once('content/settings.local.php')) {

@@ -1,13 +1,13 @@
 <?php
 
   $clients['web'] = array(
-    'bluetooth' => array(
-      'name' => 'Bluetooth Technology Website',
-      'description' => 'Sitecore website for technology company',
-      'url' => 'https://www.bluetooth.com/',
-      'image' => 'bt.jpg',
-      'tech' => array('sitecore'),
-    ),
+    // 'bluetooth' => array(
+    //   'name' => 'Bluetooth Technology Website',
+    //   'description' => 'Sitecore website for technology company',
+    //   'url' => 'https://www.bluetooth.com/',
+    //   'image' => 'bt.jpg',
+    //   'tech' => array('sitecore'),
+    // ),
     'ma' => array(
       'name' => 'Morris Adjmi Architects',
       'description' => 'Custom Wordpress theme for New York-based architect',
@@ -28,13 +28,13 @@
       'image' => 'ck.jpg',
       'tech' => array('wordpress'),
     ),
-    'max' => array(
-      'name' => 'Max Credit Union',
-      'description' => 'Built Sitecore components for Alabama-based credit union',
-      'url' => 'https://www.mymax.com/',
-      'image' => 'max.jpg',
-      'tech' => array('sitecore'),
-    ),
+    // 'max' => array(
+    //   'name' => 'Max Credit Union',
+    //   'description' => 'Built Sitecore components for Alabama-based credit union',
+    //   'url' => 'https://www.mymax.com/',
+    //   'image' => 'max.jpg',
+    //   'tech' => array('sitecore'),
+    // ),
     'dorfest' => array(
       'name' => 'DuClaw Brewing Company: Day of Retribution',
       'description' => 'Front-end development for brewery festival site',
@@ -69,18 +69,18 @@
       'image' => 'fma.jpg',
       'tech' => array('wordpress'),
     ),
-    'penn' => array(
-      'name' => 'University of Pennsylvania',
-      'description' => 'Responsive web design and development for University search campaign site',
-      'url' => 'http://clients.ncsdo.com/client/u37/114_2014_spring_search/microsite_slide/',
-      'image' => 'penn.jpg',
-    ),
-    'barnard' => array(
-      'name' => 'Barnard College',
-      'description' => 'Responsive web site for University search campaign site',
-      'url' => 'http://clients.ncsdo.com/client/b07/B07535-2016-eSearch/SITE/',
-      'image' => 'barnard.jpg',
-    ),
+    // 'penn' => array(
+    //   'name' => 'University of Pennsylvania',
+    //   'description' => 'Responsive web design and development for University search campaign site',
+    //   'url' => 'http://clients.ncsdo.com/client/u37/114_2014_spring_search/microsite_slide/',
+    //   'image' => 'penn.jpg',
+    // ),
+    // 'barnard' => array(
+    //   'name' => 'Barnard College',
+    //   'description' => 'Responsive web site for University search campaign site',
+    //   'url' => 'http://clients.ncsdo.com/client/b07/B07535-2016-eSearch/SITE/',
+    //   'image' => 'barnard.jpg',
+    // ),
   );
 
   $clients['motion'] = array(
