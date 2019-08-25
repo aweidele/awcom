@@ -1,9 +1,9 @@
 <?php
   require_once('content/content.php');
-  if(!require_once('content/settings.local.php')) {
-    echo "meh";
+  // if(!require_once('content/settings.local.php')) {
+  //   echo "meh";
     require_once('content/settings.php');
-  }
+  // }
   if(isset($_GET['p']) && $_GET['p'] != '') {
     $p = $_GET['p'];
   } else {
