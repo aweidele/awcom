@@ -17,7 +17,7 @@
         "layout": "intro",
         "content": {
           "line1": "Hello",
-          "line2": "I'm Aaron. I am a web developer and a designer in Baltimore, MD."
+          "line2": "<strong>I'm Aaron.</strong> I am a <strong>web developer</strong> and a <strong>designer</strong> in Baltimore, MD."
         }
       },
       {

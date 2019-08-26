@@ -1,0 +1,33 @@
+&.intro {
+  padding: 100px;
+
+  @media #{$mediaTablet} {
+    padding-top: 200px;
+  }
+
+  @media #{$mediaDesktop} {
+    padding-top: 302px
+  }
+  
+  h2 {
+    font-size: 76px;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+
+    small {
+      display: block;
+      font-size: 18px;
+      margin-top: (28 / 29) * -1em;
+    }
+
+    @media #{$mediaTablet} {
+      font-size: 123px;
+      text-align: right;
+
+      small {
+      font-size: 29px;
+      }
+    }
+  }
+}
