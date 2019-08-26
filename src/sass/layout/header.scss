@@ -21,12 +21,18 @@ body > header {
       text-transform: uppercase;
       color: $secondary;
       text-decoration: none;
+
+      &:hover,
+      &:focus {
+        color: $primary;
+      }
     }
 
     svg {
       width: 56px;
       height: 47px;
       margin-right: $gutter / 2;
+      fill: currentColor;
     }
   }
 
