@@ -47,7 +47,13 @@
 }
 
 @media screen and (min-width: 1025px) {
-  .col-lg-5 {
+  .col-lg-6 {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1240px) {
+  .col-xl-5 {
     width: 41.66667%;
   }
 }
@@ -135,6 +141,8 @@ body {
 }
 
 .section.intro {
+  background: #E6E6E6;
+  color: #383838;
   padding: 100px;
 }
 

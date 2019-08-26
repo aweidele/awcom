@@ -33,7 +33,13 @@
 }
 
 @media #{$mediaDesktop} {
-  .col-lg-5 {
+  .col-lg-6 {
+    @include col(6);
+  }
+}
+
+@media #{$mediaFull} {
+  .col-xl-5 {
     @include col(5);
   }
 }

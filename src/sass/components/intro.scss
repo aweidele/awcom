@@ -1,4 +1,6 @@
 &.intro {
+  background: $gray_90;
+  color: $secondary;
   padding: 100px;
 
   @media #{$mediaTablet} {
@@ -8,7 +10,7 @@
   @media #{$mediaDesktop} {
     padding-top: 302px
   }
-  
+
   h2 {
     font-size: 76px;
     font-weight: 300;

@@ -10,9 +10,8 @@
     }
   ],
   "content": {
-    "sections": [
-      {
-        "id": "top",
+    "sections": {
+      "top": {
         "title": "Intro",
         "layout": "intro",
         "content": {
@@ -20,7 +19,7 @@
           "line2": "<strong>I'm Aaron.</strong> I am a <strong>web developer</strong> and a <strong>designer</strong> in Baltimore, MD."
         }
       },
-      {
+      "web": {
         "id": "web",
         "title": "Web Development",
         "layout": "portfolio",
@@ -57,30 +56,7 @@
             }
           ]
         }
-      },
-      {
-        "id": "motion",
-        "title": "Motion",
-        "layout": "portfolio",
-        "content": {
-          "skills": [
-            "Adobe Creative Suite (Photoshop, Illustrator, InDesign)",
-            "Blah"
-          ]
-        }
-      },
-      {
-        "id": "experience",
-        "title": "Work Experience",
-        "layout": "cv",
-        "content": ""
-      },
-      {
-        "id": "contact",
-        "title": "Contact",
-        "layout": "contact",
-        "content": ""
       }
-    ]
+    }
   }
 }

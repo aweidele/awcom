@@ -4,8 +4,9 @@ $font-family: 'Open Sans Condensed', sans-serif;
 $black: #000000;
 $white: #FFFFFF;
 
+$gray_90: #E6E6E6;
 $gray_75: #BFBFBF;
-$gray_50: #7F7F7F;
+$gray_50: #9B9B9B;
 $gray_25: #3F3F3F;
 
 $primary: #ff9800;
@@ -21,3 +22,4 @@ $mediaPhone: "screen and (max-width: 767px)";
 $mediaTablet: "screen and (min-width: 768px)";
 $mediaTabletOnly: "screen and (min-width: 768px) and (max-width: 1024px)";
 $mediaDesktop: "screen and (min-width: 1025px)";
+$mediaFull: "screen and (min-width: #{$layout-width})";

@@ -1,10 +1,18 @@
 {% extends "templates/layouts/layout.twig" %}
 {% block page %}
-  {% for section in content.sections %}
+  <header id="top" class="section {{ content.sections.top.layout }}">
+    {% include "templates/components/intro.twig" with {
+      "content": content.sections.top
+    } %}
+  </header>
+  {% include "templates/components/section.twig" with {
+    "section": content.sections.web
+  } %}
+  {#% for section in content.sections %}
     <section id="{{ section.id }}" class="section {{ section.layout }}">
     {% include "templates/components/" ~ section.layout ~ ".twig" with {
       "content": section.content
     } %}
     </section>
-  {% endfor  %}
+  {% endfor  % #}
 {% endblock %}

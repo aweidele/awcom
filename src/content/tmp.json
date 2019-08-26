@@ -1,0 +1,38 @@
+{
+  "id": "web",
+  "title": "Web Development",
+  "layout": "portfolio",
+  "content": {
+    "skills": [
+      "Adobe Creative Suite (Photoshop, Illustrator, InDesign)",
+      "HTML 5",
+      "CSS 3/SASS/LESS",
+      "PHP",
+      "Javascript/JQuery",
+      "Drupal 8",
+      "Wordpress",
+      "Sitecore",
+      "Git",
+      "SourceTree",
+      "Jira",
+      "Shopify",
+      "MailChimp/MailChimp",
+      "API",
+      "MySQL",
+      "PayPal/Payflow",
+      "Web",
+      "Prototyping tools (Axure, Balsamic, HotGloo)",
+      "UX Design",
+      "Usability Testing"
+    ],
+    "work": [
+      {
+        "title": "Morris Adjmi Architects",
+        "description": "Custom Wordpress Theme for New York-based architect",
+        "url": "https://www.ma.com/",
+        "img": "ma.jpg",
+        "platform": "wordpress"
+      }
+    ]
+  }
+}
