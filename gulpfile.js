@@ -27,6 +27,7 @@ var autoprefixerOptions = {
 
 var jsQueue = [
   'node_modules/jquery/dist/jquery.js',
+  'node_modules/owl.carousel2/dist/owl.carousel.js',
   'src/js/*.js'
 ];
 
