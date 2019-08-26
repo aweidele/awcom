@@ -1,8 +1,15 @@
-    <ul>
-      {% for skill in content.skills %}
-      <li>{{ skill }}</li>
-      {% endfor %}
-    </ul>
+  <div class="row">
+    <div class="col-md-8 col-lg-6">
+      <h3>Related Skills</h3>
+      <ul>
+        {% for skill in content.skills %}
+        <li>{{ skill }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8 col-lg-6">
     <div>
       {% for work in content.work %}
       <article>
@@ -14,3 +21,5 @@
       </article>
       {% endfor %}
     </div>
+  </div>
+</div>

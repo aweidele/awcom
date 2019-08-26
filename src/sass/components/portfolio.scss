@@ -1,0 +1,21 @@
+&.portfolio {
+  ul {
+    margin-bottom: (43 / 18) * 1em;
+  }
+  li {
+    font-size: 18px;
+    line-height: (27 / 18) * 1em;
+
+    @media #{$mediaTablet} {
+      display: inline;
+    }
+
+    &:after {
+      content: ", ";
+    }
+
+    &:last-child:after {
+      content: "";
+    }
+  }
+}
