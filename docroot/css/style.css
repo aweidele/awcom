@@ -152,6 +152,11 @@ h2 {
   }
 }
 
+a {
+  -webkit-transition: all .25s;
+  transition: all .25s;
+}
+
 .section {
   position: relative;
   z-index: 100;
@@ -207,4 +212,32 @@ section.section:before {
   .section.intro h2 small {
     font-size: 1.8125rem;
   }
+}
+
+.section.intro a {
+  display: block;
+  width: 100%;
+  position: relative;
+  color: #383838;
+  font-size: 0.875rem;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-top: 24px;
+}
+
+.section.intro a:hover {
+  color: #000000;
+}
+
+.section.intro a span {
+  display: block;
+}
+
+.section.intro a svg {
+  width: 25px;
+  height: 25px;
+  display: block;
+  margin: 0 auto 2px auto;
+  fill: currentColor;
 }

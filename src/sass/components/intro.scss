@@ -30,4 +30,32 @@
       }
     }
   }
+
+  a {
+    display: block;
+    width: 100%;
+    position: relative;
+    color: $secondary;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-top: 24px;
+
+    &:hover {
+      color: $black;
+    }
+
+    span {
+      display: block;
+    }
+
+    svg {
+      width: 25px;
+      height: 25px;
+      display: block;
+      margin: 0 auto 2px auto;
+      fill: currentColor;
+    }
+  }
 }
