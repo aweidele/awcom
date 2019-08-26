@@ -1,3 +1,25 @@
 .section {
+  position: relative;
+  z-index: 100;
+  padding: 31px 0;
+
+  @at-root {
+    section#{&} {
+      &:before {
+        width: 100vw;
+        height: 51px;
+        position: absolute;
+        top: -34px;
+        left: 0;
+
+        content: "";
+        background-image: url(../images/hex.svg);
+        background-repeat: repeat-x;
+        background-position: center;
+      }
+    }
+  }
+
+
   @import "intro";
 }
