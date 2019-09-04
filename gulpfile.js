@@ -10,6 +10,7 @@ var twig = require('gulp-twig');
 var pump = require('pump');
 var imagemin = require('gulp-imagemin');
 var server = require('gulp-webserver');
+var gcmq = require('gulp-group-css-media-queries');
 
 var content = require('./src/content/site.json');
 // var iconfont = require('gulp-iconfont');
@@ -67,6 +68,7 @@ gulp.task('sass', function(){
     .pipe(sourcemaps.init())
     .pipe(sass(sassOptions).on('error', sass.logError))
     //.pipe(sourcemaps.write())
+    .pipe(gcmq())
     .pipe(autoprefixer(autoprefixerOptions))
     .pipe(pxtorem(pxtoremOptions))
     .pipe(gulp.dest('docroot/css/'))

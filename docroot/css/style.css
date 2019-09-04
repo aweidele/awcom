@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700");
+
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +10,7 @@
 /*
  *  Owl Carousel - Core
  */
+
 .owl-carousel {
   display: none;
   width: 100%;
@@ -120,6 +122,7 @@
 }
 
 /* No Js */
+
 .no-js .owl-carousel {
   display: block;
 }
@@ -127,6 +130,7 @@
 /*
  *  Owl Carousel - Animate Plugin
  */
+
 .owl-carousel .animated {
   -webkit-animation-duration: 1000ms;
           animation-duration: 1000ms;
@@ -151,6 +155,7 @@
   0% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
   }
@@ -160,6 +165,7 @@
   0% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
   }
@@ -168,6 +174,7 @@
 /*
  * 	Owl Carousel - Auto Height Plugin
  */
+
 .owl-height {
   -webkit-transition: height 500ms ease-in-out;
   transition: height 500ms ease-in-out;
@@ -176,6 +183,7 @@
 /*
  * 	Owl Carousel - Lazy Load Plugin
  */
+
 .owl-carousel .owl-item .owl-lazy {
   opacity: 0;
   -webkit-transition: opacity 400ms ease;
@@ -190,6 +198,7 @@
 /*
  * 	Owl Carousel - Video Plugin
  */
+
 .owl-carousel .owl-video-wrapper {
   position: relative;
   height: 100%;
@@ -244,6 +253,7 @@
 /*
  * 	Default theme - Owl Carousel CSS File
  */
+
 .owl-theme .owl-nav {
   margin-top: 0.625rem;
   text-align: center;
@@ -299,8 +309,13 @@
   border-radius: 1.875rem;
 }
 
-.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
   background: #869791;
+}
+
+main {
+  overflow: hidden;
 }
 
 .row {
@@ -335,27 +350,6 @@
 
 .col-10 {
   width: 83.33333%;
-}
-
-@media screen and (min-width: 768px) {
-  .col-md-7 {
-    width: 58.33333%;
-  }
-  .col-md-8 {
-    width: 66.66667%;
-  }
-}
-
-@media screen and (min-width: 1025px) {
-  .col-lg-6 {
-    width: 50%;
-  }
-}
-
-@media screen and (min-width: 1240px) {
-  .col-xl-5 {
-    width: 41.66667%;
-  }
 }
 
 body > header {
@@ -393,7 +387,8 @@ body > header {
   text-decoration: none;
 }
 
-.header_inner h1 a:hover, .header_inner h1 a:focus {
+.header_inner h1 a:hover,
+.header_inner h1 a:focus {
   color: #ff9800;
 }
 
@@ -443,7 +438,8 @@ body > header {
   transition: all .25s;
 }
 
-.header_inner nav a:hover:after, .header_inner nav a:focus:after {
+.header_inner nav a:hover:after,
+.header_inner nav a:focus:after {
   height: 0.1875rem;
 }
 
@@ -455,12 +451,6 @@ h2 {
   font-size: 2.9375rem;
   font-weight: 300;
   text-transform: uppercase;
-}
-
-@media screen and (min-width: 768px) {
-  h2 {
-    font-size: 4.75rem;
-  }
 }
 
 h3 {
@@ -483,7 +473,6 @@ a {
   position: relative;
   z-index: 100;
   padding: 1.9375rem 0;
-  overflow: hidden;
 }
 
 section.section:before {
@@ -504,18 +493,6 @@ section.section:before {
   padding: 6.25rem 0;
 }
 
-@media screen and (min-width: 768px) {
-  .section.intro {
-    padding-top: 12.5rem;
-  }
-}
-
-@media screen and (min-width: 1025px) {
-  .section.intro {
-    padding-top: 18.875rem;
-  }
-}
-
 .section.intro h2 {
   font-size: 4.75rem;
   text-align: center;
@@ -525,16 +502,6 @@ section.section:before {
   display: block;
   font-size: 1.125rem;
   margin-top: -0.96552em;
-}
-
-@media screen and (min-width: 768px) {
-  .section.intro h2 {
-    font-size: 7.6875rem;
-    text-align: right;
-  }
-  .section.intro h2 small {
-    font-size: 1.8125rem;
-  }
 }
 
 .section.intro a {
@@ -583,17 +550,6 @@ section.section:before {
   content: "";
 }
 
-@media screen and (min-width: 768px) {
-  .section.portfolio .portfolio-carousel {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    margin: -0.625rem;
-  }
-}
-
 .section.portfolio .portfolio-carousel .owl-stage-outer {
   overflow: visible;
 }
@@ -636,14 +592,8 @@ section.section:before {
   display: inline-block;
 }
 
-@media screen and (min-width: 1025px) {
-  .section.portfolio .portfolio-carousel article a {
-    padding: 1.4375rem;
-    font-size: 1.4375rem;
-  }
-}
-
-.section.portfolio .portfolio-carousel article:before, .section.portfolio .portfolio-carousel article:after,
+.section.portfolio .portfolio-carousel article:before,
+.section.portfolio .portfolio-carousel article:after,
 .section.portfolio .portfolio-carousel article > div:before {
   width: 0.25rem;
   height: 0.25rem;
@@ -654,12 +604,6 @@ section.section:before {
   border-style: solid;
   content: '';
   z-index: 100;
-}
-
-@media screen and (min-width: 768px) {
-  .section.portfolio .portfolio-carousel article:before, .section.portfolio .portfolio-carousel article:after {
-    top: 1.0625rem;
-  }
 }
 
 .section.portfolio .portfolio-carousel article:before {
@@ -678,25 +622,6 @@ section.section:before {
   background-color: #28c941;
   border-color: #24b43a;
   left: 1.6875rem;
-}
-
-@media screen and (min-width: 768px) {
-  .section.portfolio .portfolio-carousel article {
-    width: 50%;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 50%;
-            flex: 0 0 50%;
-    padding: 0.625rem;
-  }
-}
-
-@media screen and (min-width: 1025px) {
-  .section.portfolio .portfolio-carousel article {
-    width: 33.3%;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 33.3%;
-            flex: 0 0 33.3%;
-  }
 }
 
 .section.portfolio .portfolio-carousel img {
@@ -738,4 +663,81 @@ section.section:before {
   padding: 0.625rem;
   z-index: 99999;
   display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .col-md-7 {
+    width: 58.33333%;
+  }
+
+  .col-md-8 {
+    width: 66.66667%;
+  }
+
+  h2 {
+    font-size: 4.75rem;
+  }
+
+  .section.intro {
+    padding-top: 12.5rem;
+  }
+
+  .section.intro h2 {
+    font-size: 7.6875rem;
+    text-align: right;
+  }
+
+  .section.intro h2 small {
+    font-size: 1.8125rem;
+  }
+
+  .section.portfolio .portfolio-carousel {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: -0.625rem;
+  }
+
+  .section.portfolio .portfolio-carousel article:before,
+  .section.portfolio .portfolio-carousel article:after {
+    top: 1.0625rem;
+  }
+
+  .section.portfolio .portfolio-carousel article {
+    width: 50%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    padding: 0.625rem;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .col-lg-6 {
+    width: 50%;
+  }
+
+  .section.intro {
+    padding-top: 18.875rem;
+  }
+
+  .section.portfolio .portfolio-carousel article a {
+    padding: 1.4375rem;
+    font-size: 1.4375rem;
+  }
+
+  .section.portfolio .portfolio-carousel article {
+    width: 33.3%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.3%;
+            flex: 0 0 33.3%;
+  }
+}
+
+@media screen and (min-width: 1240px) {
+  .col-xl-5 {
+    width: 41.66667%;
+  }
 }
