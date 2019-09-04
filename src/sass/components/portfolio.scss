@@ -1,4 +1,10 @@
 &.portfolio {
+  @media #{$mediaPhone} {
+    .row:last-child {
+      margin: 0 25px;
+    }
+  }
+
   ul {
     margin-bottom: (43 / 18) * 1em;
   }
@@ -50,10 +56,21 @@
 
       p:last-child {
         text-align: center;
+        margin-top: 1em;
       }
 
       a {
         @include btn;
+
+        @media #{$mediaDesktop} {
+          display: none;
+        }
+      }
+
+      &:hover {
+        a {
+          display: inline-block;
+        }
       }
 
       &:before,
@@ -111,6 +128,15 @@
       display: block;
       width: 100%;
       height: auto;
+    }
+
+    .owl-item {
+      opacity: .6;
+      transition: opacity .25s;
+
+      &.active {
+        opacity: 1;
+      }
     }
 
     .owl-dots {
