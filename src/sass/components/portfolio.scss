@@ -5,10 +5,7 @@
   li {
     font-size: 18px;
     line-height: (27 / 18) * 1em;
-
-    @media #{$mediaTablet} {
-      display: inline;
-    }
+    display: inline;
 
     &:after {
       content: ", ";
@@ -16,6 +13,99 @@
 
     &:last-child:after {
       content: "";
+    }
+  }
+
+  .portfolio-carousel {
+    @media #{$mediaTablet} {
+      display: flex;
+      flex-wrap: wrap;
+      margin: $gutter / -2;
+    }
+
+    .owl-stage-outer {
+      overflow: visible;
+    }
+
+    article {
+      padding: 0 $gutter / 2;
+      position: relative;
+
+      > div {
+        border-radius: 2px;
+        padding: 20px 1px 1px 1px;
+        background: $gray_25;
+        position: relative;
+
+        > div {
+          width: 100%;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          background: rgba($black,.5);
+          color: $white;
+          padding: 21px;
+        }
+      }
+
+      p:last-child {
+        text-align: center;
+      }
+
+      a {
+        @include btn;
+      }
+
+      &:before,
+      &:after,
+      > div:before {
+        width: 6px;
+        height: 6px;
+        position: absolute;
+        top: 7px;
+        border-radius: 3px;
+        content: '';
+        z-index: 100;
+      }
+
+      &:before,
+      &:after {
+        @media #{$mediaTablet} {
+          top: ($gutter / 2) + 7;
+        }
+      }
+
+      &:before {
+        background-color: $wclose;
+        left: ($gutter / 2) + 7;
+      }
+
+      &:after {
+        background-color: $wmin;
+        left: ($gutter / 2) + 17;
+      }
+
+      > div:before {
+        background-color: $wmax;
+        left: 27px;
+      }
+
+      @media #{$mediaTablet} {
+        width: 50%;
+        flex: 0 0 50%;
+        padding: $gutter / 2;
+      }
+
+      @media #{$mediaDesktop} {
+        width: 33.3%;
+        flex: 0 0 33.3%;
+      }
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
     }
   }
 }

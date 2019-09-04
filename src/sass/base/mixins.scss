@@ -1,3 +1,20 @@
 @mixin col($col) {
   width: ($col / 12) * 100%;
 }
+
+@mixin btn {
+  background: $primary;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1em;
+  padding: 18px;
+  text-decoration: none;
+  color: $white;
+  text-transform: uppercase;
+  display: inline-block;
+
+  @media #{$mediaDesktop} {
+    padding: 23px;
+    font-size: 23px;
+  }
+}

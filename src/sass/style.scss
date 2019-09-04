@@ -11,3 +11,14 @@
 @import 'components/body';
 @import 'components/copy';
 @import 'components/section';
+
+#feedback {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  background: $black;
+  color: $white;
+  padding: 10px;
+  z-index: 99999;
+  display: none;
+}

@@ -483,6 +483,7 @@ a {
   position: relative;
   z-index: 100;
   padding: 31px 0;
+  overflow: hidden;
 }
 
 section.section:before {
@@ -571,12 +572,7 @@ section.section:before {
 .section.portfolio li {
   font-size: 1.125rem;
   line-height: 1.5em;
-}
-
-@media screen and (min-width: 768px) {
-  .section.portfolio li {
-    display: inline;
-  }
+  display: inline;
 }
 
 .section.portfolio li:after {
@@ -585,4 +581,132 @@ section.section:before {
 
 .section.portfolio li:last-child:after {
   content: "";
+}
+
+@media screen and (min-width: 768px) {
+  .section.portfolio .portfolio-carousel {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: -10px;
+  }
+}
+
+.section.portfolio .portfolio-carousel .owl-stage-outer {
+  overflow: visible;
+}
+
+.section.portfolio .portfolio-carousel article {
+  padding: 0 10px;
+  position: relative;
+}
+
+.section.portfolio .portfolio-carousel article > div {
+  border-radius: 2px;
+  padding: 20px 1px 1px 1px;
+  background: #3F3F3F;
+  position: relative;
+}
+
+.section.portfolio .portfolio-carousel article > div > div {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #FFFFFF;
+  padding: 21px;
+}
+
+.section.portfolio .portfolio-carousel article p:last-child {
+  text-align: center;
+}
+
+.section.portfolio .portfolio-carousel article a {
+  background: #ff9800;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1em;
+  padding: 18px;
+  text-decoration: none;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+@media screen and (min-width: 1025px) {
+  .section.portfolio .portfolio-carousel article a {
+    padding: 23px;
+    font-size: 1.4375rem;
+  }
+}
+
+.section.portfolio .portfolio-carousel article:before, .section.portfolio .portfolio-carousel article:after,
+.section.portfolio .portfolio-carousel article > div:before {
+  width: 6px;
+  height: 6px;
+  position: absolute;
+  top: 7px;
+  border-radius: 3px;
+  content: '';
+  z-index: 100;
+}
+
+@media screen and (min-width: 768px) {
+  .section.portfolio .portfolio-carousel article:before, .section.portfolio .portfolio-carousel article:after {
+    top: 17px;
+  }
+}
+
+.section.portfolio .portfolio-carousel article:before {
+  background-color: #ff5f57;
+  left: 17px;
+}
+
+.section.portfolio .portfolio-carousel article:after {
+  background-color: #ffbd2d;
+  left: 27px;
+}
+
+.section.portfolio .portfolio-carousel article > div:before {
+  background-color: #28c941;
+  left: 27px;
+}
+
+@media screen and (min-width: 768px) {
+  .section.portfolio .portfolio-carousel article {
+    width: 50%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .section.portfolio .portfolio-carousel article {
+    width: 33.3%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.3%;
+            flex: 0 0 33.3%;
+  }
+}
+
+.section.portfolio .portfolio-carousel img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+#feedback {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  background: #000000;
+  color: #FFFFFF;
+  padding: 10px;
+  z-index: 99999;
+  display: none;
 }
