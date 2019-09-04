@@ -13886,8 +13886,15 @@ function windowResize(owlOn) {
   //$('#feedback').text(w);
   if(w < 768 && !owlOn) {
     $('.owl-carousel').owlCarousel({
-      items: 1,
-      loop: true
+      loop: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 2
+        }
+      }
     });
     owlOn = true;
   } else if(w >= 768 && owlOn) {
