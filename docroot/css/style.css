@@ -198,12 +198,12 @@
 
 .owl-carousel .owl-video-play-icon {
   position: absolute;
-  height: 80px;
-  width: 80px;
+  height: 5rem;
+  width: 5rem;
   left: 50%;
   top: 50%;
-  margin-left: -40px;
-  margin-top: -40px;
+  margin-left: -2.5rem;
+  margin-top: -2.5rem;
   background: url("owl.video.play.png") no-repeat;
   cursor: pointer;
   z-index: 1;
@@ -245,7 +245,7 @@
  * 	Default theme - Owl Carousel CSS File
  */
 .owl-theme .owl-nav {
-  margin-top: 10px;
+  margin-top: 0.625rem;
   text-align: center;
   -webkit-tap-highlight-color: transparent;
 }
@@ -253,12 +253,12 @@
 .owl-theme .owl-nav [class*='owl-'] {
   color: #FFF;
   font-size: 0.875rem;
-  margin: 5px;
-  padding: 4px 7px;
+  margin: 0.3125rem;
+  padding: 0.25rem 0.4375rem;
   background: #D6D6D6;
   display: inline-block;
   cursor: pointer;
-  border-radius: 3px;
+  border-radius: 0.1875rem;
 }
 
 .owl-theme .owl-nav [class*='owl-']:hover {
@@ -273,7 +273,7 @@
 }
 
 .owl-theme .owl-nav.disabled + .owl-dots {
-  margin-top: 10px;
+  margin-top: 0.625rem;
 }
 
 .owl-theme .owl-dots {
@@ -288,15 +288,15 @@
 }
 
 .owl-theme .owl-dots .owl-dot span {
-  width: 10px;
-  height: 10px;
-  margin: 5px 7px;
+  width: 0.625rem;
+  height: 0.625rem;
+  margin: 0.3125rem 0.4375rem;
   background: #D6D6D6;
   display: block;
   -webkit-backface-visibility: visible;
   -webkit-transition: opacity 200ms ease;
   transition: opacity 200ms ease;
-  border-radius: 30px;
+  border-radius: 1.875rem;
 }
 
 .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
@@ -309,7 +309,7 @@
   display: -ms-flexbox;
   display: flex;
   margin: auto;
-  padding: 0 20px;
+  padding: 0 1.25rem;
 }
 
 .row.center {
@@ -326,7 +326,7 @@
 
 [class^="col"] {
   width: 100%;
-  padding: 0 10px;
+  padding: 0 0.625rem;
 }
 
 .col-5 {
@@ -376,7 +376,7 @@ body > header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 16px 0;
+  padding: 1rem 0;
 }
 
 .header_inner h1 a {
@@ -398,9 +398,9 @@ body > header {
 }
 
 .header_inner h1 svg {
-  width: 56px;
-  height: 47px;
-  margin-right: 10px;
+  width: 3.5rem;
+  height: 2.9375rem;
+  margin-right: 0.625rem;
 }
 
 .header_inner h1 svg .st0 {
@@ -420,7 +420,7 @@ body > header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 -10px;
+  margin: 0 -0.625rem;
 }
 
 .header_inner nav a {
@@ -428,15 +428,15 @@ body > header {
   position: relative;
   color: #383838;
   text-decoration: none;
-  padding: 0 10px;
+  padding: 0 0.625rem;
 }
 
 .header_inner nav a:after {
-  width: calc(100% - 10px);
-  height: 0px;
+  width: calc(100% - 0.625rem);
+  height: 0;
   position: absolute;
-  left: 5px;
-  bottom: -3px;
+  left: 0.3125rem;
+  bottom: -0.1875rem;
   content: "";
   background: #383838;
   -webkit-transition: all .25s;
@@ -444,7 +444,7 @@ body > header {
 }
 
 .header_inner nav a:hover:after, .header_inner nav a:focus:after {
-  height: 3px;
+  height: 0.1875rem;
 }
 
 body {
@@ -482,15 +482,15 @@ a {
 .section {
   position: relative;
   z-index: 100;
-  padding: 31px 0;
+  padding: 1.9375rem 0;
   overflow: hidden;
 }
 
 section.section:before {
   width: 100%;
-  height: 51px;
+  height: 3.1875rem;
   position: absolute;
-  top: -34px;
+  top: -2.125rem;
   left: 0;
   content: "";
   background-image: url(../images/hex.svg);
@@ -501,18 +501,18 @@ section.section:before {
 .section.intro {
   background: #E6E6E6;
   color: #383838;
-  padding: 100px 0;
+  padding: 6.25rem 0;
 }
 
 @media screen and (min-width: 768px) {
   .section.intro {
-    padding-top: 200px;
+    padding-top: 12.5rem;
   }
 }
 
 @media screen and (min-width: 1025px) {
   .section.intro {
-    padding-top: 302px;
+    padding-top: 18.875rem;
   }
 }
 
@@ -546,7 +546,7 @@ section.section:before {
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-  margin-top: 24px;
+  margin-top: 1.5rem;
 }
 
 .section.intro a:hover {
@@ -558,10 +558,10 @@ section.section:before {
 }
 
 .section.intro a svg {
-  width: 25px;
-  height: 25px;
+  width: 1.5625rem;
+  height: 1.5625rem;
   display: block;
-  margin: 0 auto 2px auto;
+  margin: 0 auto 0.125rem auto;
   fill: currentColor;
 }
 
@@ -590,7 +590,7 @@ section.section:before {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin: -10px;
+    margin: -0.625rem;
   }
 }
 
@@ -599,13 +599,13 @@ section.section:before {
 }
 
 .section.portfolio .portfolio-carousel article {
-  padding: 0 10px;
+  padding: 0 0.625rem;
   position: relative;
 }
 
 .section.portfolio .portfolio-carousel article > div {
-  border-radius: 2px;
-  padding: 20px 1px 1px 1px;
+  border-radius: 0.125rem;
+  padding: 1.25rem 0.0625rem 0.0625rem 0.0625rem;
   background: #3F3F3F;
   position: relative;
 }
@@ -617,7 +617,7 @@ section.section:before {
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
   color: #FFFFFF;
-  padding: 21px;
+  padding: 1.3125rem;
 }
 
 .section.portfolio .portfolio-carousel article p:last-child {
@@ -629,7 +629,7 @@ section.section:before {
   font-size: 1.125rem;
   font-weight: 700;
   line-height: 1em;
-  padding: 18px;
+  padding: 1.125rem;
   text-decoration: none;
   color: #FFFFFF;
   text-transform: uppercase;
@@ -638,41 +638,46 @@ section.section:before {
 
 @media screen and (min-width: 1025px) {
   .section.portfolio .portfolio-carousel article a {
-    padding: 23px;
+    padding: 1.4375rem;
     font-size: 1.4375rem;
   }
 }
 
 .section.portfolio .portfolio-carousel article:before, .section.portfolio .portfolio-carousel article:after,
 .section.portfolio .portfolio-carousel article > div:before {
-  width: 6px;
-  height: 6px;
+  width: 0.25rem;
+  height: 0.25rem;
   position: absolute;
-  top: 7px;
-  border-radius: 3px;
+  top: 0.4375rem;
+  border-radius: 0.1875rem;
+  border-width: 1px;
+  border-style: solid;
   content: '';
   z-index: 100;
 }
 
 @media screen and (min-width: 768px) {
   .section.portfolio .portfolio-carousel article:before, .section.portfolio .portfolio-carousel article:after {
-    top: 17px;
+    top: 1.0625rem;
   }
 }
 
 .section.portfolio .portfolio-carousel article:before {
   background-color: #ff5f57;
-  left: 17px;
+  border-color: #ff473e;
+  left: 1.0625rem;
 }
 
 .section.portfolio .portfolio-carousel article:after {
   background-color: #ffbd2d;
-  left: 27px;
+  border-color: #ffb514;
+  left: 1.6875rem;
 }
 
 .section.portfolio .portfolio-carousel article > div:before {
   background-color: #28c941;
-  left: 27px;
+  border-color: #24b43a;
+  left: 1.6875rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -681,7 +686,7 @@ section.section:before {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 50%;
             flex: 0 0 50%;
-    padding: 10px;
+    padding: 0.625rem;
   }
 }
 
@@ -700,13 +705,37 @@ section.section:before {
   height: auto;
 }
 
+.section.portfolio .portfolio-carousel .owl-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0.625rem 0;
+}
+
+.section.portfolio .portfolio-carousel .owl-dot {
+  width: 0.375rem;
+  height: 0.375rem;
+  border-radius: 0.1875rem;
+  background: #9B9B9B;
+  margin: 0 0.1875rem;
+  -webkit-transition: all .25s;
+  transition: all .25s;
+}
+
+.section.portfolio .portfolio-carousel .owl-dot.active {
+  background: #ff9800;
+}
+
 #feedback {
   position: fixed;
-  right: 10px;
-  bottom: 10px;
+  right: 0.625rem;
+  bottom: 0.625rem;
   background: #000000;
   color: #FFFFFF;
-  padding: 10px;
+  padding: 0.625rem;
   z-index: 99999;
   display: none;
 }

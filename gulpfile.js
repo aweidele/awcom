@@ -25,6 +25,36 @@ var autoprefixerOptions = {
   grid: true
 };
 
+var pxtoremOptions = {
+  propList: [
+    'font',
+    'font-size',
+    'line-height',
+    'padding',
+    'padding-top',
+    'padding-left',
+    'padding-right',
+    'padding-bottom',
+    'width',
+    'height',
+    'border',
+    'border-radius',
+    'border-top-left-radius',
+    'border-top-right-radius',
+    'border-bottom-left-radius',
+    'border-bottom-right-radius',
+    'top',
+    'left',
+    'bottom',
+    'right',
+    'margin',
+    'margin-left',
+    'margin-right',
+    'margin-top',
+    'margin-bottom'
+  ]
+};
+
 var jsQueue = [
   'node_modules/jquery/dist/jquery.js',
   'node_modules/owl.carousel2/dist/owl.carousel.js',
@@ -38,7 +68,7 @@ gulp.task('sass', function(){
     .pipe(sass(sassOptions).on('error', sass.logError))
     //.pipe(sourcemaps.write())
     .pipe(autoprefixer(autoprefixerOptions))
-    .pipe(pxtorem())
+    .pipe(pxtorem(pxtoremOptions))
     .pipe(gulp.dest('docroot/css/'))
 });
 
