@@ -393,10 +393,22 @@ body > header {
   text-decoration: none;
 }
 
+.header_inner h1 a:hover, .header_inner h1 a:focus {
+  color: #ff9800;
+}
+
 .header_inner h1 svg {
   width: 56px;
   height: 47px;
   margin-right: 10px;
+}
+
+.header_inner h1 svg .st0 {
+  fill: currentColor;
+}
+
+.header_inner h1 svg .st1 {
+  fill: #FFFFFF;
 }
 
 .header_inner nav {
@@ -474,7 +486,7 @@ a {
 }
 
 section.section:before {
-  width: 100vw;
+  width: 100%;
   height: 51px;
   position: absolute;
   top: -34px;
