@@ -13878,6 +13878,11 @@ return jQuery;
     $(window).on('resize',function() {
       owlOn = windowResize(owlOn);
     });
+
+    windowScroll();
+    $(window).on('scroll', function() {
+      windowScroll();
+    });
   });
 })(jQuery);
 
@@ -13903,4 +13908,13 @@ function windowResize(owlOn) {
   }
 
   return owlOn;
+}
+
+function windowScroll() {
+  s = $(window).scrollTop();
+  if(s > 60) {
+    $('body').addClass('scrolled');
+  } else {
+    $('body').removeClass('scrolled');
+  }
 }
