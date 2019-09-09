@@ -48,10 +48,31 @@
           ],
           "work": [
             {
-              "title": "Morris Adjmi Architects",
-              "description": "Custom Wordpress Theme for New York-based architect",
-              "url": "https://www.ma.com/",
-              "img": "ma.jpg",
+              "title": "The Walters Art Museum",
+              "description": "Custom Wordpress Theme Baltimore Art Museum",
+              "url": "https://thewalters.org/",
+              "img": "walters.jpg",
+              "platform": "wordpress"
+            },
+            {
+              "title": "Centrify",
+              "description": "Custom Drupa 8 Theme for software security company",
+              "url": "https://www.centrify.com/",
+              "img": "centrify.jpg",
+              "platform": "drupal"
+            },
+            {
+              "title": "Meadville Lombard Theological School",
+              "description": "Custom Bigtree Theme for the Theological School",
+              "url": "https://www.meadville.edu/",
+              "img": "meadville.jpg",
+              "platform": "bigtree"
+            },
+            {
+              "title": "Bluetooth",
+              "description": "Sitecore Site for technolog company",
+              "url": "https://web.archive.org/web/20170103105044/https://www.bluetooth.com/",
+              "img": "bluetooth.jpg",
               "platform": "wordpress"
             },
             {
@@ -62,24 +83,38 @@
               "platform": "wordpress"
             },
             {
-              "title": "Morris Adjmi Architects",
-              "description": "Custom Wordpress Theme for New York-based architect",
-              "url": "https://www.ma.com/",
-              "img": "ma.jpg",
+              "title": "DuClaw Brewing Company: Colossus",
+              "description": "Front-end development for brewery promotional site",
+              "url": "http://hosted.aaronweidele.com/colossus/",
+              "img": "colossus.jpg",
               "platform": "wordpress"
             },
             {
-              "title": "Morris Adjmi Architects",
-              "description": "Custom Wordpress Theme for New York-based architect",
-              "url": "https://www.ma.com/",
-              "img": "ma.jpg",
+              "title": "Carol Kurth Architecture",
+              "description": "Custom Wordpress Theme for New York-based architect and interior designer",
+              "url": "http://carolkurtharchitects.com/",
+              "img": "ck.jpg",
               "platform": "wordpress"
             },
             {
-              "title": "Morris Adjmi Architects",
+              "title": "Shen Milsom & Wilke",
+              "description": "Custom Wordpress Theme for New York-based acoustical design company",
+              "url": "http://www.smwllc.com/",
+              "img": "smw.jpg",
+              "platform": "wordpress"
+            },
+            {
+              "title": "Celebrations, LLC",
+              "description": "Website design and custom Wordpress theme for Event Planning Agency",
+              "url": "http://www.cuievents.com/",
+              "img": "celebrations.jpg",
+              "platform": "wordpress"
+            },
+            {
+              "title": "Fradkin & McAlpin Architects",
               "description": "Custom Wordpress Theme for New York-based architect",
-              "url": "https://www.ma.com/",
-              "img": "ma.jpg",
+              "url": "http://www.fradkinmcalpin.com/",
+              "img": "fma.jpg",
               "platform": "wordpress"
             }
           ]
