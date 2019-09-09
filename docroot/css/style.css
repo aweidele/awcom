@@ -721,6 +721,10 @@ section.section:before {
     width: 66.66667%;
   }
 
+  .col-md-9 {
+    width: 75%;
+  }
+
   h2 {
     font-size: 4.75rem;
   }
@@ -766,6 +770,10 @@ section.section:before {
     width: 50%;
   }
 
+  .col-lg-8 {
+    width: 66.66667%;
+  }
+
   .section.intro {
     padding-top: 18.875rem;
   }
@@ -790,6 +798,10 @@ section.section:before {
 @media screen and (min-width: 1240px) {
   .col-xl-5 {
     width: 41.66667%;
+  }
+
+  .col-xl-7 {
+    width: 58.33333%;
   }
 }
 
