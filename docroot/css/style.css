@@ -603,7 +603,7 @@ section.section:before {
   position: absolute;
   left: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(63, 63, 63, 0.75);
   color: #FFFFFF;
   padding: 1.3125rem;
 }
