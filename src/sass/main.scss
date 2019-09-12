@@ -16,7 +16,7 @@ ul,ol {
 
 html { font-size: 62.5%; }
 body { font-size: 1em; font-family: 'Open Sans', sans-serif; }
-   
+
 a {
   text-decoration: none;
   transition: all $speed;
@@ -69,8 +69,14 @@ a {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-down:before {
-  content: "\e900";
+.icon-drupal:before {
+  content: "\e902";
+}
+.icon-wordpress:before {
+  content: "\f19a";
+}
+.icon-file-text-o:before {
+  content: "\f0f6";
 }
 .icon-bars:before {
   content: "\f0c9";
@@ -90,15 +96,13 @@ a {
 .icon-vimeo:before {
   content: "\f27d";
 }
-.icon-file-text-o:before {
-  content: "\f0f6";
-}
 .icon-sitecore:before {
   content: "\e901";
 }
-.icon-wordpress:before {
-  content: "\f19a";
+.icon-down:before {
+  content: "\e900";
 }
+
 
 // COLORS
 $primary: #ff9800;
