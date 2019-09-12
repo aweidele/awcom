@@ -1,6 +1,33 @@
 <?php
 
   $clients['web'] = array(
+    'walters' => array(
+      'name' => 'The Walters Art Museum',
+      'description' => 'Wordpress website for the Walters Art Museum in Baltimore',
+      'url' => 'https://thewalters.org/',
+      'image' => 'walters.jpg',
+      'tech' => array('wordpress'),
+    ),
+    'jhu' => array(
+      'name' => 'Johns Hopkins Carey School of Business',
+      'description' => 'Drupal 8 website for Baltimore university',
+      'url' => 'https://carey.jhu.edu/',
+      'image' => 'jhu.jpg',
+      'tech' => array('drupal'),
+    ),
+    'centrify' => array(
+      'name' => 'Centrify',
+      'description' => 'Custom Drupal 8 theme for software security company',
+      'url' => 'https://www.centrify.com/',
+      'image' => 'centrify.jpg',
+      'tech' => array('drupal'),
+    ),
+    'meadville' => array(
+      'name' => 'Meadville Lombard Theological School',
+      'description' => 'Bigtree website for Chigaco college',
+      'url' => 'https://www.meadville.edu/',
+      'image' => 'meadville.png'
+    ),
     'bluetooth' => array(
       'name' => 'Bluetooth Technology Website',
       'description' => 'Sitecore website for technology company',
