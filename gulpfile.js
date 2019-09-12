@@ -58,7 +58,7 @@ gulp.task('sass', function(){
     //.pipe(sourcemaps.write())
     .pipe(gcmq())
     .pipe(autoprefixer(autoprefixerOptions))
-    .pipe(pxtorem(pxtoremOptions))
+    //.pipe(pxtorem(pxtoremOptions))
     .pipe(gulp.dest('docroot/templates/2017-theme/'))
 });
 
