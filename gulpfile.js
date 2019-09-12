@@ -8,8 +8,8 @@ var uglify = require('gulp-uglify');
 var pump = require('pump');
 var gcmq = require('gulp-group-css-media-queries');
 
-// var iconfont = require('gulp-iconfont');
-// var iconfontCss = require('gulp-iconfont-css');
+var iconfont = require('gulp-iconfont');
+var iconfontCss = require('gulp-iconfont-css');
 
 var sassOptions = {
   errLogToConsole: true,
@@ -72,18 +72,19 @@ gulp.task('compress', function() {
 });
 
 gulp.task('iconfont', function(){
-  gulp.src(['src/icons/*.svg'])
+  gulp.src(['./src/icons/*.svg'], {base: './src'})
     .pipe(iconfontCss({
-      fontName: 'aw_glyphs',
-      targetPath: 'src/sass/_icons.scss',
+      fontName: 'aw',
+      targetPath: './src/sass/_icons.scss',
       fontPath: 'fonts/'
     }))
     .pipe(iconfont({
-      fontName: 'aw_glyphs',
+      fontName: 'aw',
+      formats: ['ttf', 'eot', 'woff', 'woff2', 'svg'],
       normalize:true,
       fontHeight: 1001
      }))
-    .pipe(gulp.dest('docroot/fonts/'));
+    .pipe(gulp.dest('docroot/templates/2017-theme/fonts/'));
 });
 
 gulp.task('watch', function(){

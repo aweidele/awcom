@@ -28,6 +28,8 @@
   },
   "dependencies": {
     "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-iconfont": "^10.0.2",
+    "gulp-iconfont-css": "^3.0.0",
     "jquery": "^3.4.1",
     "npm": "^6.11.3"
   }
