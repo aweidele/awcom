@@ -28,7 +28,6 @@
     </div>
   </header>
   <main>
-    TEST
 <?php foreach($content as $a => $page) { ?>
 
 <?php include($root_uri.'content/'.$page); ?>
