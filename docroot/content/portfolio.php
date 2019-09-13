@@ -62,12 +62,12 @@
     //   'image' => 'max.jpg',
     //   'tech' => array('sitecore'),
     // ),
-    'dorfest' => array(
-      'name' => 'DuClaw Brewing Company: Day of Retribution',
-      'description' => 'Front-end development for brewery festival site',
-      'url' => 'http://dorfestival.com/',
-      'image' => 'dor.jpg',
-    ),
+    // 'dorfest' => array(
+    //   'name' => 'DuClaw Brewing Company: Day of Retribution',
+    //   'description' => 'Front-end development for brewery festival site',
+    //   'url' => 'http://dorfestival.com/',
+    //   'image' => 'dor.jpg',
+    // ),
     'smw' => array(
       'name' => 'Shen Milsom &amp; Wilke',
       'description' => 'Custom Wordpress theme for New York-based acoustical design company',
