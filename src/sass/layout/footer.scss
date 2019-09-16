@@ -13,13 +13,17 @@ footer {
     padding: 92px 0;
   }
 
+  h2 {
+    margin-bottom: (16 / 76) * 1em;
+  }
+
   a {
     color: $white;
     text-decoration: none;
 
     &:hover,
     &:focus {
-      color: rgba($white,.7);
+      color: $primary;
     }
   }
 }
@@ -56,5 +60,52 @@ footer {
 
   span {
     @include srOnly;
+  }
+}
+
+.contact {
+  form {
+    > div {
+      display: grid;
+      grid-template-columns: 90px 1fr;
+      grid-row-gap: 14px;
+    }
+  }
+
+  label,
+  input,
+  textarea {
+    font-size: 16px;
+
+    @media #{$mediaTablet} {
+      font-size: 18px;
+    }
+  }
+
+  input,
+  textarea {
+    font-family: $font-family;
+    border: 1px solid $black;
+  }
+
+  input {
+    height: 37px;
+    padding: 0 10px;
+  }
+
+  textarea {
+    height: 120px;
+    padding: 10px;
+  }
+
+  button {
+    @include btn;
+    background: $gray_50;
+    grid-column: 2;
+
+    &:hover,
+    &:focus {
+      background: $primary;
+    }
   }
 }
