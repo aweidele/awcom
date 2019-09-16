@@ -26,11 +26,19 @@ main {
   @include col(5);
 }
 
+.col-6 {
+  @include col(6);
+}
+
 .col-10 {
   @include col(10);
 }
 
 @media #{$mediaTablet} {
+  .col-md-6 {
+    @include col(6);
+  }
+
   .col-md-7 {
     @include col(7);
   }
@@ -45,6 +53,10 @@ main {
 }
 
 @media #{$mediaDesktop} {
+  .col-lg-5 {
+    @include col(5);
+  }
+
   .col-lg-6 {
     @include col(6);
   }

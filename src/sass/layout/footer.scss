@@ -1,0 +1,10 @@
+footer {
+  @include hexborder;
+  background: $secondary;
+  color: $white;
+  padding: 45px 0;
+
+  @media #{$mediaDesktop} {
+    padding: 92px 0;
+  }
+}
