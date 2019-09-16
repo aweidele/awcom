@@ -5,6 +5,7 @@ main {
 .row {
   max-width: $layout-width;
   display: flex;
+  flex-wrap: wrap;
   margin: auto;
   padding: 0 $gutter;
 
@@ -20,6 +21,7 @@ main {
 [class^="col"] {
   @include col(12);
   padding: 0 $gutter / 2;
+  flex: 1 1 100%;
 }
 
 .col-5 {

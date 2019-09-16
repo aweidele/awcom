@@ -3,8 +3,58 @@ footer {
   background: $secondary;
   color: $white;
   padding: 45px 0;
+  text-align: center;
+
+  @media #{$mediaTablet} {
+    text-align: left;
+  }
 
   @media #{$mediaDesktop} {
     padding: 92px 0;
+  }
+
+  a {
+    color: $white;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: rgba($white,.7);
+    }
+  }
+}
+
+.social {
+  svg {
+    width: auto;
+    height: 28px;
+    fill: currentColor;
+
+    @media #{$mediaDesktop} {
+      height: 36px;
+    }
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+
+    @media #{$mediaTablet} {
+      justify-content: flex-start;
+    }
+  }
+
+  li {
+    margin: 0 11px;
+
+    @media #{$mediaTablet} {
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  span {
+    @include srOnly;
   }
 }
