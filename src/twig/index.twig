@@ -1,6 +1,6 @@
 {% extends "templates/layouts/layout.twig" %}
 {% block page %}
-  <header id="top" class="section {{ content.sections.top.layout }}">
+  <header id="top" class="{{ content.sections.top.layout }}">
     {% include "templates/components/intro.twig" with {
       "content": content.sections.top
     } %}

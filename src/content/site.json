@@ -25,20 +25,19 @@
         "layout": "portfolio",
         "content": {
           "skills": [
-            "Adobe Creative Suite (Photoshop, Illustrator, InDesign)",
             "HTML 5",
             "CSS 3/SASS/LESS",
-            "PHP",
-            "Javascript/JQuery",
             "Drupal 8",
             "Wordpress",
             "Sitecore",
+            "PHP",
+            "Javascript/JQuery",
+            "Adobe Creative Suite (Photoshop, Illustrator, InDesign)",
             "Git",
             "SourceTree",
             "Jira",
             "Shopify",
-            "MailChimp/MailChimp",
-            "API",
+            "MailChimp/MailChimp API",
             "MySQL",
             "PayPal/Payflow",
             "Web",
@@ -53,6 +52,13 @@
               "url": "https://thewalters.org/",
               "img": "walters.jpg",
               "platform": "wordpress"
+            },
+            {
+              "title": "Johns Hopkins Carey Business School",
+              "description": "Drupal 8 website for Baltimore university",
+              "url": "https://thewalters.org/",
+              "img": "jhu.jpg",
+              "platform": "drupal"
             },
             {
               "title": "Centrify",

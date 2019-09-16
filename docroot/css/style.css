@@ -659,51 +659,6 @@ a {
   background-position: center;
 }
 
-.section.intro {
-  background: #E6E6E6;
-  color: #383838;
-  padding: 6.25rem 0;
-}
-
-.section.intro h2 {
-  font-size: 4.75rem;
-  text-align: center;
-}
-
-.section.intro h2 small {
-  display: block;
-  font-size: 1.125rem;
-  margin-top: -0.96552em;
-}
-
-.section.intro a {
-  display: block;
-  width: 100%;
-  position: relative;
-  color: #383838;
-  font-size: 0.875rem;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  margin-top: 1.5rem;
-}
-
-.section.intro a:hover {
-  color: #000000;
-}
-
-.section.intro a span {
-  display: block;
-}
-
-.section.intro a svg {
-  width: 1.5625rem;
-  height: 1.5625rem;
-  display: block;
-  margin: 0 auto 0.125rem auto;
-  fill: currentColor;
-}
-
 .section.portfolio ul {
   margin-bottom: 2.38889em;
 }
@@ -846,6 +801,51 @@ a {
   background: #ff9800;
 }
 
+.intro {
+  background: #E6E6E6;
+  color: #383838;
+  padding: 6.25rem 0;
+}
+
+.intro h2 {
+  font-size: 4.75rem;
+  text-align: center;
+}
+
+.intro h2 small {
+  display: block;
+  font-size: 1.125rem;
+  margin-top: -0.96552em;
+}
+
+.intro a {
+  display: block;
+  width: 100%;
+  position: relative;
+  color: #383838;
+  font-size: 0.875rem;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-top: 1.5rem;
+}
+
+.intro a:hover {
+  color: #000000;
+}
+
+.intro a span {
+  display: block;
+}
+
+.intro a svg {
+  width: 1.5625rem;
+  height: 1.5625rem;
+  display: block;
+  margin: 0 auto 0.125rem auto;
+  fill: currentColor;
+}
+
 #feedback {
   position: fixed;
   right: 0.625rem;
@@ -914,19 +914,6 @@ a {
     padding: 4.6875rem 0 9.375rem 0;
   }
 
-  .section.intro {
-    padding-top: 12.5rem;
-  }
-
-  .section.intro h2 {
-    font-size: 7.6875rem;
-    text-align: right;
-  }
-
-  .section.intro h2 small {
-    font-size: 1.8125rem;
-  }
-
   .section.portfolio .portfolio-carousel {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -947,6 +934,19 @@ a {
         -ms-flex: 0 0 50%;
             flex: 0 0 50%;
     padding: 0.625rem;
+  }
+
+  .intro {
+    padding-top: 12.5rem;
+  }
+
+  .intro h2 {
+    font-size: 7.6875rem;
+    text-align: right;
+  }
+
+  .intro h2 small {
+    font-size: 1.8125rem;
   }
 }
 
@@ -985,10 +985,6 @@ a {
     font-size: 1.4375rem;
   }
 
-  .section.intro {
-    padding-top: 18.875rem;
-  }
-
   .section.portfolio .portfolio-carousel article a {
     padding: 1.125rem 1.4375rem;
     font-size: 1.4375rem;
@@ -1003,6 +999,10 @@ a {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 33.3%;
             flex: 0 0 33.3%;
+  }
+
+  .intro {
+    padding-top: 18.875rem;
   }
 }
 
