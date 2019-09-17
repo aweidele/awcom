@@ -125,6 +125,11 @@
             }
           ]
         }
+      },
+      "cv": {
+        "id": "cv",
+        "title": "Work Experience",
+        "layout": "cv"
       }
     }
   }
