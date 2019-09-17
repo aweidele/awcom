@@ -1,7 +1,7 @@
 {
   "site": {
     "title": "Aaron Weidele",
-    "subtitle": "Web Developer, Web Designer, and Animator in Baltimore, Maryland"
+    "subtitle": "Full Stack Wordpress and Drupal Developer, Web Designer, and Animator in Baltimore, Maryland"
   },
   "nav": [
     {
@@ -48,14 +48,14 @@
           "work": [
             {
               "title": "The Walters Art Museum",
-              "description": "Custom Wordpress Theme Baltimore Art Museum",
+              "description": "Custom Wordpress Theme for a Baltimore Art Museum",
               "url": "https://thewalters.org/",
               "img": "walters.jpg",
               "platform": "wordpress"
             },
             {
               "title": "Johns Hopkins Carey Business School",
-              "description": "Drupal 8 website for Baltimore university",
+              "description": "Drupal 8 website for a Baltimore university",
               "url": "https://thewalters.org/",
               "img": "jhu.jpg",
               "platform": "drupal"
@@ -76,7 +76,7 @@
             },
             {
               "title": "Bluetooth",
-              "description": "Sitecore Site for technolog company",
+              "description": "Sitecore Site for technology company",
               "url": "https://web.archive.org/web/20170103105044/https://www.bluetooth.com/",
               "img": "bluetooth.jpg",
               "platform": "wordpress"

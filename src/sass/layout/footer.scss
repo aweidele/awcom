@@ -1,7 +1,7 @@
 footer {
   @include hexborder;
   background: $secondary;
-  color: $white;
+  color: $gray_90;
   padding: 45px 0;
   text-align: center;
 
@@ -24,6 +24,14 @@ footer {
     &:hover,
     &:focus {
       color: $primary;
+    }
+  }
+
+  [class^="col"] {
+    + [class^="col"] {
+      @media #{$mediaPhone} {
+        margin-top: 29px;
+      }
     }
   }
 }
