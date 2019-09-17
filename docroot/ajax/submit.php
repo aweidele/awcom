@@ -1,4 +1,6 @@
 <?php
+  use PHPMailer\PHPMailer\PHPMailer;
   require_once("vendor/autoload.php");
 
-  echo "yes";
+?>
+<pre><?php print_r($_POST); ?></pre>
