@@ -1,6 +1,23 @@
-main {
-  overflow: hidden;
+body {
+  > main {
+    overflow: hidden;
+    transition: all $barspeed;
+  }
+
+  &.menu_open {
+    height: 100vh;
+
+    overflow: hidden;
+    > main,
+    > footer {
+      @media #{$mediaToggleHeader} {
+        filter: blur(4px);
+      }
+    }
+  }
 }
+
+
 
 .row {
   max-width: $layout-width;

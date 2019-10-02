@@ -22,6 +22,18 @@
       }
     });
 
+    $('body > header a').on('click',function(e) {
+      var h = $(this).attr('href');
+      if (h.charAt(0) == "#") {
+        e.preventDefault();
+        $('body').removeClass('menu_open').addClass('menu_closed');
+        var target = $(h).offset().top - $('body > header').height();
+        $('html, body').animate({
+          scrollTop: target
+        },1000);
+      }
+    });
+
   });
 })(jQuery);
 

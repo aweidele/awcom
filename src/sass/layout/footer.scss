@@ -1,9 +1,10 @@
-footer {
+body > footer {
   @include hexborder;
   background: $secondary;
   color: $gray_90;
   padding: 45px 0;
   text-align: center;
+  transition: all $barspeed;
 
   @media #{$mediaTablet} {
     text-align: left;

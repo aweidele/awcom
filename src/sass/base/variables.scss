@@ -28,3 +28,8 @@ $mediaTabletOnly: "screen and (min-width: 768px) and (max-width: 1024.9px)";
 $mediaToggleHeader: "screen and (max-width: 1024.9px)";
 $mediaDesktop: "screen and (min-width: 1025px)";
 $mediaFull: "screen and (min-width: #{$layout-width})";
+
+
+// Menu
+$barspace: 6;
+$barspeed: .5s;
