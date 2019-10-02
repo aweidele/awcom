@@ -22,8 +22,9 @@ $layout-width: 1240px;
 $gutter: 20px;
 
 // Breakpoints
-$mediaPhone: "screen and (max-width: 767px)";
+$mediaPhone: "screen and (max-width: 767.9px)";
 $mediaTablet: "screen and (min-width: 768px)";
-$mediaTabletOnly: "screen and (min-width: 768px) and (max-width: 1024px)";
+$mediaTabletOnly: "screen and (min-width: 768px) and (max-width: 1024.9px)";
+$mediaToggleHeader: "screen and (max-width: 1024.9px)";
 $mediaDesktop: "screen and (min-width: 1025px)";
 $mediaFull: "screen and (min-width: #{$layout-width})";

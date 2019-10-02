@@ -1,3 +1,30 @@
+$barspace: 6;
+$barspeed: .5s;
+
+@keyframes menu_tb_open {
+  0% { transform: translateY(-#{$barspace}px) rotate(0deg); }
+  50% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(0) rotate(45deg); }
+}
+
+@keyframes menu_bb_open {
+  0% { transform: translateY(#{$barspace}px) rotate(0deg); }
+  50% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(0) rotate(-45deg); }
+}
+
+@keyframes menu_tb_close {
+  0% { transform: translateY(0) rotate(45deg); }
+  50% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(-#{$barspace}px) rotate(0deg); }
+}
+
+@keyframes menu_bb_close {
+  0% { transform: translateY(0) rotate(-45deg); }
+  50% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(#{$barspace}px) rotate(0deg); }
+}
+
 .header_inner {
   display: flex;
   justify-content: space-between;
@@ -37,13 +64,110 @@
     }
   }
 
+  button {
+    width: 47px;
+    height: 47px;
+    position: relative;
+    border: 0;
+    background-color: transparent;
+
+    span {
+      display: block;
+      text-indent: -999999px;
+      transition: all $barspeed / 2;
+
+      .menu_open & {
+        opacity: 0;
+      }
+
+      .menu_close & {
+        transition-delay: $barspeed / 2;
+      }
+    }
+
+    &:before,
+    &:after,
+    span {
+      width: 16px;
+      height: 2px;
+      position: absolute;
+      top: 21px;
+      left: 15px;
+      background: $secondary;
+      content: "";
+      .scrolled & {
+        background: $white;
+      }
+    }
+
+    &:before {
+      transform: translateY(-#{$barspace}px);
+
+      .menu_open & {
+        animation: menu_tb_open $barspeed;
+        transform: translateY(0) rotate(45deg);
+      }
+
+      .menu_closed & {
+        animation: menu_tb_close $barspeed;
+      }
+    }
+
+    &:after {
+      transform: translateY(#{$barspace}px);
+
+      .menu_open & {
+        animation: menu_bb_open $barspeed;
+        transform: translateY(0) rotate(-45deg);
+      }
+
+      .menu_closed & {
+        animation: menu_bb_close $barspeed;
+      }
+    }
+
+    @media #{$mediaDesktop} {
+      display: none;
+    }
+  }
+
   nav {
     font-size: 14px;
     text-transform: uppercase;
 
-    ul {
-      display: flex;
-      margin: 0 -10px;
+    @media #{$mediaToggleHeader} {
+      width: 100vw;
+      height: calc(100vh - 79px);
+      position: absolute;
+      left: 0;
+      top: 100%;
+      z-index: 100;
+      text-align: center;
+      font-size: 29px;
+      @include fw-bold;
+      background: rgba($gray_90,.9);
+      padding-top: 1em;
+      transform: translateX(100%);
+      transition: all $barspeed;
+
+      .menu_open & {
+        transform: translateX(0);
+      }
+
+      .scrolled & {
+        background: rgba($gray_25,.9);
+      }
+
+      a {
+        padding: .25em 0;
+      }
+    }
+
+    @media #{$mediaDesktop} {
+      ul {
+        display: flex;
+        margin: 0 -10px;
+      }
     }
 
     a {
@@ -67,7 +191,9 @@
       &:hover,
       &:focus {
         &:after {
-          height: 3px;
+          @media #{$mediaDesktop} {
+            height: 3px;
+          }
         }
       }
     }
@@ -87,7 +213,7 @@ body {
   &.scrolled {
     > header {
       background: rgba($gray_25,.9);
-      box-shadow: 0px 3px 2px rgba($gray_25,.9);
+      //box-shadow: 0px 3px 2px rgba($gray_25,.9);
 
       h1 {
         a {

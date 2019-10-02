@@ -7,6 +7,10 @@
     {
       "url": "#web",
       "label": "Web Development"
+    },
+    {
+      "url": "#cv",
+      "label": "Work Experience"
     }
   ],
   "content": {

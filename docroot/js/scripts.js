@@ -13883,6 +13883,18 @@ return jQuery;
     $(window).on('scroll', function() {
       windowScroll();
     });
+
+    var menuOpen = false;
+    $('.header_inner button').on('click',function() {
+      if(menuOpen) {
+        $('body').removeClass('menu_open').addClass('menu_closed');
+        menuOpen = false;
+      } else {
+        $('body').removeClass('menu_closed').addClass('menu_open');
+        menuOpen = true;
+      }
+    });
+
   });
 })(jQuery);
 
