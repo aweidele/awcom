@@ -10,6 +10,30 @@
     $(window).on('scroll', function() {
       windowScroll();
     });
+
+    var menuOpen = false;
+    $('.header_inner button').on('click',function() {
+      if(menuOpen) {
+        $('body').removeClass('menu_open').addClass('menu_closed');
+        menuOpen = false;
+      } else {
+        $('body').removeClass('menu_closed').addClass('menu_open');
+        menuOpen = true;
+      }
+    });
+
+    $('body > header a').on('click',function(e) {
+      var h = $(this).attr('href');
+      if (h.charAt(0) == "#") {
+        e.preventDefault();
+        $('body').removeClass('menu_open').addClass('menu_closed');
+        var target = $(h).offset().top - $('body > header').height();
+        $('html, body').animate({
+          scrollTop: target
+        },1000);
+      }
+    });
+
   });
 })(jQuery);
 

@@ -1,0 +1,162 @@
+$jobs: 5;
+$lw_m: 4px;
+$lw_d: 6px;
+
+&.cv {
+  .jobs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat($jobs, auto);
+
+    position: relative;
+    padding: 50px 0;
+    color: $secondary;
+
+    &:after {
+      width: $lw_m;
+      height: 100%;
+      position: absolute;
+      left: calc(50% - #{$lw_m / 2)};
+      top: 0;
+      content: "";
+      background: $secondary;
+      z-index: 0;
+    }
+
+    li {
+      position: relative;
+      padding: 5px 30px 5px 0;
+      z-index: 5;
+      align-self: center;
+
+      &:nth-child(2n) {
+        padding: 5px 0 5px 30px;
+
+        &:before {
+          background: $primary;
+          left: -#{$lw_m / 2};
+        }
+
+        &:after {
+          background: $primary;
+          left: $lw_m / 2;
+        }
+      }
+
+      &:before {
+        width: $lw_m;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: -#{$lw_m / 2};
+        content: "";
+        background: $secondary;
+      }
+
+      &:after {
+        width: $lw_m * 5.6;
+        height: $lw_m;
+        position: absolute;
+        top: calc(50% - #{$lw_m / 2});
+        right: $lw_m / 2;
+        content: "";
+        background: $secondary;
+      }
+
+      @media #{$mediaPhone} {
+        &:nth-child(2n) {
+          grid-column: 2;
+        }
+        &:nth-child(2n+1) {
+          grid-column: 1;
+          text-align: right;
+        }
+
+        @for $i from 1 through $jobs {
+          &:nth-child(#{$i}) {
+            grid-row: $i;
+          }
+        }
+      }
+
+      @media #{$mediaXs} {
+        > h3,
+        > div {
+          font-size: 14px;
+        }
+      }
+    }
+
+    @media #{$mediaTablet} {
+      grid-template-columns: repeat($jobs + 1, 1fr);
+      grid-template-rows: 1fr 1fr;
+      padding: 0;
+
+      &:after {
+        width: 200vw;
+        height: $lw_d;
+        position: absolute;
+        top: calc(50% - #{$lw_d / 2)};
+        left: -100vw;
+      }
+
+      li {
+        text-align: center;
+        padding: 30px 0;
+
+        &:before {
+          width: 50%;
+          height: $lw_d;
+          left: 25%;
+          right: auto;
+        }
+
+        &:after {
+          width: $lw_d;
+          height: $lw_d * 5.6;
+          right: calc(50% - #{$lw_d / 2});
+        }
+
+        &:nth-child(2n) {
+          grid-row: 2;
+          z-index: 10;
+          padding: 30px 0;
+          align-self: start;
+
+          &:after {
+            top: 0;
+            left: auto;
+          }
+
+          &:before {
+            top: -#{$lw_d / 2};
+            left: 25%;
+          }
+        }
+
+
+        &:nth-child(2n+1) {
+          grid-row: 1;
+          align-self: end;
+
+          &:before {
+            top: auto;
+            bottom: -#{$lw_d / 2};
+          }
+
+          &:after {
+            top: auto;
+            bottom: 0;
+          }
+        }
+
+        @for $i from 1 through $jobs {
+          &:nth-child(#{$i}) {
+            grid-column-start: $i;
+            grid-column-end: $i + 2;
+          }
+        }
+      }
+    }
+  }
+}
