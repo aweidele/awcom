@@ -1008,10 +1008,11 @@ a {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: (1fr)[5];
-      grid-template-rows: repeat(5, 1fr);
+  -ms-grid-rows: (auto)[5];
+      grid-template-rows: repeat(5, auto);
   position: relative;
   padding: 3.125rem 0;
+  color: #383838;
 }
 
 .section.cv .jobs:after {
@@ -1021,7 +1022,7 @@ a {
   left: calc(50% - 0.125rem);
   top: 0;
   content: "";
-  background: #000000;
+  background: #383838;
   z-index: 0;
 }
 
@@ -1038,6 +1039,16 @@ a {
   padding: 0.3125rem 0 0.3125rem 1.875rem;
 }
 
+.section.cv .jobs li:nth-child(2n):before {
+  background: #ff9800;
+  left: -0.125rem;
+}
+
+.section.cv .jobs li:nth-child(2n):after {
+  background: #ff9800;
+  left: 0.125rem;
+}
+
 .section.cv .jobs li:before {
   width: 0.25rem;
   height: 100%;
@@ -1045,7 +1056,7 @@ a {
   top: 0;
   right: -0.125rem;
   content: "";
-  background: #000000;
+  background: #383838;
 }
 
 .section.cv .jobs li:after {
@@ -1055,7 +1066,7 @@ a {
   top: calc(50% - 0.125rem);
   right: 0.125rem;
   content: "";
-  background: #000000;
+  background: #383838;
 }
 
 .intro {
@@ -1203,17 +1214,54 @@ a {
   .section.cv .jobs {
     -ms-grid-columns: (1fr)[6];
         grid-template-columns: repeat(6, 1fr);
-    -ms-grid-rows: auto auto;
-        grid-template-rows: auto auto;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+  }
+
+  .section.cv .jobs:after {
+    width: 200vw;
+    height: 0.375rem;
+    position: absolute;
+    top: calc(50% - 0.1875rem);
+    left: -100vw;
   }
 
   .section.cv .jobs li {
     text-align: center;
+    padding: 1.875rem 0;
+  }
+
+  .section.cv .jobs li:before {
+    width: 50%;
+    height: 0.375rem;
+    left: 25%;
+    right: auto;
+  }
+
+  .section.cv .jobs li:after {
+    width: 0.375rem;
+    height: 2.1rem;
+    right: calc(50% - 0.1875rem);
   }
 
   .section.cv .jobs li:nth-child(2n) {
     -ms-grid-row: 2;
     grid-row: 2;
+    z-index: 10;
+    padding: 1.875rem 0;
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+  }
+
+  .section.cv .jobs li:nth-child(2n):after {
+    top: 0;
+    left: auto;
+  }
+
+  .section.cv .jobs li:nth-child(2n):before {
+    top: -0.1875rem;
+    left: 25%;
   }
 
   .section.cv .jobs li:nth-child(2n+1) {
@@ -1222,6 +1270,16 @@ a {
     -ms-flex-item-align: end;
         -ms-grid-row-align: end;
         align-self: end;
+  }
+
+  .section.cv .jobs li:nth-child(2n+1):before {
+    top: auto;
+    bottom: -0.1875rem;
+  }
+
+  .section.cv .jobs li:nth-child(2n+1):after {
+    top: auto;
+    bottom: 0;
   }
 
   .section.cv .jobs li:nth-child(1) {
@@ -1424,16 +1482,6 @@ a {
   .section.cv .jobs li:nth-child(2n) {
     -ms-grid-column: 2;
     grid-column: 2;
-  }
-
-  .section.cv .jobs li:nth-child(2n):before {
-    background: #9B9B9B;
-    left: -0.125rem;
-  }
-
-  .section.cv .jobs li:nth-child(2n):after {
-    background: #9B9B9B;
-    left: 0.125rem;
   }
 
   .section.cv .jobs li:nth-child(2n+1) {
