@@ -1216,6 +1216,7 @@ a {
         grid-template-columns: repeat(6, 1fr);
     -ms-grid-rows: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
+    padding: 0;
   }
 
   .section.cv .jobs:after {

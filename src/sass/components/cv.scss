@@ -90,6 +90,7 @@ $lw_d: 6px;
     @media #{$mediaTablet} {
       grid-template-columns: repeat($jobs + 1, 1fr);
       grid-template-rows: 1fr 1fr;
+      padding: 0;
 
       &:after {
         width: 200vw;
