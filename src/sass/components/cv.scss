@@ -1,4 +1,6 @@
 $jobs: 5;
+$lw_m: 4px;
+$lw_d: 6px;
 
 &.cv {
   .jobs {
@@ -6,12 +8,66 @@ $jobs: 5;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat($jobs, 1fr);
 
+    position: relative;
+    padding: 50px 0;
+
+    &:after {
+      width: $lw_m;
+      height: 100%;
+      position: absolute;
+      left: calc(50% - #{$lw_m / 2)};
+      top: 0;
+      content: "";
+      background: $black;
+      z-index: 0;
+    }
+
     li {
-      border: 1px solid #EEE;
+      position: relative;
+      padding: 5px 30px 5px 0;
+      z-index: 5;
+      align-self: center;
+
+      &:nth-child(2n+1) {
+      }
+
+      &:nth-child(2n) {
+        padding: 5px 0 5px 30px;
+      }
+
+      &:before {
+        width: $lw_m;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: -#{$lw_m / 2};
+        content: "";
+        background: $black;
+      }
+
+      &:after {
+        width: $lw_m * 5.6;
+        height: $lw_m;
+        position: absolute;
+        top: calc(50% - #{$lw_m / 2});
+        right: $lw_m / 2;
+        content: "";
+        background: $black;
+      }
 
       @media #{$mediaPhone} {
         &:nth-child(2n) {
           grid-column: 2;
+
+          &:before {
+            background: $gray_50;
+            left: -#{$lw_m / 2};
+          }
+
+          &:after {
+            background: $gray_50;
+            left: $lw_m / 2;
+          }
         }
         &:nth-child(2n+1) {
           grid-column: 1;
@@ -22,6 +78,13 @@ $jobs: 5;
           &:nth-child(#{$i}) {
             grid-row: $i;
           }
+        }
+      }
+
+      @media #{$mediaXs} {
+        > h3,
+        > div {
+          font-size: 14px;
         }
       }
     }

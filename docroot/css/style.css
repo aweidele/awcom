@@ -1010,10 +1010,52 @@ a {
       grid-template-columns: 1fr 1fr;
   -ms-grid-rows: (1fr)[5];
       grid-template-rows: repeat(5, 1fr);
+  position: relative;
+  padding: 3.125rem 0;
+}
+
+.section.cv .jobs:after {
+  width: 0.25rem;
+  height: 100%;
+  position: absolute;
+  left: calc(50% - 0.125rem);
+  top: 0;
+  content: "";
+  background: #000000;
+  z-index: 0;
 }
 
 .section.cv .jobs li {
-  border: 0.0625rem solid #EEE;
+  position: relative;
+  padding: 0.3125rem 1.875rem 0.3125rem 0;
+  z-index: 5;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.section.cv .jobs li:nth-child(2n) {
+  padding: 0.3125rem 0 0.3125rem 1.875rem;
+}
+
+.section.cv .jobs li:before {
+  width: 0.25rem;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: -0.125rem;
+  content: "";
+  background: #000000;
+}
+
+.section.cv .jobs li:after {
+  width: 1.4rem;
+  height: 0.25rem;
+  position: absolute;
+  top: calc(50% - 0.125rem);
+  right: 0.125rem;
+  content: "";
+  background: #000000;
 }
 
 .intro {
@@ -1384,6 +1426,16 @@ a {
     grid-column: 2;
   }
 
+  .section.cv .jobs li:nth-child(2n):before {
+    background: #9B9B9B;
+    left: -0.125rem;
+  }
+
+  .section.cv .jobs li:nth-child(2n):after {
+    background: #9B9B9B;
+    left: 0.125rem;
+  }
+
   .section.cv .jobs li:nth-child(2n+1) {
     -ms-grid-column: 1;
     grid-column: 1;
@@ -1413,5 +1465,12 @@ a {
   .section.cv .jobs li:nth-child(5) {
     -ms-grid-row: 5;
     grid-row: 5;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .section.cv .jobs li > h3,
+  .section.cv .jobs li > div {
+    font-size: 0.875rem;
   }
 }
