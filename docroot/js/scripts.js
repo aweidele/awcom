@@ -13895,7 +13895,7 @@ return jQuery;
       }
     });
 
-    $('body > header a').on('click',function(e) {
+    $('a[href^="#"]').on('click',function(e) {
       var h = $(this).attr('href');
       if (h.charAt(0) == "#") {
         e.preventDefault();

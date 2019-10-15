@@ -91,6 +91,7 @@ $lw_d: 6px;
       grid-template-columns: repeat($jobs + 1, 1fr);
       grid-template-rows: 1fr 1fr;
       padding: 0;
+      margin-top: $gutter;
 
       &:after {
         width: 200vw;
@@ -102,7 +103,7 @@ $lw_d: 6px;
 
       li {
         text-align: center;
-        padding: 30px 0;
+        padding: 0 0 ($lw_d * 5.6) + 10 0;
 
         &:before {
           width: 50%;
@@ -120,7 +121,7 @@ $lw_d: 6px;
         &:nth-child(2n) {
           grid-row: 2;
           z-index: 10;
-          padding: 30px 0;
+          padding: ($lw_d * 5.6) + 10 0 0 0;
           align-self: start;
 
           &:after {

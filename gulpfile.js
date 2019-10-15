@@ -18,7 +18,7 @@ var content = require('./src/content/site.json');
 
 var sassOptions = {
   errLogToConsole: true,
-  outputStyle: 'expanded'
+  outputStyle: 'compressed'
 };
 
 var autoprefixerOptions = {
