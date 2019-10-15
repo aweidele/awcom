@@ -11,6 +11,10 @@
     {
       "url": "#cv",
       "label": "Work Experience"
+    },
+    {
+      "url": "#contact",
+      "label": "Contact"
     }
   ],
   "content": {
