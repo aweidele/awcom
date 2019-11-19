@@ -1307,6 +1307,10 @@ a {
     grid-column-end: 7;
   }
 
+  .section.cv p {
+    font-size: 1.5rem;
+  }
+
   .intro {
     padding-top: 12.5rem;
   }
