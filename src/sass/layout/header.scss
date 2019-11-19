@@ -92,8 +92,7 @@ body {
       color: $secondary;
       text-decoration: none;
 
-      &:hover,
-      &:focus {
+      @include hover {
         color: $primary;
       }
     }
@@ -239,8 +238,7 @@ body {
         transition: all .25s;
       }
 
-      &:hover,
-      &:focus {
+      @include hover {
         &:after {
           @media #{$mediaDesktop} {
             height: 3px;

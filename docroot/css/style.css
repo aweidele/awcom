@@ -897,7 +897,8 @@ a {
   cursor: pointer;
 }
 
-.section.portfolio .portfolio-carousel article:hover a {
+.section.portfolio .portfolio-carousel article:hover a,
+.section.portfolio .portfolio-carousel article:focus a {
   display: inline-block;
 }
 
@@ -1039,6 +1040,22 @@ a {
   background: #383838;
 }
 
+.section.cv p {
+  margin: 2em 0;
+  font-weight: 700;
+  text-align: center;
+  font-size: 1.125rem;
+}
+
+.section.cv a {
+  color: #e68900;
+}
+
+.section.cv a:hover,
+.section.cv a:focus {
+  color: #f6a26d;
+}
+
 .intro {
   background: #E6E6E6;
   color: #383838;
@@ -1068,7 +1085,8 @@ a {
   margin-top: 1.5rem;
 }
 
-.intro a:hover {
+.intro a:hover,
+.intro a:focus {
   color: #000;
 }
 

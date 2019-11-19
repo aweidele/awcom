@@ -42,7 +42,7 @@
     text-decoration: none;
     margin-top: 24px;
 
-    &:hover {
+    @include hover {
       color: $black;
     }
 

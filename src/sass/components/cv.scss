@@ -160,4 +160,18 @@ $lw_d: 6px;
       }
     }
   }
+
+  p {
+    margin: 2em 0;
+    font-weight: 700;
+    text-align: center;
+    font-size: 18px;
+  }
+
+  a {
+    color: darken($primary,5);
+    @include hover {
+      color: $tertiary;
+    }
+  }
 }

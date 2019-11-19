@@ -67,7 +67,7 @@
         }
       }
 
-      &:hover {
+      @include hover {
         a {
           display: inline-block;
         }

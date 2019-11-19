@@ -22,8 +22,7 @@ body > footer {
     color: $white;
     text-decoration: none;
 
-    &:hover,
-    &:focus {
+    @include hover {
       color: $primary;
     }
   }
@@ -112,8 +111,7 @@ body > footer {
     background: $gray_50;
     grid-column: 2;
 
-    &:hover,
-    &:focus {
+    @include hover {
       background: $primary;
     }
   }
