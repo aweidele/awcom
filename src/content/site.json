@@ -69,10 +69,10 @@
               "platform": "drupal"
             },
             {
-              "title": "Centrify",
-              "description": "Custom Drupal 8 Theme for software security company",
-              "url": "https://www.centrify.com/",
-              "img": "centrify.jpg",
+              "title": "Creighton University Graduate School",
+              "description": "Custom Drupal 8 Theme University website",
+              "url": "https://gradschool.creighton.edu/",
+              "img": "creighton.jpg",
               "platform": "drupal"
             },
             {
@@ -88,6 +88,13 @@
               "url": "https://web.archive.org/web/20170103105044/https://www.bluetooth.com/",
               "img": "bluetooth.jpg",
               "platform": "wordpress"
+            },
+            {
+              "title": "Centrify",
+              "description": "Custom Drupal 8 Theme for software security company",
+              "url": "https://www.centrify.com/",
+              "img": "centrify.jpg",
+              "platform": "drupal"
             },
             {
               "title": "Morris Adjmi Architects",
