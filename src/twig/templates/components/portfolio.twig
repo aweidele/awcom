@@ -1,3 +1,5 @@
+{% set space=' ' %}
+{% set spaceReplace='-' %}
   <div class="row">
     <div class="col-md-8 col-lg-6">
       <h3>Related Skills</h3>
@@ -13,11 +15,11 @@
       <div class="owl-carousel portfolio-carousel">
         {% for work in content.work %}
 
-        <article>
+        <article aria-labelledby="{{ work.title|replace({ (' '): '-', (':'): '', ('\&'), '', (','): '' })|lower }}">
           <div>
             <img src="/images/{{ work.img }}" alt="Screenshot for {{ work.title }}">
             <div>
-              <h3>{{ work.title }}</h3>
+              <h3 id="{{ work.title|replace({ (' '): '-', (':'): '', ('\&'), '', (','): '' })|lower }}">{{ work.title }}</h3>
               <p>{{ work.description }}</p>
               <p><a href="{{ work.url }}" target="_blank" aria-label="Launch Project: {{ work.title }}">Launch Site</a></p>
               {# <div>{{ work.platform }}</div> #}
@@ -28,3 +30,9 @@
       </div>
   </div>
 </div>
+
+{% set twig_content_variable= 'Testing to replace content'%}
+{% set replace_value_var= 'Testing' %}
+{% set replace_with_value_var = 'Testing complete' %}
+
+{{ twig_content_variable|replace({ (replace_value_var): replace_with_value_var }) }}

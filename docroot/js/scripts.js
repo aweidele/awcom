@@ -13912,7 +13912,6 @@ return jQuery;
 
 function windowResize(owlOn) {
   var w = $(window).width();
-  //$('#feedback').text(w);
   if(w < 768 && !owlOn) {
     $('.owl-carousel').owlCarousel({
       loop: true,
