@@ -1,13 +1,40 @@
 <?php
 
   $clients['web'] = array(
-    // 'bluetooth' => array(
-    //   'name' => 'Bluetooth Technology Website',
-    //   'description' => 'Sitecore website for technology company',
-    //   'url' => 'https://www.bluetooth.com/',
-    //   'image' => 'bt.jpg',
-    //   'tech' => array('sitecore'),
-    // ),
+    'walters' => array(
+      'name' => 'The Walters Art Museum',
+      'description' => 'Wordpress website for the Walters Art Museum in Baltimore',
+      'url' => 'https://thewalters.org/',
+      'image' => 'walters.jpg',
+      'tech' => array('wordpress'),
+    ),
+    'jhu' => array(
+      'name' => 'Johns Hopkins Carey School of Business',
+      'description' => 'Drupal 8 website for Baltimore university',
+      'url' => 'https://carey.jhu.edu/',
+      'image' => 'jhu.jpg',
+      'tech' => array('drupal'),
+    ),
+    'centrify' => array(
+      'name' => 'Centrify',
+      'description' => 'Custom Drupal 8 theme for software security company',
+      'url' => 'https://www.centrify.com/',
+      'image' => 'centrify.jpg',
+      'tech' => array('drupal'),
+    ),
+    'meadville' => array(
+      'name' => 'Meadville Lombard Theological School',
+      'description' => 'Bigtree website for Chigaco college',
+      'url' => 'https://www.meadville.edu/',
+      'image' => 'meadville.png'
+    ),
+    'bluetooth' => array(
+      'name' => 'Bluetooth Technology Website',
+      'description' => 'Sitecore website for technology company',
+      'url' => 'https://web.archive.org/web/20170103105044/https://www.bluetooth.com/',
+      'image' => 'bt.jpg',
+      'tech' => array('sitecore'),
+    ),
     'ma' => array(
       'name' => 'Morris Adjmi Architects',
       'description' => 'Custom Wordpress theme for New York-based architect',
@@ -35,12 +62,12 @@
     //   'image' => 'max.jpg',
     //   'tech' => array('sitecore'),
     // ),
-    'dorfest' => array(
-      'name' => 'DuClaw Brewing Company: Day of Retribution',
-      'description' => 'Front-end development for brewery festival site',
-      'url' => 'http://dorfestival.com/',
-      'image' => 'dor.jpg',
-    ),
+    // 'dorfest' => array(
+    //   'name' => 'DuClaw Brewing Company: Day of Retribution',
+    //   'description' => 'Front-end development for brewery festival site',
+    //   'url' => 'http://dorfestival.com/',
+    //   'image' => 'dor.jpg',
+    // ),
     'smw' => array(
       'name' => 'Shen Milsom &amp; Wilke',
       'description' => 'Custom Wordpress theme for New York-based acoustical design company',
