@@ -175,7 +175,7 @@ $lw_d: 6px;
   a {
     color: darken($primary,5);
     @include hover {
-      color: $tertiary;
+      color: $secondary;
     }
   }
 }
