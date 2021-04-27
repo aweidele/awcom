@@ -83,18 +83,18 @@
               "platform": "bigtree"
             },
             {
+              "title": "Walden University",
+              "description": "Sitecore Site for Online University",
+              "url": "https://www.waldenu.edu",
+              "img": "walden.jpg",
+              "platform": "wordpress"
+            },
+            {
               "title": "Bluetooth",
               "description": "Sitecore Site for technology company",
               "url": "https://web.archive.org/web/20170103105044/https://www.bluetooth.com/",
               "img": "bluetooth.jpg",
               "platform": "wordpress"
-            },
-            {
-              "title": "Centrify",
-              "description": "Custom Drupal 8 Theme for software security company",
-              "url": "https://www.centrify.com/",
-              "img": "centrify.jpg",
-              "platform": "drupal"
             },
             {
               "title": "Morris Adjmi Architects",
