@@ -897,6 +897,11 @@ a {
   cursor: pointer;
 }
 
+.section.portfolio .portfolio-carousel article:hover a,
+.section.portfolio .portfolio-carousel article:focus a {
+  display: inline-block;
+}
+
 .section.portfolio .portfolio-carousel article:before,
 .section.portfolio .portfolio-carousel article:after,
 .section.portfolio .portfolio-carousel article>div:before {
@@ -1384,7 +1389,7 @@ a {
   }
 
   .section.portfolio .portfolio-carousel article a {
-    display: inline-block;
+    display: none;
   }
 
   .section.portfolio .portfolio-carousel article {

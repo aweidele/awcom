@@ -63,8 +63,12 @@
         @include btn;
 
         @media #{$mediaDesktop} {
+          display: none;
+        }
+      }
 
-          // @include srOnly;
+      @include hover {
+        a {
           display: inline-block;
         }
       }
