@@ -130,4 +130,4 @@ gulp.task('watch', function(){
   //gulp.watch('src/icons/**/*.svg', ['iconfont','sass']);
 });
 
-gulp.task('default', ['sass', 'compress', 'compile', 'watch', 'server']);
+gulp.task('default', ['sass', 'compress', 'compile', 'images', 'watch', 'server']);
