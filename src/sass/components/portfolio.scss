@@ -12,6 +12,14 @@
     font-size: 18px;
     line-height: (27 / 18) * 1em;
     display: inline;
+    @include letterSpacing(20);
+    transition: all .25s;
+    cursor: default;
+    border-radius: 2px;
+
+    @include hover {
+      background: $gray_90;
+    }
 
     &:after {
       content: ", ";

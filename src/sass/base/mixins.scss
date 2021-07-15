@@ -58,3 +58,7 @@
     @content;
   }
 }
+
+@mixin letterSpacing($ls) {
+  letter-spacing: ($ls / 1000) * 1em;
+}

@@ -839,6 +839,16 @@ a {
   font-size: 1.125rem;
   line-height: 1.5em;
   display: inline;
+  letter-spacing: .02em;
+  -webkit-transition: all .25s;
+  transition: all .25s;
+  cursor: default;
+  border-radius: 0.125rem;
+}
+
+.section.portfolio li:hover,
+.section.portfolio li:focus {
+  background: #E6E6E6;
 }
 
 .section.portfolio li:after {
