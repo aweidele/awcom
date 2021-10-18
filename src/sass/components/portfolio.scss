@@ -133,5 +133,47 @@
       width: 100%;
       height: auto;
     }
+
+    // .owl-item {
+    //   opacity: .6;
+    //   transition: opacity .25s;
+    //
+    //   &.active {
+    //     opacity: 1;
+    //   }
+    // }
+  }
+
+  .tns-nav {
+    display: flex;
+    justify-content: center;
+    margin: $gutter / 2 0;
+
+    button {
+      width: 6px;
+      height: 6px;
+      border: 0;
+      border-radius: 3px;
+      background: $gray_50;
+      margin: 0 3px;
+      transition: all .25s;
+
+      &.tns-nav-active {
+        background: $primary;
+      }
+    }
+  }
+
+  .tns-ovh {
+    overflow: visible;
+  }
+
+  .tns-item {
+    opacity: .6;
+    transition: opacity .25s;
+
+    &.tns-slide-active {
+      opacity: 1;
+    }
   }
 }

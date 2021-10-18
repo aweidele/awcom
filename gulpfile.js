@@ -57,6 +57,7 @@ var pxtoremOptions = {
 };
 
 var jsQueue = [
+  'node_modules/tiny-slider/dist/tiny-slider.js',
   'src/js/*.js'
 ];
 

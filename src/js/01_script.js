@@ -1,4 +1,6 @@
 (() => {
+  'use strict';
+
   const body = document.querySelector('body');
 
   // Menu Toggle
@@ -40,9 +42,52 @@
       body.classList.add('scrolled');
     }
   };
-  const sectionObserver = new IntersectionObserver(bodyScroll, {
+  const scrolledOberver = new IntersectionObserver(bodyScroll, {
     root: null,
     threshold: 0.7
   });
-  sectionObserver.observe(section);
+  scrolledOberver.observe(section);
+
+  // Portfolio Carousel
+  let windowWidth = window.innerWidth;
+  let carousel = false;
+  let portfolio;
+
+  const isCarousel = function(w) {
+    if(w <= 768 && !carousel) {
+      portfolio = tns({
+        container: '#portfolio',
+        items: 1,
+        responsive: {
+          600: {
+            items: 2
+          }
+        },
+        slideBy: 'page',
+        mouseDrag: true,
+        controls: false,
+        navPosition: 'bottom'
+      });
+      carousel = true;
+    } else if(w > 768 && carousel) {
+      portfolio.destroy();
+      carousel = false;
+    }
+  }
+
+  isCarousel(windowWidth);
+
+  const resizeHandler = function(e) {
+    windowWidth = window.innerWidth;
+    isCarousel(windowWidth);
+  }
+
+  window.addEventListener('resize',resizeHandler);
+
+  // const portfolio = tns({
+  //   container: '#portfolio',
+  //   items: 3,
+  //   slideBy: 'page',
+  //   autoplay: false
+  // });
 })();
