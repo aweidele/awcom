@@ -3227,13 +3227,22 @@ return tns;
     }
   });
 
-  // Navigation Scroll
+  // Smooth Scroll
   const jumpLink = document.querySelectorAll('a[href^="#"]');
   jumpLink.forEach((el)=>{
     el.addEventListener('click',function(e) {
       e.preventDefault();
 
-      document.querySelector(e.target.closest('a').getAttribute('href')).scrollIntoView({behavior: 'smooth'});
+      const sect = document.querySelector(e.target.closest('a').getAttribute('href'));
+      const s1coords = sect.getBoundingClientRect();
+      const headerH = document.querySelector('body > header').clientHeight;
+
+      window.scrollTo({
+       left: s1coords.left + window.pageXOffset,
+       top: s1coords.top + window.pageYOffset - headerH,
+       behavior: 'smooth',
+     });
+      // document.querySelector(e.target.closest('a').getAttribute('href')).scrollIntoView({behavior: 'smooth'});
 
       body.classList.remove('menu_open');
       body.classList.add('menu_closed');
