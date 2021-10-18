@@ -37,10 +37,6 @@
       margin: $gutter / -2;
     }
 
-    .owl-stage-outer {
-      overflow: visible;
-    }
-
     article {
       padding: 0 $gutter / 2;
       position: relative;
@@ -136,34 +132,6 @@
       display: block;
       width: 100%;
       height: auto;
-    }
-
-    .owl-item {
-      opacity: .6;
-      transition: opacity .25s;
-
-      &.active {
-        opacity: 1;
-      }
-    }
-
-    .owl-dots {
-      display: flex;
-      justify-content: center;
-      margin: $gutter / 2 0;
-    }
-
-    .owl-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 3px;
-      background: $gray_50;
-      margin: 0 3px;
-      transition: all .25s;
-
-      &.active {
-        background: $primary;
-      }
     }
   }
 }

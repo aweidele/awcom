@@ -1,3 +1,1 @@
-(() => {
-  
-})();
+(()=>{const e=document.querySelector("body"),s=document.querySelector(".header_inner button");let n=!1;s.addEventListener("click",(()=>{n?(e.classList.remove("menu_open"),e.classList.add("menu_closed"),n=!1):(e.classList.add("menu_open"),e.classList.remove("menu_closed"),n=!0)}))})();
