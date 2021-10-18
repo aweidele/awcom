@@ -3294,17 +3294,10 @@ return tns;
 
   isCarousel(windowWidth);
 
-  const resizeHandler = function(e) {
+  const resizeHandler = function() {
     windowWidth = window.innerWidth;
     isCarousel(windowWidth);
   }
 
   window.addEventListener('resize',resizeHandler);
-
-  // const portfolio = tns({
-  //   container: '#portfolio',
-  //   items: 3,
-  //   slideBy: 'page',
-  //   autoplay: false
-  // });
 })();
