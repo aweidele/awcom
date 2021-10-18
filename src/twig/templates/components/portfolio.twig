@@ -12,7 +12,7 @@
   </div>
   <div class="row">
     <div class="col">
-      <div class="owl-carousel portfolio-carousel">
+      <div class="portfolio-carousel" id="portfolio">
         {% for work in content.work %}
 
         <article aria-labelledby="{{ work.title|replace({ (' '): '-', (':'): '', ('\&'), '', (','): '' })|lower }}">

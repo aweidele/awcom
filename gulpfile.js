@@ -5,7 +5,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var pxtorem = require('gulp-pxtorem');
 var concat = require('gulp-concat');
 var rename = require('gulp-rename');
-var uglify = require('gulp-uglify');
+var terser = require('gulp-terser');
 var twig = require('gulp-twig');
 var pump = require('pump');
 var imagemin = require('gulp-imagemin');
@@ -57,8 +57,7 @@ var pxtoremOptions = {
 };
 
 var jsQueue = [
-  'node_modules/jquery/dist/jquery.js',
-  'node_modules/owl.carousel2/dist/owl.carousel.js',
+  'node_modules/tiny-slider/dist/tiny-slider.js',
   'src/js/*.js'
 ];
 
@@ -79,7 +78,7 @@ gulp.task('compress', function() {
     .pipe(concat('scripts.js'))
     .pipe(gulp.dest('docroot/js'))
     .pipe(rename('site.js'))
-    .pipe(uglify())
+    .pipe(terser())
     .pipe(gulp.dest('docroot/js'));
 });
 

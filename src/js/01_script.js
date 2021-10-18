@@ -1,70 +1,102 @@
-(function($) {
-  $(document).ready(function() {
-    owlOn = false;
-    owlOn = windowResize(owlOn);
-    $(window).on('resize',function() {
-      owlOn = windowResize(owlOn);
-    });
+(() => {
+  'use strict';
 
-    windowScroll();
-    $(window).on('scroll', function() {
-      windowScroll();
-    });
+  const body = document.querySelector('body');
 
-    var menuOpen = false;
-    $('.header_inner button').on('click',function() {
-      if(menuOpen) {
-        $('body').removeClass('menu_open').addClass('menu_closed');
-        menuOpen = false;
-      } else {
-        $('body').removeClass('menu_closed').addClass('menu_open');
-        menuOpen = true;
-      }
-    });
+  // Menu Toggle
+  const menuToggle = document.querySelector('.header_inner button');
+  let menuOpen = false;
 
-    $('a[href^="#"]').on('click',function(e) {
-      var h = $(this).attr('href');
-      if (h.charAt(0) == "#") {
-        e.preventDefault();
-        $('body').removeClass('menu_open').addClass('menu_closed');
-        var target = $(h).offset().top - $('body > header').height();
-        $('html, body').animate({
-          scrollTop: target
-        },1000);
-      }
-    });
-
+  menuToggle.addEventListener('click',() =>{
+    if(menuOpen) {
+      body.classList.remove('menu_open');
+      body.classList.add('menu_closed');
+      menuOpen = false;
+    } else {
+      body.classList.add('menu_open');
+      body.classList.remove('menu_closed');
+      menuOpen = true;
+    }
   });
-})(jQuery);
 
-function windowResize(owlOn) {
-  var w = $(window).width();
-  if(w < 768 && !owlOn) {
-    $('.owl-carousel').owlCarousel({
-      loop: true,
-      responsive: {
-        0: {
-          items: 1
-        },
-        600: {
-          items: 2
-        }
-      }
+  // Smooth Scroll
+  const jumpLink = document.querySelectorAll('a[href^="#"]');
+  jumpLink.forEach((el)=>{
+    el.addEventListener('click',function(e) {
+      e.preventDefault();
+
+      const sect = document.querySelector(e.target.closest('a').getAttribute('href'));
+      const s1coords = sect.getBoundingClientRect();
+      const headerH = document.querySelector('body > header').clientHeight;
+
+      window.scrollTo({
+       left: s1coords.left + window.pageXOffset,
+       top: s1coords.top + window.pageYOffset - headerH,
+       behavior: 'smooth',
+     });
+      // document.querySelector(e.target.closest('a').getAttribute('href')).scrollIntoView({behavior: 'smooth'});
+
+      body.classList.remove('menu_open');
+      body.classList.add('menu_closed');
     });
-    owlOn = true;
-  } else if(w >= 768 && owlOn) {
-    $('.owl-carousel').owlCarousel('destroy');
-    owlOn = false;
+  });
+
+  // Menu scrolled style
+  const section = document.querySelector('.intro');
+  const bodyScroll = function(entries, observer) {
+    const [entry] = entries;
+    if(entry.isIntersecting) {
+      body.classList.remove('scrolled');
+    } else {
+      body.classList.add('scrolled');
+    }
+  };
+  const scrolledOberver = new IntersectionObserver(bodyScroll, {
+    root: null,
+    threshold: 0.7
+  });
+  scrolledOberver.observe(section);
+
+  // Portfolio Carousel
+  let windowWidth = window.innerWidth;
+  let carousel = false;
+  let portfolio;
+
+  const isCarousel = function(w) {
+    if(w <= 768 && !carousel) {
+      portfolio = tns({
+        container: '#portfolio',
+        items: 1,
+        responsive: {
+          600: {
+            items: 2
+          }
+        },
+        slideBy: 'page',
+        mouseDrag: true,
+        controls: false,
+        navPosition: 'bottom'
+      });
+      carousel = true;
+    } else if(w > 768 && carousel) {
+      portfolio.destroy();
+      carousel = false;
+    }
   }
 
-  return owlOn;
-}
+  isCarousel(windowWidth);
 
-function windowScroll() {
-  s = $(window).scrollTop();
-  if(s > 60) {
-    $('body').addClass('scrolled');
-  } else {
-    $('body').removeClass('scrolled');
+  const resizeHandler = function(e) {
+    windowWidth = window.innerWidth;
+    isCarousel(windowWidth);
   }
-}
+
+  window.addEventListener('resize',resizeHandler);
+
+  // const portfolio = tns({
+  //   container: '#portfolio',
+  //   items: 3,
+  //   slideBy: 'page',
+  //   autoplay: false
+  // });
+})();

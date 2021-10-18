@@ -37,10 +37,6 @@
       margin: $gutter / -2;
     }
 
-    .owl-stage-outer {
-      overflow: visible;
-    }
-
     article {
       padding: 0 $gutter / 2;
       position: relative;
@@ -138,32 +134,46 @@
       height: auto;
     }
 
-    .owl-item {
-      opacity: .6;
-      transition: opacity .25s;
+    // .owl-item {
+    //   opacity: .6;
+    //   transition: opacity .25s;
+    //
+    //   &.active {
+    //     opacity: 1;
+    //   }
+    // }
+  }
 
-      &.active {
-        opacity: 1;
-      }
-    }
+  .tns-nav {
+    display: flex;
+    justify-content: center;
+    margin: $gutter / 2 0;
 
-    .owl-dots {
-      display: flex;
-      justify-content: center;
-      margin: $gutter / 2 0;
-    }
-
-    .owl-dot {
+    button {
       width: 6px;
       height: 6px;
+      border: 0;
       border-radius: 3px;
       background: $gray_50;
       margin: 0 3px;
       transition: all .25s;
 
-      &.active {
+      &.tns-nav-active {
         background: $primary;
       }
+    }
+  }
+
+  .tns-ovh {
+    overflow: visible;
+  }
+
+  .tns-item {
+    opacity: .6;
+    transition: opacity .25s;
+
+    &.tns-slide-active {
+      opacity: 1;
     }
   }
 }
