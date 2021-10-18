@@ -28,5 +28,21 @@
       body.classList.remove('menu_open');
       body.classList.add('menu_closed');
     });
-  })
+  });
+
+  // Menu scrolled style
+  const section = document.querySelector('.intro');
+  const bodyScroll = function(entries, observer) {
+    const [entry] = entries;
+    if(entry.isIntersecting) {
+      body.classList.remove('scrolled');
+    } else {
+      body.classList.add('scrolled');
+    }
+  };
+  const sectionObserver = new IntersectionObserver(bodyScroll, {
+    root: null,
+    threshold: 0.7
+  });
+  sectionObserver.observe(section);
 })();
