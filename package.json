@@ -17,22 +17,24 @@
   },
   "homepage": "https://github.com/aweidele/awcom#readme",
   "devDependencies": {
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-pxtorem": "^3.0.0",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.2.1",
+    "gulp-sass": "^5.0.0",
     "gulp-sourcemaps": "^2.6.1",
     "gulp-uglify": "^3.0.0",
     "gulp-webserver": "^0.9.1",
-    "pump": "^1.0.2"
+    "pump": "^1.0.2",
+    "sass": "^1.43.2"
   },
   "dependencies": {
     "gulp-group-css-media-queries": "^1.2.2",
     "gulp-imagemin": "^5.0.3",
     "gulp-twig": "^1.2.0",
     "jquery": "^3.4.1",
+    "node-sass": "^6.0.1",
     "npm": "^6.11.3",
     "owl.carousel2": "^2.2.1"
   }

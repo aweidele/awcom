@@ -1,5 +1,5 @@
 var gulp = require('gulp');
-var sass = require('gulp-sass');
+var sass = require('gulp-sass')(require('node-sass'));
 var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
 var pxtorem = require('gulp-pxtorem');
@@ -123,11 +123,11 @@ gulp.task('server', function() {
 });
 
 gulp.task('watch', function(){
-  gulp.watch('src/sass/**/*.scss', ['sass']);
-  gulp.watch('src/js/**/*.js', ['compress']);
-  gulp.watch('src/twig/**/*.twig', ['compile']);
-  gulp.watch('src/images/**/*', ['images']);
+  gulp.watch('src/sass/**/*.scss', gulp.series('sass'));
+  gulp.watch('src/js/**/*.js', gulp.series('compress'));
+  gulp.watch('src/twig/**/*.twig', gulp.series('compile'));
+  gulp.watch('src/images/**/*', gulp.series('images'));
   //gulp.watch('src/icons/**/*.svg', ['iconfont','sass']);
 });
 
-gulp.task('default', ['sass', 'compress', 'compile', 'images', 'watch', 'server']);
+gulp.task('default', gulp.series('sass', 'compress', 'compile', 'images', 'watch', 'server'));
