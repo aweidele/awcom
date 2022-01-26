@@ -874,8 +874,8 @@ a {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: (auto)[5];
-      grid-template-rows: repeat(5, auto);
+  -ms-grid-rows: (auto)[6];
+      grid-template-rows: repeat(6, auto);
   position: relative;
   padding: 3.125rem 0;
   color: #383838;
@@ -1095,8 +1095,8 @@ a {
   }
 
   .section.cv .jobs {
-    -ms-grid-columns: (1fr)[6];
-        grid-template-columns: repeat(6, 1fr);
+    -ms-grid-columns: (1fr)[7];
+        grid-template-columns: repeat(7, 1fr);
     -ms-grid-rows: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
     padding: 0;
@@ -1200,6 +1200,13 @@ a {
         grid-column-start: 5;
     -ms-grid-column-span: 2;
     grid-column-end: 7;
+  }
+
+  .section.cv .jobs li:nth-child(6) {
+    -ms-grid-column: 6;
+        grid-column-start: 6;
+    -ms-grid-column-span: 2;
+    grid-column-end: 8;
   }
 
   .section.cv p {
@@ -1402,6 +1409,11 @@ a {
   .section.cv .jobs li:nth-child(5) {
     -ms-grid-row: 5;
     grid-row: 5;
+  }
+
+  .section.cv .jobs li:nth-child(6) {
+    -ms-grid-row: 6;
+    grid-row: 6;
   }
 }
 

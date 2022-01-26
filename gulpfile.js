@@ -130,3 +130,4 @@ gulp.task('watch', function(){
 });
 
 gulp.task('default', gulp.series('sass', 'compress', 'compile', 'images', 'watch', 'server'));
+gulp.task('start', gulp.series('server', 'watch'));
