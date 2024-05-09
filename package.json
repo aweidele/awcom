@@ -1,0 +1,23 @@
+{
+  "name": "aaronweidele.com2024",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aweidele/awcom.git"
+  },
+  "author": "Aaron Weidele",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aweidele/awcom/issues"
+  },
+  "homepage": "https://github.com/aweidele/awcom#readme",
+  "dependencies": {
+    "gulp": "^5.0.0",
+    "tailwindcss": "^3.4.3"
+  }
+}
