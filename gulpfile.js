@@ -5,7 +5,10 @@ const clean = require("gulp-clean");
 const sass = require("gulp-sass")(require("sass"));
 const autoprefixer = require("autoprefixer");
 const postcss = require("gulp-postcss");
+const cssnano = require("cssnano");
 const tailwindcss = require("tailwindcss");
+
+var twig = require("gulp-twig");
 
 function prodClean() {
   console.log("\n\t" + "Cleaning build folder for fresh start.\n");
@@ -14,10 +17,20 @@ function prodClean() {
 
 function prodStyles() {
   console.log("\n\t" + "Compiling styles.\n");
-  return src(`${options.paths.src.css}/**/*.scss`)
-    .pipe(sass().on("error", sass.logError))
-    .pipe(postcss([tailwindcss(options.config.tailwindjs), autoprefixer()]))
-    .pipe(dest(options.paths.docroot.css));
+  return (
+    src(`${options.paths.src.css}/**/*.scss`)
+      .pipe(sass().on("error", sass.logError))
+      // .pipe(postcss([tailwindcss(options.config.tailwindjs), autoprefixer(), cssnano()]))
+      .pipe(postcss([tailwindcss(options.config.tailwindjs), autoprefixer()]))
+      .pipe(dest(options.paths.docroot.css))
+  );
+}
+
+function prodTwig() {
+  console.log("\n\t" + "Compiling HTML.\n");
+  return src([`${options.paths.src.base}/**/*.twig`, `!${options.paths.src.base}/twig/templates/**/*.twig`])
+    .pipe(twig())
+    .pipe(dest(options.paths.docroot.base));
 }
 
 function buildFinish(done) {
@@ -27,7 +40,7 @@ function buildFinish(done) {
 
 exports.prod = series(
   prodClean, // Clean Build Folder
-  parallel(prodStyles),
+  parallel(prodStyles, prodTwig),
   // parallel(prodStyles, prodScripts, prodImages, prodHTML, prodFonts, prodThirdParty), //Run All tasks in parallel
   buildFinish
 );
