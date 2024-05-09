@@ -4,6 +4,7 @@ const clean = require("gulp-clean");
 
 const sass = require("gulp-sass")(require("sass"));
 const autoprefixer = require("autoprefixer");
+const postcss = require("gulp-postcss");
 const tailwindcss = require("tailwindcss");
 
 function prodClean() {
@@ -12,8 +13,11 @@ function prodClean() {
 }
 
 function prodStyles() {
-  console.log("HOWDY DOOOOOO!!");
-  return src(`${options.paths.src.css}/**/*.scss`).pipe(sass().on("error", sass.logError)).pipe(dest(options.paths.docroot.css));
+  console.log("\n\t" + "Compiling styles.\n");
+  return src(`${options.paths.src.css}/**/*.scss`)
+    .pipe(sass().on("error", sass.logError))
+    .pipe(postcss([tailwindcss(options.config.tailwindjs), autoprefixer()]))
+    .pipe(dest(options.paths.docroot.css));
 }
 
 function buildFinish(done) {
