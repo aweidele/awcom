@@ -13,6 +13,3 @@ exec(`git commit -m "Production Build ${dateString(date)}"`, (err, stdout, stder
   console.log(`stdout: ${stdout}`);
   console.log(`stderr: ${stderr}`);
 });
-
-// const date1 = new Date("December 17, 1995 00:24:00");
-// console.log(dateString(date1));
