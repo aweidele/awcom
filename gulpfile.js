@@ -9,7 +9,13 @@ const cssnano = require("cssnano");
 const clean = require("gulp-clean");
 const tailwindcss = require("tailwindcss");
 
+const concat = require("gulp-concat"); //For Concatinating js,css files
+const uglify = require("gulp-terser");
+
 var twig = require("gulp-twig");
+
+const jsQueue = [`${options.paths.src.js}/**/*.js`];
+// const jsQueue = [`${options.paths.src.js}/libs/**/*.js`, `${options.paths.src.js}/**/*.js`];
 
 /** Browser Sync */
 function livePreview(done) {
@@ -31,6 +37,7 @@ function previewReload(done) {
 function watchFiles() {
   watch(`${options.paths.src.base}/**/*.twig`, series(devTwig, devStyles, previewReload));
   watch([options.config.tailwindjs, `${options.paths.src.css}/**/*.scss`], series(devStyles, previewReload));
+  watch(`${options.paths.src.js}/**/*.js`, series(devScripts, previewReload));
 }
 
 /** Dev Tasks */
@@ -52,6 +59,12 @@ function devTwig() {
   return src([`${options.paths.src.base}/**/*.twig`, `!${options.paths.src.base}/twig/templates/**/*.twig`])
     .pipe(twig())
     .pipe(dest(options.paths.dist.base));
+}
+
+function devScripts() {
+  return src(jsQueue)
+    .pipe(concat({ path: "scripts.js" }))
+    .pipe(dest(options.paths.dist.js));
 }
 
 /** Production Tasks */
@@ -78,6 +91,13 @@ function prodTwig() {
     .pipe(dest(options.paths.docroot.base));
 }
 
+function prodScripts() {
+  return src(jsQueue)
+    .pipe(concat({ path: "scripts.js" }))
+    .pipe(uglify())
+    .pipe(dest(options.paths.docroot.js));
+}
+
 function buildFinish(done) {
   console.log("\n\t" + `Production build is complete. Files are located at ${options.paths.docroot.base}\n`);
   done();
@@ -85,9 +105,9 @@ function buildFinish(done) {
 
 exports.prod = series(
   prodClean, // Clean Build Folder
-  parallel(prodStyles, prodTwig),
+  parallel(prodStyles, prodTwig, prodScripts),
   // parallel(prodStyles, prodScripts, prodImages, prodHTML, prodFonts, prodThirdParty), //Run All tasks in parallel
   buildFinish
 );
 
-exports.default = series(devClean, parallel(devStyles, devTwig), livePreview, watchFiles);
+exports.default = series(devClean, parallel(devStyles, devTwig, devScripts), livePreview, watchFiles);

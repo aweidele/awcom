@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "echo \"Deploying\n\" && gulp prod && git add -A && git commit -m \"Building Prod\" && git push"
   },
   "repository": {
     "type": "git",
@@ -23,8 +24,10 @@
     "gulp": "^5.0.0",
     "gulp-clean": "^0.4.0",
     "gulp-cli": "^3.0.0",
+    "gulp-concat": "^2.6.1",
     "gulp-postcss": "^10.0.0",
     "gulp-sass": "^5.1.0",
+    "gulp-terser": "^2.1.0",
     "gulp-twig": "^1.2.0",
     "sass": "^1.77.0",
     "tailwindcss": "^3.4.3"
