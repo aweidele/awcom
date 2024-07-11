@@ -2,7 +2,6 @@ GULP TAILWIND repo
 https://github.com/lazymozek/gulp-with-tailwindcss
 
 
-https://jacekjeznach.com/
 https://www.adhamdannaway.com/
 https://anuraghazra.dev/
 http://findmatthew.com/
