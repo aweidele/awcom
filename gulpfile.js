@@ -17,6 +17,8 @@ var twig = require("gulp-twig");
 const jsQueue = [`${options.paths.src.js}/**/*.js`];
 // const jsQueue = [`${options.paths.src.js}/libs/**/*.js`, `${options.paths.src.js}/**/*.js`];
 
+const content = { cheese: "cheddar" };
+
 /** Browser Sync */
 function livePreview(done) {
   browserSync.init({
@@ -57,7 +59,7 @@ function devStyles() {
 function devTwig() {
   console.log("\n\t" + "Compiling HTML.\n");
   return src([`${options.paths.src.base}/**/*.twig`, `!${options.paths.src.base}/twig/templates/**/*.twig`])
-    .pipe(twig())
+    .pipe(twig({ data: content }))
     .pipe(dest(options.paths.dist.base));
 }
 

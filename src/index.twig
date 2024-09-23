@@ -7,8 +7,7 @@
   </head>
   <body>
     <h1 class="text-9xl text-slate-500">Hello Dar!</h1>
-    {% include './twig/templates/test.twig' with { cheese: 'cheddar' } %}
-
-   
+    {% include './twig/templates/test.twig' %}
+    <pre>{{dump(content)}}</pre>
   </body>
 </html>
