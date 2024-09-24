@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
 import { splitFontSizes } from "./src/utils/fontsizes";
+import { pxToRem } from "./src/utils/pxToRem";
 
 const fontSizes = {
   sm: [23, 14, 37],
@@ -30,6 +31,12 @@ export default {
         s2: "#2E4057",
         a1: "#DA4167",
         a2: "#2CA58D",
+      },
+      minHeight: {
+        home: "90vh",
+      },
+      maxWidth: {
+        c: pxToRem(1270),
       },
     },
   },

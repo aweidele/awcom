@@ -3,5 +3,14 @@
 @tailwind utilities;
 
 body {
-  @apply font-serif text-base;
+  @apply font-serif text-base-m md:text-base;
+}
+
+.home-intro {
+  @apply flex items-center gap-9;
+}
+
+.home-intro:after,
+.home-intro:before {
+  @apply content-[''] h-px bg-white grow;
 }
