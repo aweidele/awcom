@@ -7,7 +7,7 @@ export const sections = [
     component: "home",
   },
   {
-    title: "Home",
+    title: "Home 2",
     content: home,
     component: "home",
   },

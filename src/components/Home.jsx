@@ -6,12 +6,14 @@ import { SmallText } from "./SmallText";
 import { DownArrow } from "./Icons";
 import Grid from "./Grid";
 import { formatSectionName } from "../utils/formatSectionName";
+import border from "../assets/border.svg";
 
 export default function Home({ content }) {
   const { sections } = useContext(ContentContext);
   const { line1, line2, scrollText } = content;
   return (
-    <Section className="bg-p2 text-white relative home-container">
+    <Section className="bg-p2 text-white relative z-10 home-container">
+      <div class="circle-bg"></div>
       <div className="min-h-home relative flex items-center md:items-end w-full md:pb-[15%]">
         <div className="w-full">
           <Grid>
@@ -30,6 +32,7 @@ export default function Home({ content }) {
           </SmallText>
         </div>
       </div>
+      <hr className="w-full h-[50px] left-0 -bottom-[25px] absolute border-0" style={{ backgroundImage: `url(${border})` }} />
     </Section>
   );
 }
