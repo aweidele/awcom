@@ -18,3 +18,21 @@ body {
 .home-intro:before {
   @apply content-[''] h-px bg-white grow;
 }
+
+.menu-button:before,
+.menu-button:after {
+  @apply content-[""];
+}
+
+.menu-button span:not(.sr-only),
+.menu-button:before,
+.menu-button:after {
+  @apply w-full h-0.5 lg:h-1 bg-white block absolute left-0 top-[calc(50%-2px)] origin-center duration-300;
+}
+
+.menu-button:before {
+  @apply -translate-y-2.5 lg:-translate-y-3;
+}
+.menu-button:after {
+  @apply translate-y-2.5 lg:translate-y-3;
+}

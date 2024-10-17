@@ -1,11 +1,14 @@
+import { useContext } from "react";
+import { ContentContext } from "./ContentContext";
+
 import Section from "./Section";
 import { SmallText } from "./SmallText";
 import { DownArrow } from "./Icons";
 import Grid from "./Grid";
-import { sections } from "../content/content";
 import { formatSectionName } from "../utils/formatSectionName";
 
 export default function Home({ content }) {
+  const { sections } = useContext(ContentContext);
   const { line1, line2, scrollText } = content;
   return (
     <Section className="bg-p2 text-white relative home-container">

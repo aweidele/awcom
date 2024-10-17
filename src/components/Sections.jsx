@@ -1,12 +1,15 @@
+import { Fragment, useContext } from "react";
+import { ContentContext } from "./ContentContext";
+
 import Home from "./Home";
-import { Fragment } from "react";
 import { formatSectionName } from "../utils/formatSectionName";
 
 const componentMap = {
   home: Home,
 };
 
-export default function Sections({ sections }) {
+export default function Sections() {
+  const { sections } = useContext(ContentContext);
   return (
     <>
       {sections.map((section, i) => {

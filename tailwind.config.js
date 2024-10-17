@@ -2,7 +2,7 @@
 
 import { splitFontSizes } from "./src/utils/fontsizes";
 import { pxToRem } from "./src/utils/pxToRem";
-import { hextToRGBA } from "./src/utils/hexToRGBA";
+import { hexToRGBA } from "./src/utils/hexToRGBA";
 
 const fontSizes = {
   sm: [23, 14, 37],
@@ -17,10 +17,12 @@ const colors = {
   p: "#151E29",
   p2: "#F4843F",
   "p2-dk": "#F3772B",
+  "p2-menu": "#C6530C",
   s: "#083D77",
   s2: "#2E4057",
   a1: "#DA4167",
   a2: "#2CA58D",
+  white: "#F2F4F8",
 };
 
 const logosize = [69, 58];
@@ -39,7 +41,8 @@ export default {
       lineHeight: { ...lineheights },
       colors: {
         ...colors,
-        "p-20": hextToRGBA(colors.p, 0.2),
+        "p-20": hexToRGBA(colors.p, 0.2),
+        wt: hexToRGBA("#FFFFFF", 0),
       },
       minHeight: {
         home: "90vh",
@@ -54,6 +57,24 @@ export default {
       height: {
         logo: `${logosize[1]}px`,
         "logo-m": `${logosize[1] * 0.6}px`,
+      },
+      keyframes: {
+        menuOpenTop: {
+          "0%": { transform: "rotate(0deg) translateY(-12px)" },
+          "50%": { transform: "rotate(0deg) translateY(0)" },
+          "100%": { transform: "rotate(45deg) translateY(0)" },
+        },
+        menuOpenBottom: {
+          "0%": { transform: "rotate(0deg) translateY(12px)" },
+          "50%": { transform: "rotate(0deg) translateY(0)" },
+          "100%": { transform: "rotate(-45deg) translateY(0)" },
+        },
+      },
+      animation: {
+        menuOpenTop: "menuOpenTop 3s ease-in-out",
+        menuOpenBottom: "menuOpenBottom 3s ease-in-out",
+        menuCloseTop: "menuOpenTop 3s ease-in-out reverse",
+        menuCloseBottom: "menuOpenBottom 3s ease-in-out reverse",
       },
     },
   },
