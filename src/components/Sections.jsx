@@ -1,4 +1,6 @@
 import Home from "./Home";
+import { Fragment } from "react";
+import { formatSectionName } from "../utils/formatSectionName";
 
 const componentMap = {
   home: Home,
@@ -7,9 +9,14 @@ const componentMap = {
 export default function Sections({ sections }) {
   return (
     <>
-      {sections.map((section) => {
+      {sections.map((section, i) => {
         const ThisComponent = componentMap[section.component];
-        return <ThisComponent key={section.title} content={section.content}></ThisComponent>;
+        return (
+          <Fragment key={`${section.title}-${i}`}>
+            <a name={formatSectionName(section.title, i)}></a>
+            <ThisComponent key={section.title} content={section.content}></ThisComponent>
+          </Fragment>
+        );
       })}
     </>
   );

@@ -23,6 +23,8 @@ const colors = {
   a2: "#2CA58D",
 };
 
+const logosize = [69, 58];
+
 const { sizes, sizesM, lineheights } = splitFontSizes(fontSizes);
 
 export default {
@@ -44,6 +46,14 @@ export default {
       },
       maxWidth: {
         c: pxToRem(1270),
+      },
+      width: {
+        logo: `${logosize[0]}px`,
+        "logo-m": `${logosize[0] * 0.6}px`,
+      },
+      height: {
+        logo: `${logosize[1]}px`,
+        "logo-m": `${logosize[1] * 0.6}px`,
       },
     },
   },

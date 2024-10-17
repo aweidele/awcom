@@ -6,4 +6,9 @@ export const sections = [
     content: home,
     component: "home",
   },
+  {
+    title: "Home",
+    content: home,
+    component: "home",
+  },
 ];
