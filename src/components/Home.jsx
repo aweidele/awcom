@@ -7,13 +7,13 @@ export default function Home({ content }) {
   console.log(content);
   const { line1, line2, scrollText } = content;
   return (
-    <Section className="bg-p2 text-white relative overflow-hidden before:w-[102%] before:aspect-square before:absolute before:-left-1/2 before:bottom-0 before:content-[''] before:rounded-full before:bg-p2-dk before:translate-y-[35%] before:translate-x-[4.5%]">
-      <div className="min-h-home relative flex items-end w-full pb-[15%]">
-        <div>
+    <Section className="bg-p2 text-white relative home-container">
+      <div className="min-h-home relative flex items-center md:items-end w-full md:pb-[15%]">
+        <div className="w-full">
           <Grid>
-            <h1 className="col-span-12 lg:col-span-10 lg:col-start-2 text-center lg:grid lg:grid-cols-subgrid">
-              <span className="col-span-10 home-intro text-3xl-m md:text-3xl leading-3xl uppercase font-bold font-sans">{line1}</span>
-              <span className="col-span-6 col-start-3 block">{line2}</span>
+            <h1 className="col-span-12 lg:col-span-10 lg:col-start-2 text-center grid grid-cols-subgrid">
+              <span className="home-intro text-3xl-m md:text-3xl leading-3xl uppercase font-bold font-sans col-span-12 lg:col-span-10">{line1}</span>
+              <span className="block col-span-12 lg:col-span-6 lg:col-start-3">{line2}</span>
             </h1>
           </Grid>
           <SmallText className="mt-5">

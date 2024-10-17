@@ -6,6 +6,10 @@ body {
   @apply font-serif text-base-m md:text-base;
 }
 
+.home-container {
+  @apply overflow-hidden before:w-[102%] before:aspect-square before:absolute before:-left-1/2 before:bottom-0 before:content-[''] before:rounded-full before:bg-p2-dk before:translate-y-[35%] before:translate-x-[4.5%];
+}
+
 .home-intro {
   @apply flex items-center gap-9;
 }
