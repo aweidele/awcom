@@ -32,7 +32,7 @@ export default function Home({ content }) {
           </SmallText>
         </div>
       </div>
-      <hr className="w-full h-[50px] left-0 -bottom-[25px] absolute border-0" style={{ backgroundImage: `url(${border})` }} />
+      <hr className="w-full h-10 lg:h-[50px] left-0 -bottom-[25px] lg:-bottom-[32px] absolute border-0 bg-center" style={{ backgroundImage: `url(${border})` }} />
     </Section>
   );
 }

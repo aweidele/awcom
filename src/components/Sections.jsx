@@ -2,10 +2,12 @@ import { Fragment, useContext } from "react";
 import { ContentContext } from "./ContentContext";
 
 import Home from "./Home";
+import { Work } from "./Work";
 import { formatSectionName } from "../utils/formatSectionName";
 
 const componentMap = {
   home: Home,
+  work: Work,
 };
 
 export default function Sections() {

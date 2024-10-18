@@ -1,4 +1,5 @@
 import home from "./sections/home.json";
+import { workExperience } from "./sections/skills-experience";
 
 export const sections = [
   {
@@ -7,8 +8,8 @@ export const sections = [
     component: "home",
   },
   {
-    title: "Home 2",
-    content: home,
-    component: "home",
+    title: "Work Experience",
+    content: workExperience,
+    component: "work",
   },
 ];

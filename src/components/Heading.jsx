@@ -1,4 +1,4 @@
-export default function Heading({ l, children }) {
+export default function Heading({ l = 2, children }) {
   const level = parseInt(l);
   const Tag = level <= 4 ? `h${level}` : `h4`;
   let classes = "font-sans";
