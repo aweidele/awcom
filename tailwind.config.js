@@ -11,6 +11,7 @@ const fontSizes = {
   xl: [47, 29, 72],
   "2xl": [60, 37, 91],
   "3xl": [76, 47, 114],
+  reg: [16, 16, 24],
 };
 
 const colors = {
@@ -51,12 +52,14 @@ export default {
         c: pxToRem(1270),
       },
       width: {
-        logo: `${logosize[0]}px`,
-        "logo-m": `${logosize[0] * 0.6}px`,
+        logo: pxToRem(logosize[0]),
+        "logo-m": pxToRem(logosize[0] * 0.6),
+        42: pxToRem(60),
       },
       height: {
-        logo: `${logosize[1]}px`,
-        "logo-m": `${logosize[1] * 0.6}px`,
+        logo: pxToRem(logosize[1]),
+        "logo-m": pxToRem(logosize[1] * 0.6),
+        42: pxToRem(60),
       },
       keyframes: {
         menuOpenTop: {
