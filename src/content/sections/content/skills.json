@@ -1,10 +1,5 @@
 [
   {
-    "skill": "Responsive, accessible web development",
-    "id": "webdev",
-    "level": 100
-  },
-  {
     "skill": "HTML 5",
     "id": "html",
     "level": 100,
@@ -13,27 +8,32 @@
   {
     "skill": "CSS 3/SASS/LESS",
     "id": "css",
-    "level": 100
+    "level": 100,
+    "highlight": true
   },
   {
     "skill": "Javascript ES6+",
     "id": "javascript",
-    "level": 100
+    "level": 100,
+    "highlight": true
   },
   {
     "skill": "Wordpress",
     "id": "wordpress",
-    "level": 100
+    "level": 100,
+    "highlight": true
   },
   {
     "skill": "React.js",
     "id": "react",
-    "level": 66
+    "level": 66,
+    "highlight": true
   },
   {
     "skill": "Tailwind.js",
     "id": "tailwind",
-    "level": 75
+    "level": 75,
+    "highlight": true
   },
   {
     "skill": "Storybook.js",
@@ -43,7 +43,8 @@
   {
     "skill": "Drupal 8+",
     "id": "drupal",
-    "level": 55
+    "level": 55,
+    "highlight": true
   },
   {
     "skill": "PHP",

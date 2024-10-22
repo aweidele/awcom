@@ -8,8 +8,11 @@ export function Work({ content }) {
     <Section className="py-32">
       <Heading>Work Experience</Heading>
       <Grid>
-        <div class="col-span-4">
+        <div className="col-span-4">
           <Skills skills={content.skills} />
+        </div>
+        <div className="col-span-7 col-start-6 border">
+          <Heading l={3}>My Experience</Heading>
         </div>
       </Grid>
     </Section>

@@ -21,6 +21,7 @@ const colors = {
   "p2-menu": "#C6530C",
   s: "#083D77",
   s2: "#2E4057",
+  "s2-lt": "#d2e0f1",
   a1: "#DA4167",
   a2: "#2CA58D",
   white: "#F2F4F8",
