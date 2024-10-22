@@ -23,7 +23,7 @@ export default function DonutGraph({ percent, className, r, ir, s }) {
 
   if (percent > 1) percent = 1;
   const radius = r ? r : 20;
-  const innerRad = (ir ? ir : 0.65) * radius;
+  const innerRad = (ir ? ir : 0.85) * radius;
   const stroke = s ? s : 1;
 
   const [hue, sat, lit] = calcHSL(percent);

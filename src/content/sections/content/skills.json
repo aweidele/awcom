@@ -7,7 +7,8 @@
   {
     "skill": "HTML 5",
     "id": "html",
-    "level": 100
+    "level": 100,
+    "highlight": true
   },
   {
     "skill": "CSS 3/SASS/LESS",

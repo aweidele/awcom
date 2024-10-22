@@ -8,7 +8,7 @@ export default function SkillCard({ skill }) {
     setImgSrc(false);
   };
   return (
-    <div className="text-reg leading-reg text-center">
+    <div className="text-xs font-sans leading-reg text-center">
       <div class="relative max-w-42 max-h-42 aspect-square mx-auto">
         <DonutGraph className="size-full my-0 relative z-10" percent={skill.level / 100} />
         {imgSrc && (
