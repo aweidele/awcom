@@ -61,6 +61,10 @@ export default {
         "logo-m": pxToRem(logosize[1] * 0.6),
         42: pxToRem(60),
       },
+      spacing: {
+        42: pxToRem(60),
+        logo: "65%",
+      },
       keyframes: {
         menuOpenTop: {
           "0%": { transform: "rotate(0deg) translateY(-12px)" },

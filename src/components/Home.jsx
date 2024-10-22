@@ -6,7 +6,7 @@ import { SmallText } from "./SmallText";
 import { DownArrow } from "./Icons";
 import Grid from "./Grid";
 import { formatSectionName } from "../utils/formatSectionName";
-import border from "../assets/border.svg";
+import border from "/assets/images/border.svg";
 
 export default function Home({ content }) {
   const { sections } = useContext(ContentContext);

@@ -6,8 +6,6 @@ function calcHSL(percent) {
   const r = percent < m ? 0 : percent - m;
   const pct = (r / (1 - m)) * percent;
 
-  // const pct = percent;
-  console.log("?", percent, pct);
   return hslLow.map((v, i) => {
     const l = Math.min(v, hslHigh[i]);
     const h = Math.max(v, hslHigh[i]);
@@ -24,7 +22,7 @@ export default function DonutGraph({ percent, className, r, ir, s }) {
   }
 
   if (percent > 1) percent = 1;
-  const radius = r ? r : 69;
+  const radius = r ? r : 20;
   const innerRad = (ir ? ir : 0.65) * radius;
   const stroke = s ? s : 1;
 
@@ -42,9 +40,9 @@ export default function DonutGraph({ percent, className, r, ir, s }) {
   /* https://david-gilbertson.medium.com/a-simple-pie-chart-in-svg-dbdd653b6936 */
 
   return (
-    <svg className={className} viewBox={`${radius * -1 - stroke} ${radius * -1 - stroke} ${radius * 2 + stroke * 2} ${radius * 2 + stroke * 2}`} style={{ transform: "rotate(-0.25turn)" }}>
+    <svg className={`${className} -rotate-90 block`} viewBox={`${radius * -1 - stroke} ${radius * -1 - stroke} ${radius * 2 + stroke * 2} ${radius * 2 + stroke * 2}`}>
       <g>
-        <path fill={color} strokeWidth={stroke} stroke="#000000" d={pathData.join(" ")}></path>
+        <path fill={color} strokeWidth={stroke} stroke="#151E29" d={pathData.join(" ")}></path>
       </g>
     </svg>
   );
