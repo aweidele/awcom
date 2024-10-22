@@ -23,15 +23,15 @@
   <sodipodi:namedview id="base" bordercolor="#666666" borderopacity="1.0" fit-margin-bottom="0" fit-margin-left="0" fit-margin-right="0" fit-margin-top="0" inkscape:current-layer="layer1" inkscape:cx="181.367" inkscape:cy="256" inkscape:document-units="px" inkscape:pageopacity="0.0" inkscape:pageshadow="2" inkscape:window-height="704" inkscape:window-maximized="1" inkscape:window-width="1366" inkscape:window-x="0" inkscape:window-y="27" inkscape:zoom="0.35" pagecolor="#ffffff" showgrid="false"/>
   <g id="layer1" inkscape:groupmode="layer" inkscape:label="Calque 1">
     <g id="g3013">
-      <polygon id="polygon2989" class="st3" points="341.7 78.6 315.9 367.8 199.8 400 84.1 367.9 58.3 78.6 341.7 78.6"/>
-      <polygon id="polygon2991" class="st1" points="293.8 349.4 315.8 102.3 200 102.3 200 375.4 293.8 349.4"/>
-      <polygon id="polygon2993" class="st0" points="117.4 209.5 120.6 245 200 245 200 209.5 117.4 209.5"/>
-      <polygon id="polygon2995" class="st0" points="200 137.7 199.9 137.7 111 137.7 114.3 173.2 200 173.2 200 137.7"/>
-      <polygon id="polygon2997" class="st0" points="200 338.6 200 301.7 199.8 301.7 160.3 291.1 157.8 262.8 138.6 262.8 122.2 262.8 127.2 318.5 199.8 338.6 200 338.6"/>
-      <path id="path2999" d="M125,0h43v18h-25v18h25v18h-43V0Z" inkscape:connector-curvature="0"/>
-      <path id="path3001" d="M176.6,0h43v15.6h-25v3.1h25v35.9h-43v-16.4h25v-3.1h-25V0Z" inkscape:connector-curvature="0"/>
-      <path id="path3003" d="M228.1,0h43v15.6h-25v3.1h25v35.9h-43v-16.4h25v-3.1h-25V0Z" inkscape:connector-curvature="0"/>
-      <polygon id="polygon3005" class="st2" points="243.6 245 239.4 291 199.9 301.7 199.9 338.6 272.6 318.5 273.1 312.5 281.5 219.1 282.3 209.5 288.7 137.7 199.9 137.7 199.9 173.2 249.9 173.2 246.6 209.5 199.9 209.5 199.9 245 243.6 245"/>
+      <polygon id="polygon2989" class="st3" points="298.1 115.9 280.2 316.2 199.9 338.5 119.7 316.3 101.9 115.9 298.1 115.9"/>
+      <polygon id="polygon2991" class="st1" points="264.9 303.5 280.2 132.3 200 132.3 200 321.5 264.9 303.5"/>
+      <polygon id="polygon2993" class="st0" points="142.8 206.6 145 231.2 200 231.2 200 206.6 142.8 206.6"/>
+      <polygon id="polygon2995" class="st0" points="200 156.9 199.9 156.9 138.4 156.9 140.6 181.5 200 181.5 200 156.9"/>
+      <polygon id="polygon2997" class="st0" points="200 296 200 270.4 199.9 270.4 172.5 263.1 170.8 243.5 157.5 243.5 146.1 243.5 149.6 282 199.9 296 200 296"/>
+      <path id="path2999" d="M148.1,61.5h29.8v12.4h-17.3v12.4h17.3v12.4h-29.8v-37.3Z" inkscape:connector-curvature="0"/>
+      <path id="path3001" d="M183.8,61.5h29.8v10.8h-17.3v2.2h17.3v24.9h-29.8v-11.4h17.3v-2.2h-17.3v-24.3Z" inkscape:connector-curvature="0"/>
+      <path id="path3003" d="M219.5,61.5h29.8v10.8h-17.3v2.2h17.3v24.9h-29.8v-11.4h17.3v-2.2h-17.3v-24.3Z" inkscape:connector-curvature="0"/>
+      <polygon id="polygon3005" class="st2" points="230.2 231.2 227.3 263 199.9 270.4 199.9 296 250.3 282 250.6 277.9 256.4 213.2 257 206.6 261.5 156.9 199.9 156.9 199.9 181.5 234.5 181.5 232.3 206.6 199.9 206.6 199.9 231.2 230.2 231.2"/>
     </g>
   </g>
 </svg>

@@ -63,13 +63,13 @@
         opacity: .3;
       }
     </style>
-    <radialGradient id="radial-gradient" cx="198.7" cy="-1484.4" fx="198.7" fy="-1484.4" r="63.5" gradientTransform="translate(0 34.5) scale(1 -.2)" gradientUnits="userSpaceOnUse">
+    <radialGradient id="radial-gradient" cx="199.2" cy="-1242.7" fx="199.2" fy="-1242.7" r="44" gradientTransform="translate(0 34.5) scale(1 -.2)" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#323232" stop-opacity=".9"/>
       <stop offset=".2" stop-color="#272727" stop-opacity=".6"/>
       <stop offset=".6" stop-color="#0b0b0b" stop-opacity=".2"/>
       <stop offset=".8" stop-color="#000" stop-opacity="0"/>
     </radialGradient>
-    <linearGradient id="linear-gradient" x1="195.7" y1="113.5" x2="195.7" y2="415" gradientTransform="translate(0 401) scale(1 -1)" gradientUnits="userSpaceOnUse">
+    <linearGradient id="linear-gradient" x1="197.1" y1="140.4" x2="197.1" y2="349.2" gradientTransform="translate(0 401) scale(1 -1)" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#3d6a06"/>
       <stop offset=".2" stop-color="#588710"/>
       <stop offset=".3" stop-color="#6d9d18"/>
@@ -77,7 +77,7 @@
       <stop offset=".7" stop-color="#84b721"/>
       <stop offset="1" stop-color="#87ba22"/>
     </linearGradient>
-    <linearGradient id="linear-gradient1" x1="182.7" y1="45" x2="182.7" y2="400.5" gradientTransform="translate(0 401) scale(1 -1)" gradientUnits="userSpaceOnUse">
+    <linearGradient id="linear-gradient1" x1="188.1" y1="92.9" x2="188.1" y2="339.2" gradientTransform="translate(0 401) scale(1 -1)" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#bbe882"/>
       <stop offset=".1" stop-color="#bee988" stop-opacity=".9"/>
       <stop offset=".3" stop-color="#c8ec9a" stop-opacity=".8"/>
@@ -85,20 +85,20 @@
       <stop offset=".8" stop-color="#eef9e0" stop-opacity=".5"/>
       <stop offset="1" stop-color="#fff" stop-opacity=".4"/>
     </linearGradient>
-    <linearGradient id="linear-gradient2" x1="189.6" y1="62.7" x2="189.6" y2="379.7" gradientTransform="translate(0 401) scale(1 -1)" gradientUnits="userSpaceOnUse">
+    <linearGradient id="linear-gradient2" x1="192.9" y1="105.2" x2="192.9" y2="324.8" gradientTransform="translate(0 401) scale(1 -1)" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#48790b"/>
       <stop offset=".8" stop-color="#fff" stop-opacity=".4"/>
     </linearGradient>
-    <linearGradient id="linear-gradient3" x1="165.8" y1="17.3" x2="165.8" y2="125.7" gradientTransform="translate(0 401) scale(1 -1)" gradientUnits="userSpaceOnUse">
+    <linearGradient id="linear-gradient3" x1="176.4" y1="73.8" x2="176.4" y2="148.9" gradientTransform="translate(0 401) scale(1 -1)" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#5e7814"/>
       <stop offset=".5" stop-color="#8aa21f"/>
       <stop offset="1" stop-color="#b1c628"/>
     </linearGradient>
-    <linearGradient id="linear-gradient4" x1="162.1" y1="35.5" x2="163.8" y2="122.8" gradientTransform="translate(0 401) scale(1 -1)" gradientUnits="userSpaceOnUse">
+    <linearGradient id="linear-gradient4" x1="173.9" y1="86.4" x2="175" y2="146.8" gradientTransform="translate(0 401) scale(1 -1)" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#82af10"/>
       <stop offset=".8" stop-color="#fff" stop-opacity="0"/>
     </linearGradient>
-    <linearGradient id="linear-gradient5" x1="233.5" y1="13.9" x2="233.5" y2="111.5" gradientTransform="translate(0 401) scale(1 -1)" gradientUnits="userSpaceOnUse">
+    <linearGradient id="linear-gradient5" x1="223.3" y1="71.4" x2="223.3" y2="139" gradientTransform="translate(0 401) scale(1 -1)" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#5e7814"/>
       <stop offset=".1" stop-color="#758e1a"/>
       <stop offset=".3" stop-color="#8fa620"/>
@@ -106,40 +106,40 @@
       <stop offset=".8" stop-color="#adc327"/>
       <stop offset="1" stop-color="#b1c628"/>
     </linearGradient>
-    <linearGradient id="linear-gradient6" x1="209.6" y1="6.4" x2="209.6" y2="117.1" gradientTransform="translate(0 401) scale(1 -1)" gradientUnits="userSpaceOnUse">
+    <linearGradient id="linear-gradient6" x1="206.8" y1="66.3" x2="206.8" y2="142.9" gradientTransform="translate(0 401) scale(1 -1)" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#fff"/>
       <stop offset="1" stop-color="#fff" stop-opacity="0"/>
     </linearGradient>
-    <radialGradient id="radial-gradient1" cx="2215.5" cy="-1840.2" fx="2215.5" fy="-1840.2" r="67.5" gradientTransform="translate(-182.6 -14.5) scale(.2 -.2)" gradientUnits="userSpaceOnUse">
+    <radialGradient id="radial-gradient1" cx="2203.3" cy="-1629" fx="2203.3" fy="-1629" r="46.8" gradientTransform="translate(-182.6 -14.5) scale(.2 -.2)" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#323232"/>
       <stop offset=".3" stop-color="#252525" stop-opacity=".7"/>
       <stop offset=".8" stop-color="#040404" stop-opacity="0"/>
       <stop offset=".9" stop-color="#000" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="radial-gradient2" cx="2108.1" cy="-1840.2" fx="2108.1" fy="-1840.2" r="67.4" gradientTransform="translate(-182.6 -14.5) scale(.2 -.2)" gradientUnits="userSpaceOnUse">
+    <radialGradient id="radial-gradient2" cx="2128.9" cy="-1629" fx="2128.9" fy="-1629" r="46.7" gradientTransform="translate(-182.6 -14.5) scale(.2 -.2)" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#323232"/>
       <stop offset=".3" stop-color="#252525" stop-opacity=".7"/>
       <stop offset=".8" stop-color="#040404" stop-opacity="0"/>
       <stop offset=".9" stop-color="#000" stop-opacity="0"/>
     </radialGradient>
   </defs>
-  <ellipse class="st2" cx="198.7" cy="386.3" rx="66.4" ry="13.7"/>
-  <path class="st3" d="M175.3,355.5h44.3C216.9,298,200.1,114.2,171.9,0c5.1,78.4,10.7,339,3.4,355.5Z"/>
-  <path class="st10" d="M175.3,356h18.1C195.6,226,171.9.5,171.9.5c5.1,78.4,10.7,339,3.4,355.5Z"/>
-  <path class="st8" d="M176.9,345.8l18.8,5.5s-1.2-46.3,11.4-67.2c3.6-23.9-26.3-242.8-34.2-280-.3-1.4-.7-2.7-1-4.1,4.7,71.5,9.7,294.5,5,345.8h0Z"/>
+  <ellipse class="st2" cx="199.2" cy="329" rx="46" ry="9.5"/>
+  <path class="st3" d="M183,307.7h30.7c-1.9-39.9-13.5-167.1-33.1-246.2,3.5,54.3,7.4,234.7,2.4,246.2Z"/>
+  <path class="st10" d="M183,308.1h12.5c1.5-90-14.9-246.2-14.9-246.2,3.5,54.3,7.4,234.7,2.4,246.2Z"/>
+  <path class="st8" d="M184.1,300.9l13,3.8s-.9-32,7.9-46.5c2.5-16.6-18.2-168.1-23.7-193.9-.2-.9-.5-1.9-.7-2.8,3.2,49.5,6.7,203.9,3.5,239.4h0Z"/>
   <g>
-    <path class="st0" d="M174,389.2l28,1.2c.7-54.3-19-148.3-72.6-184.8,27.3,33.9,47,75.3,44.6,183.6h0Z"/>
-    <path class="st9" d="M133.3,210.5c25.4,33.1,43.3,75.5,41,179.1l19.1.8c.7-20.9,1.2-131.1-60.1-179.9h0Z"/>
+    <path class="st0" d="M182.1,331l19.4.8c.5-37.6-13.2-102.7-50.3-128,18.9,23.4,32.5,52.1,30.9,127.2h0Z"/>
+    <path class="st9" d="M153.9,207.2c17.6,22.9,30,52.3,28.4,124l13.3.6c.5-14.5.8-90.8-41.7-124.6h0Z"/>
   </g>
   <g>
-    <path class="st1" d="M227.3,391c.9,3.9-28,6.7-29,5.8s-20.9-134.2,72.9-120.8c-50.9,2.2-54.8,72-44,114.9Z"/>
-    <path class="st7" d="M198.3,396.8c.6.5,10.2-.2,18.3-1.6-1.2-11.2-6.9-72.6,6.8-108.8-37.9,30-25.8,109.8-25.1,110.5h0Z"/>
+    <path class="st1" d="M219,332.3c.6,2.7-19.4,4.6-20.1,4s-14.5-92.9,50.5-83.6c-35.2,1.5-37.9,49.8-30.4,79.6Z"/>
+    <path class="st7" d="M198.9,336.3c.4.3,7.1-.2,12.7-1.1-.8-7.8-4.8-50.3,4.7-75.4-26.2,20.8-17.9,76-17.4,76.5h0Z"/>
   </g>
   <g>
-    <ellipse class="st6" cx="207.4" cy="327.7" rx="12.9" ry="11.9"/>
-    <ellipse class="st5" cx="188.5" cy="327.7" rx="12.9" ry="11.9"/>
-    <circle class="st4" cx="188.5" cy="327.7" r="7.4"/>
-    <circle class="st4" cx="207" cy="327.7" r="7.4"/>
+    <ellipse class="st6" cx="205.2" cy="288.4" rx="8.9" ry="8.2"/>
+    <ellipse class="st5" cx="192.1" cy="288.4" rx="8.9" ry="8.2"/>
+    <circle class="st4" cx="192.1" cy="288.4" r="5.1"/>
+    <circle class="st4" cx="205" cy="288.4" r="5.1"/>
   </g>
-  <path class="st11" d="M135.8,371.9l10.5,18h5.8M165,397.7h12.7l-18.7-50.4M238.3,394.5h8.3l6.1-39M259.5,384.3h7.1l3.4-14.4"/>
+  <path class="st11" d="M155.7,319l7.3,12.5h4M175.9,336.9h8.8l-13-34.9M226.7,334.7h5.7l4.2-27M241.3,327.6h4.9l2.4-9.9"/>
 </svg>

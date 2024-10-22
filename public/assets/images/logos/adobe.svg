@@ -6,9 +6,15 @@
       .st0 {
         fill: #fa0c00;
       }
+
+      .st1 {
+        fill: #f9f9f9;
+      }
     </style>
   </defs>
-  <path class="st0" d="M148,23H0v354L148,23Z"/>
-  <path class="st0" d="M252.2,23h147.8v354L252.2,23Z"/>
-  <path class="st0" d="M200.1,153.5l94.2,223.5h-61.8l-28.2-71.2h-68.9l64.7-152.4Z"/>
+  <rect class="st0" width="400" height="400"/>
+  <rect class="st1" x="61.5" y="77.4" width="277" height="245.1"/>
+  <path class="st0" d="M164,77.4H61.5v245.1l102.5-245.1Z"/>
+  <path class="st0" d="M236.1,77.4h102.4v245.1l-102.4-245.1Z"/>
+  <path class="st0" d="M200.1,167.8l65.2,154.8h-42.8l-19.5-49.3h-47.7l44.8-105.5Z"/>
 </svg>
