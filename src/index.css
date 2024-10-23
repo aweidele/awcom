@@ -46,3 +46,11 @@ body {
 .experience-marker > div {
   @apply w-full h-1/2 w-full h-1/2 border-r-white border-r border-r-4;
 }
+
+.experience-year {
+  @apply relative after:content-[""] after:w-1 after:h-5 after:top-full after:left-2/4 block after:absolute after:-translate-x-1/2;
+}
+
+.experience-year.even {
+  @apply after:bottom-full after:top-auto;
+}

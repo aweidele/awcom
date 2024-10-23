@@ -1,5 +1,5 @@
 import { ExperienceCard } from "./ExperienceCard";
-import { backgrounds, backgroundsDk, borders } from "../content/content";
+import { backgrounds, backgroundsDk, borders, bgAfter } from "../content/content";
 
 const cols = { 3: "grid-cols-3", 4: "grid-cols-4", 5: "grid-cols-5", 6: "grid-cols-6", 7: "grid-cols-7", 8: "grid-cols-8", 9: "grid-cols-9" };
 
@@ -8,7 +8,7 @@ export function Experience({ experience }) {
     <ul className={`my-10 grid gap-y-5 grid-rows-timeline ${cols[experience.length]}`}>
       {experience.map((item, index) => (
         <li className="grid row-span-3 grid-rows-subgrid experience-row">
-          <div className={`${index % 2 ? "row-start-3 self-start" : "self-end"}`}>
+          <div className={`experience-year ${bgAfter[index % 6]} ${index % 2 ? "row-start-3 self-start even" : "self-end"}`}>
             <h4 className={`${borders[index % 6]}`}>{item.start}</h4>
           </div>
           <div className="experience-marker">
