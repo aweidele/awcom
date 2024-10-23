@@ -38,3 +38,11 @@ body {
 .menu-button:after {
   @apply translate-y-2.5 lg:translate-y-3;
 }
+
+.experience-row h4 {
+  @apply w-42 h-42 m-auto flex items-center justify-center text-reg rounded-full font-sans border border-4;
+}
+
+.experience-marker > div {
+  @apply w-full h-1/2 w-full h-1/2 border-r-white border-r border-r-4;
+}

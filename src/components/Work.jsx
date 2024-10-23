@@ -7,17 +7,17 @@ import { Experience } from "./Experience";
 export function Work({ content }) {
   console.log(content);
   return (
-    <Section className="py-32">
+    <Section className="bg-white py-32">
       <Heading>Work Experience</Heading>
       <Grid>
         <div className="col-span-4">
           <Skills skills={content.skills} />
         </div>
-        <div className="col-span-7 col-start-6">
-          <Heading l={3}>My Experience</Heading>
-          <Experience experience={content.experience} />
-        </div>
+        {/* <div className="col-span-7 col-start-6">
+        </div> */}
       </Grid>
+      <Heading l={3}>My Experience</Heading>
+      <Experience experience={content.experience} />
     </Section>
   );
 }

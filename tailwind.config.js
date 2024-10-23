@@ -93,6 +93,12 @@ export default {
         menuCloseTop: "menuOpenTop 3s ease-in-out reverse",
         menuCloseBottom: "menuOpenBottom 3s ease-in-out reverse",
       },
+      gridTemplateRows: {
+        timeline: `auto ${14 / 16}rem auto`,
+      },
+      skew: {
+        tl: "45deg",
+      },
     },
   },
   plugins: [],

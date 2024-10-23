@@ -1,6 +1,6 @@
 const hslLow = [214, 31, 26];
 const hslHigh = [345, 67, 55];
-const m = 0.33;
+const m = 0.5;
 
 function calcHSL(percent) {
   const r = percent < m ? 0 : percent - m;

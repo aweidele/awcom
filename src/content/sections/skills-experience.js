@@ -3,5 +3,5 @@ import experience from "./content/work-experience.json";
 
 export const workExperience = {
   skills: skills,
-  experience: experience.sort((a, b) => b.start - a.start),
+  experience: experience.sort((a, b) => a.start - b.start),
 };
