@@ -6,7 +6,7 @@
     "highlight": true
   },
   {
-    "skill": "CSS 3/SASS/LESS",
+    "skill": "CSS 3/SASS",
     "id": "css",
     "level": 100,
     "highlight": true
@@ -30,7 +30,7 @@
     "highlight": true
   },
   {
-    "skill": "Tailwind.js",
+    "skill": "Tailwindcss",
     "id": "tailwind",
     "level": 75,
     "highlight": true
@@ -38,12 +38,13 @@
   {
     "skill": "Storybook.js",
     "id": "storybook",
-    "level": 75
+    "level": 75,
+    "highlight": true
   },
   {
     "skill": "Drupal 8+",
     "id": "drupal",
-    "level": 55,
+    "level": 80,
     "highlight": true
   },
   {

@@ -2,7 +2,7 @@
 
 import { splitFontSizes } from "./src/utils/fontsizes";
 import { pxToRem } from "./src/utils/pxToRem";
-import { hexToRGBA } from "./src/utils/hexToRGBA";
+import { hexToRGBA, darkenHexColor } from "./src/utils/hexToRGBA";
 
 const fontSizes = {
   sm: [23, 14, 37],
@@ -14,7 +14,7 @@ const fontSizes = {
   reg: [16, 16, 24],
 };
 
-const colors = {
+export const colors = {
   p: "#151E29",
   p2: "#F4843F",
   "p2-dk": "#F3772B",
@@ -26,6 +26,15 @@ const colors = {
   a2: "#2CA58D",
   white: "#F2F4F8",
 };
+
+Object.keys(colors).forEach((key) => {
+  const darkKey = `${key}-dk`;
+  if (!colors.hasOwnProperty(darkKey)) {
+    colors[darkKey] = darkenHexColor(colors[key], 30);
+  }
+});
+
+// export const colorsDk = Object.keys(colors).map((key) );
 
 const logosize = [69, 58];
 
