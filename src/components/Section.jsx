@@ -1,7 +1,5 @@
-export default function Section({ className, children }) {
-  return (
-    <section className={className}>
-      <div className="max-w-c px-5 m-auto">{children}</div>
-    </section>
-  );
+import { Fragment } from "react";
+export default function Section({ className, children, tag = "section", fullwidth = false }) {
+  const Tag = tag;
+  return <Tag className={className}>{fullwidth ? <Fragment>{children}</Fragment> : <div className="max-w-c px-5 m-auto">{children}</div>}</Tag>;
 }

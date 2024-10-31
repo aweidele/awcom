@@ -13,8 +13,6 @@ export function Work({ content }) {
         <div className="col-span-4">
           <Skills skills={content.skills} />
         </div>
-        {/* <div className="col-span-7 col-start-6">
-        </div> */}
       </Grid>
       <Heading l={3}>My Experience</Heading>
       <Experience experience={content.experience} />

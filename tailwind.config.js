@@ -74,6 +74,7 @@ export default {
       spacing: {
         42: pxToRem(60),
         logo: "85.5%",
+        "04em": "0.4em",
       },
       keyframes: {
         menuOpenTop: {

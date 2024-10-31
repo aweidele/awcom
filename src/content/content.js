@@ -1,5 +1,6 @@
 import home from "./sections/home.json";
 import { workExperience } from "./sections/skills-experience";
+import { portfolio } from "./sections/portfolio";
 
 export const backgrounds = ["bg-p", "bg-p2", "bg-s", "bg-a1", "bg-s2", "bg-a2"];
 export const backgroundsDk = ["bg-p-dk", "bg-p2-dk", "bg-s-dk", "bg-a1-dk", "bg-s2-dk", "bg-a2-dk"];
@@ -18,5 +19,10 @@ export const sections = [
     title: "Work Experience",
     content: workExperience,
     component: "work",
+  },
+  {
+    title: "Portfolio",
+    content: portfolio,
+    component: "portfolio",
   },
 ];
