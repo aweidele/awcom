@@ -5,7 +5,6 @@ import { Skills } from "./Skills";
 import { Experience } from "./Experience";
 
 export function Work({ content }) {
-  console.log(content);
   return (
     <Section className="bg-white py-32">
       <Heading>Work Experience</Heading>

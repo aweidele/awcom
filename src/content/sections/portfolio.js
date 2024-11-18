@@ -5,7 +5,8 @@ const works = [
     description: "Custom Wordpress Theme for a Baltimore Art Museum",
     url: "https://thewalters.org/",
     skills: ["html", "css", "javascript", "wordpress"],
-    images: [],
+    images: ["walters.jpg"],
+    video: "walters.mp4",
     mobile: [],
   },
   {
@@ -14,7 +15,8 @@ const works = [
     description: `Drupal theme and Storybook for campaign site`,
     url: "https://accelerateumass.org/",
     skills: ["html", "css", "javascript", "drupal", "tailwind", "storybook"],
-    images: [],
+    images: ["umass.jpg"],
+    video: "umass.mp4",
     mobile: [],
   },
 ];

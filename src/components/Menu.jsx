@@ -5,7 +5,6 @@ import { formatSectionName } from "../utils/formatSectionName";
 export function Menu() {
   const { sections, menuOpen, setMenuOpen } = useContext(ContentContext);
   function handleMenuOpen(isOpen) {
-    console.log("?");
     setMenuOpen((isOpen) => !isOpen);
   }
 
