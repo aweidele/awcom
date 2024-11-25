@@ -26,7 +26,6 @@ export function Desktop({ images, video }) {
       format: type === "mp4" || type === "webm" ? "video" : "image",
     };
   });
-  console.log(slides);
   return (
     <>
       <div className="grid grid-cols-1 grid-rows-1" ref={ref}>

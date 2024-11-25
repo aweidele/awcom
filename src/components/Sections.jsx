@@ -4,13 +4,17 @@ import { ContentContext } from "./ContentContext";
 import Home from "./Home";
 import { Work } from "./Work";
 import { Portfolio } from "./Portfolio";
+import { Skills } from "./Skills";
 import { formatSectionName } from "../utils/formatSectionName";
 import { portfolio } from "../content/sections/portfolio";
+import { Experience } from "./Experience";
 
 const componentMap = {
   home: Home,
   work: Work,
   portfolio: Portfolio,
+  skills: Skills,
+  experience: Experience,
 };
 
 export default function Sections() {

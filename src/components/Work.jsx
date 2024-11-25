@@ -8,13 +8,11 @@ export function Work({ content }) {
   return (
     <Section className="bg-white py-32">
       <Heading>Work Experience</Heading>
-      <Grid>
-        <div className="col-span-4">
-          <Skills skills={content.skills} />
-        </div>
-      </Grid>
-      <Heading l={3}>My Experience</Heading>
-      <Experience experience={content.experience} />
+
+      <Skills skills={content.skills} />
+
+      {/* <Heading l={3}>My Experience</Heading> */}
+      {/* <Experience experience={content.experience} /> */}
     </Section>
   );
 }

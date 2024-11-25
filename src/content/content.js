@@ -16,13 +16,18 @@ export const sections = [
     component: "home",
   },
   {
-    title: "Work Experience",
-    content: workExperience,
-    component: "work",
+    title: "My Skills",
+    content: workExperience.skills,
+    component: "skills",
   },
   {
     title: "Portfolio",
     content: portfolio,
     component: "portfolio",
+  },
+  {
+    title: "Work Experience",
+    content: workExperience.experience,
+    component: "experience",
   },
 ];
