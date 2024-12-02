@@ -19,6 +19,16 @@ const works = [
     video: "umass.mp4",
     mobile: [],
   },
+  {
+    id: "meadville",
+    title: "Meadville Lombard Theological School",
+    description: `Front End Development for higher education`,
+    url: "https://www.meadville.edu/",
+    skills: ["html", "css", "javascript"],
+    images: ["umass.jpg"],
+    video: "meadville.mp4",
+    mobile: [],
+  },
 ];
 
-export const portfolio = ["walters", "umaf"].map((item) => works.filter((work) => work.id === item)[0]);
+export const portfolio = ["walters", "umaf", "meadville"].map((item) => works.filter((work) => work.id === item)[0]);

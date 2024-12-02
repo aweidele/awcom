@@ -40,17 +40,22 @@ body {
 }
 
 .experience-row h4 {
-  @apply w-42 h-42 m-auto flex items-center justify-center text-reg rounded-full font-sans border border-4;
+  @apply w-42 h-42 md:m-auto flex items-center justify-center text-reg rounded-full font-sans border border-4;
 }
 
+.experience-marker {
+  @apply max-md:flex max-md:h-full;
+}
 .experience-marker > div {
-  @apply w-full h-1/2 w-full h-1/2 border-r-white border-r border-r-4;
+  @apply h-full w-1/2 md:w-full md:h-1/2 md:border-r-white md:border-r-4 max-md:border-b-white max-md:border-b-4;
 }
 
 .experience-year {
-  @apply relative after:content-[""] after:w-1 after:h-5 after:top-full after:left-2/4 block after:absolute after:-translate-x-1/2;
+  @apply relative after:content-[""] block after:absolute
+    after:w-7 after:h-1 after:top-1/2 after:left-full max-md:after:-translate-y-1/2
+    md:after:w-1 md:after:h-5 md:after:top-full md:after:left-2/4 md:after:-translate-x-1/2;
 }
 
 .experience-year.even {
-  @apply after:bottom-full after:top-auto;
+  @apply md:after:bottom-full md:after:top-auto;
 }

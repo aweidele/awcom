@@ -97,6 +97,9 @@ export default {
       gridTemplateRows: {
         timeline: `auto ${14 / 16}rem auto`,
       },
+      gridTemplateColumns: {
+        timeline: `${pxToRem(60)} ${14 / 16}rem auto`,
+      },
       skew: {
         tl: "45deg",
       },

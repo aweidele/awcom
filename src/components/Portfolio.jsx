@@ -44,7 +44,7 @@ export function Portfolio({ content }) {
                   </Button>
                 </div>
               </div>
-              <div className="col-span-6">
+              <div className="col-span-6 max-md:my-10">
                 {work.images && work.images.length && (
                   <a href={work.url} target="_blank">
                     <Desktop images={work.images} video={work.video} />
