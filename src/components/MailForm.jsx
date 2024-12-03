@@ -1,13 +1,17 @@
+import { useState } from "react";
 import { Button } from "./Button";
 import emailjs from "emailjs-com";
 
 export function MailForm() {
+  const [submitState, setSubmitState] = useState(false);
+
   const sendEmail = (e) => {
     e.preventDefault();
-    console.log(e.target);
+    setSubmitState("waiting");
     emailjs.sendForm("service_ptc4fcg", "template_ge28via", e.target, "4f4ixyWBzkrnwY4_0").then(
       (result) => {
         console.log("Email sent:", result.text);
+        setSubmitState("submitted");
       },
       (error) => {
         console.error("Error sending email:", error.text);
@@ -15,18 +19,25 @@ export function MailForm() {
     );
   };
 
-  return (
-    <form onSubmit={sendEmail} className="mail-form text-reg">
-      <label for="from_name">Your Name</label>
-      <input type="text" id="from_name" name="from_name" />
+  const formDisplay = () => {
+    if (submitState === "submitted") return <p>Thank you for sending me an email!</p>;
+    if (submitState === "waiting") return <p>Sending</p>;
 
-      <label for="reply_to">Your Email</label>
-      <input type="email" id="reply_to" name="reply_to" />
+    return (
+      <form onSubmit={sendEmail} className="mail-form text-reg">
+        <label for="from_name">Your Name</label>
+        <input type="text" id="from_name" name="from_name" />
 
-      <label for="message">Your Message</label>
-      <textarea id="message" name="message"></textarea>
+        <label for="reply_to">Your Email</label>
+        <input type="email" id="reply_to" name="reply_to" />
 
-      <Button tag="button">Submit</Button>
-    </form>
-  );
+        <label for="message">Your Message</label>
+        <textarea className="h-32" id="message" name="message"></textarea>
+
+        <Button tag="button">Submit</Button>
+      </form>
+    );
+  };
+
+  return <>{formDisplay()}</>;
 }
