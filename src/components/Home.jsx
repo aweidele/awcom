@@ -13,7 +13,7 @@ export default function Home({ content }) {
   const { line1, line2, scrollText } = content;
   return (
     <Section className="bg-p2 text-white relative z-10 home-container">
-      <div class="circle-bg"></div>
+      <div className="circle-bg"></div>
       <div className="min-h-home relative flex items-center md:items-end w-full md:pb-[15%]">
         <div className="w-full">
           <Grid>

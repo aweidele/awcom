@@ -4,7 +4,7 @@ export function ExperienceCard({ item, index }) {
     <li key={item.name} className={`w-full flex my-6 gap-5 items-center`}>
       <h4 className={`w-42 h-42 flex items-center justify-center text-reg text-white ${backgrounds[index % 6]} rounded-full font-sans`}>{item.start}</h4>
       <span></span>
-      <p class="grow order-3">
+      <p className="grow order-3">
         <span className="text-xs font-sans font-bold block">{item.title}</span>
         <span className="block text-sm font-sans">{item.name}</span>
       </p>
