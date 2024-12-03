@@ -54,12 +54,14 @@ export default {
         ...colors,
         "p-20": hexToRGBA(colors.p, 0.2),
         wt: hexToRGBA("#FFFFFF", 0),
+        s2dk: darkenHexColor(colors.s2),
       },
       minHeight: {
         home: "90vh",
       },
       maxWidth: {
         c: pxToRem(1270),
+        h: pxToRem(1428),
       },
       width: {
         logo: pxToRem(logosize[0]),

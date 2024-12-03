@@ -35,7 +35,7 @@ export function Portfolio({ content }) {
               <div className="col-span-6">
                 <Heading l={4}>{work.title}</Heading>
                 {nl2array(work.description).map((paragraph) => (
-                  <p className="mb-04em">{paragraph}</p>
+                  <p className="mb-04em text-reg">{paragraph}</p>
                 ))}
                 <SkillChips skills={work.skills} />
                 <div>

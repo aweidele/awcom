@@ -59,3 +59,14 @@ body {
 .experience-year.even {
   @apply md:after:bottom-full md:after:top-auto;
 }
+
+.mail-form label,
+.mail-form input,
+.mail-form textarea {
+  @apply block my-2 font-sans;
+}
+
+.mail-form input,
+.mail-form textarea {
+  @apply bg-s2-dk w-full p-2;
+}
