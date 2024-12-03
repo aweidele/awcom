@@ -13,7 +13,7 @@ body {
 }
 
 .home-intro {
-  @apply flex items-center gap-9;
+  @apply flex items-center gap-2 sm:gap-9;
 }
 
 .home-intro:after,

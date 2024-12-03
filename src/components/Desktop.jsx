@@ -31,10 +31,11 @@ export function Desktop({ images, video }) {
       <div className="grid grid-cols-1 grid-rows-1" ref={ref}>
         <div className="row-start-1 col-start-1 p-[3%]">
           {video && isViewed && (
-            <div>
-              <video ref={vidRef} autoPlay={true} muted={true} loop>
+            <div className="relative z-0">
+              <video ref={vidRef} autoPlay={true} muted={true} loop className="max-sm:hidden relative z-10">
                 <source src={`/assets/video/${video}`} type="video/mp4" />
               </video>
+              <img className="absolute top-0 left-0 z-0" src={slides[0].image} />
             </div>
           )}
           {video && !isViewed && (
@@ -51,7 +52,7 @@ export function Desktop({ images, video }) {
               </div>
             ))}
         </div>
-        <div className="row-start-1 col-start-1">
+        <div className="row-start-1 col-start-1 relative z-10">
           <img src={desktop} />
         </div>
       </div>

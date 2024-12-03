@@ -107,7 +107,7 @@ export default {
       skew: {
         tl: "45deg",
       },
-      screens: { desktopXl: "1440px" },
+      screens: { xs: "321px", desktopXl: "1440px" },
     },
   },
   plugins: [],
