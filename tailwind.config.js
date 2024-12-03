@@ -5,6 +5,7 @@ import { pxToRem } from "./src/utils/pxToRem";
 import { hexToRGBA, darkenHexColor } from "./src/utils/hexToRGBA";
 
 const fontSizes = {
+  xs: [14, 14, 14],
   sm: [23, 14, 37],
   base: [29, 18, 46],
   lg: [37, 23, 58],
@@ -58,10 +59,11 @@ export default {
       },
       minHeight: {
         home: "90vh",
+        100: pxToRem(400),
       },
       maxWidth: {
         c: pxToRem(1270),
-        h: pxToRem(1428),
+        h: pxToRem(1536),
       },
       width: {
         logo: pxToRem(logosize[0]),
@@ -105,6 +107,7 @@ export default {
       skew: {
         tl: "45deg",
       },
+      screens: { desktopXl: "1440px" },
     },
   },
   plugins: [],

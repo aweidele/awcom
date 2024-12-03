@@ -8,7 +8,7 @@ import { nl2p, nl2array } from "../utils/fontsizes";
 import skills from "../content/sections/content/skills.json";
 
 export function Portfolio({ content }) {
-  const containerClasses = `max-w-c px-5 m-auto`;
+  const containerClasses = `max-w-c px-16 desktopXl:px-5 m-auto`;
   const paddingClasses = `py-28`;
   const bgClasses = ["bg-s", "bg-s2"];
 

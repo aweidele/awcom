@@ -24,8 +24,8 @@ export default function Home({ content }) {
           </Grid>
           <SmallText className="mt-5">
             <a href={`#${formatSectionName(sections[1].title, 1)}`} className="text-center flex flex-col items-center gap-2.5">
-              <span className="flex items-center justify-center w-[44px] h-[44px] border border-white bg-p-20 rounded-full">
-                <DownArrow className="w-[28px] h-[16px] fill-white" />
+              <span className="flex items-center justify-center w-7 md:w-[44px] h-7 md:h-[44px] border border-white bg-p-20 rounded-full">
+                <DownArrow className="w-3.5 h-2 md:w-7 md:h-4 fill-white" />
               </span>
               <span>{scrollText}</span>
             </a>

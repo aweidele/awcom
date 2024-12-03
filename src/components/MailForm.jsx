@@ -1,9 +1,20 @@
 import { useState } from "react";
 import { Button } from "./Button";
+import Lottie from "react-lottie";
+import animationData from "./lotties/mail.json";
 import emailjs from "emailjs-com";
 
 export function MailForm() {
   const [submitState, setSubmitState] = useState(false);
+
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -20,8 +31,8 @@ export function MailForm() {
   };
 
   const formDisplay = () => {
-    if (submitState === "submitted") return <p>Thank you for sending me an email!</p>;
-    if (submitState === "waiting") return <p>Sending</p>;
+    if (submitState === "submitted") return <p>Email received. Thanks!</p>;
+    if (submitState === "waiting") return <Lottie options={defaultOptions} height={501} width={412} />;
 
     return (
       <form onSubmit={sendEmail} className="mail-form text-reg">
@@ -39,5 +50,5 @@ export function MailForm() {
     );
   };
 
-  return <>{formDisplay()}</>;
+  return <div className="min-h-100">{formDisplay()}</div>;
 }

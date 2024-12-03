@@ -13,7 +13,7 @@ export function Menu() {
   }
   return (
     <div>
-      <button onClick={handleMenuOpen} className={`menu-button relative z-20 w-[32px] lg:w-[49px] h-full ${menuOpen ? "before:translate-y-0 before:rotate-45 after:translate-y-0 after:-rotate-45" : ""}`}>
+      <button onClick={handleMenuOpen} className={`menu-button relative z-20 w-[32px] desktopXl:w-[49px] h-full ${menuOpen ? "before:translate-y-0 before:rotate-45 after:translate-y-0 after:-rotate-45" : ""}`}>
         <span className={`${menuOpen ? "opacity-0" : ""}`}></span>
         <span className="sr-only">Menu</span>
       </button>
