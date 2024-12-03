@@ -14,14 +14,14 @@ createRoot(document.getElementById("root")).render(
       <Header />
       <Sections />
       <Footer />
-      <div className="flex gap-2">
+      {/* <div className="flex gap-2">
         {["bg-p", "bg-p2", "bg-s", "bg-s2", "bg-a1", "bg-a2"].map((bg, i) => (
           <div key={i} className="text-center">
             <div className={`h-8 w-8 ${bg}`}></div>
             <div className="text-[10px]">{bg}</div>
           </div>
         ))}
-      </div>
+      </div> */}
     </ContentProvider>
   </StrictMode>
 );
