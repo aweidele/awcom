@@ -16,7 +16,7 @@ export function Portfolio({ content }) {
     const projSkills = skillIds.map((skillId) => skills.filter((skill) => skill.id === skillId)[0]);
 
     return (
-      <ul className="inline-flex flex-wrap justify-center md:justify-start gap-1 text-xs font-sans">
+      <ul className="inline-flex flex-wrap md:justify-start gap-1 text-xs font-sans">
         {projSkills.map((skill) => (
           <li className="bg-white text-black py-px px-2 rounded-full" key={`${Math.random()}-proj-skill-${skill.id}`}>
             {skill.skill}

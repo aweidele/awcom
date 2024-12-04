@@ -25,7 +25,7 @@ const works = [
     description: `Front End Development for higher education`,
     url: "https://www.meadville.edu/",
     skills: ["html", "css", "javascript"],
-    images: ["umass.jpg"],
+    images: ["meadville.jpg"],
     video: "meadville.mp4",
     mobile: [],
   },
