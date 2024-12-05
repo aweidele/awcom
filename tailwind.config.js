@@ -5,6 +5,7 @@ import { pxToRem } from "./src/utils/pxToRem";
 import { hexToRGBA, darkenHexColor } from "./src/utils/hexToRGBA";
 
 const fontSizes = {
+  xxs: [12, 12, 12],
   xs: [14, 14, 14],
   sm: [23, 14, 37],
   base: [29, 18, 46],
@@ -69,6 +70,7 @@ export default {
         logo: pxToRem(logosize[0]),
         "logo-m": pxToRem(logosize[0] * 0.6),
         42: pxToRem(60),
+        84: pxToRem(90),
       },
       height: {
         logo: pxToRem(logosize[1]),
@@ -102,7 +104,7 @@ export default {
         timeline: `auto ${14 / 16}rem auto`,
       },
       gridTemplateColumns: {
-        timeline: `${pxToRem(60)} ${14 / 16}rem auto`,
+        timeline: `auto ${14 / 16}rem auto`,
       },
       skew: {
         tl: "45deg",

@@ -40,7 +40,7 @@ body {
 }
 
 .experience-row h4 {
-  @apply w-42 h-42 md:m-auto flex items-center justify-center text-reg rounded-full font-sans border border-4;
+  @apply md:m-auto flex items-center justify-center rounded-full font-sans border border-4;
 }
 
 .experience-marker {
