@@ -12,7 +12,7 @@ const works = [
   {
     id: "umaf",
     title: "Accelerate—The Campaign for UMass Amherst",
-    description: `Drupal theme and Storybook for campaign site`,
+    description: `Drupal theme and Storybook for campaign site.`,
     url: "https://accelerateumass.org/",
     skills: ["html", "css", "javascript", "drupal", "tailwind", "storybook"],
     images: ["umass.jpg"],
