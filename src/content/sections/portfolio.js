@@ -32,13 +32,23 @@ const works = [
   {
     id: "meadville",
     title: "Meadville Lombard Theological School",
-    description: `Front-end development for Meadville Lombard Theological School using BigtreeCMS as the content management backend. Implemented sophisticated interactive elements and navigated challenging design requirements`,
+    description: `Front-end development for Meadville Lombard Theological School using BigtreeCMS as the content management backend. Implemented sophisticated interactive elements and navigated challenging design requirements.`,
     url: "https://www.meadville.edu/",
     skills: ["html", "css", "javascript"],
     images: ["meadville.jpg"],
     video: "meadville.mp4",
     mobile: [],
   },
+  {
+    id: "nfip",
+    title: "FEMA/NFIP Campaign landing page",
+    description: `Developed a campaign landing page for FEMA's National Flood Insurance Program, collaborating closely with motion graphics designers to seamlessly integrate animated elements originally created for banner ads using Google Web Designer. This approach ensured visual consistency across campaign assets and streamlined the transition from digital advertisements to the landing page.`,
+    url: "https://www.floodsmart.gov/hurricanes",
+    skills: ["html", "css", "javascript", "gwd", "drupal"],
+    images: ["nfip.jpg"],
+    video: "nfip.mp4",
+    mobile: [],
+  },
 ];
 
-export const portfolio = ["walters", "umaf", "prescott", "meadville"].map((item) => works.filter((work) => work.id === item)[0]);
+export const portfolio = ["walters", "umaf", "prescott", "nfip", "meadville"].map((item) => works.filter((work) => work.id === item)[0]);

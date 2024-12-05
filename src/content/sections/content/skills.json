@@ -121,5 +121,10 @@
     "skill": "MySQL",
     "id": "mysql",
     "level": 70
+  },
+  {
+    "skill": "Google Web Developer",
+    "id": "gwd",
+    "level": 33
   }
 ]

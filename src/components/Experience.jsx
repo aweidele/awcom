@@ -12,7 +12,7 @@ export function Experience({ content: experience }) {
       <ul className={`my-10 grid max-md:gap-x-5 md:gap-y-5 md:grid-rows-timeline max-md:grid-cols-timeline ${cols[experience.length]}`}>
         {experience.map((item, index) => (
           <li key={item.name} className="grid max-md:col-span-3 md:row-span-3 max-md:grid-cols-subgrid md:grid-rows-subgrid experience-row">
-            <div className={`self-center experience-year ${bgAfter[index % 6]} ${index % 2 ? "md:row-start-3 md:self-start even" : "self-end"}`}>
+            <div className={`self-center experience-year ${bgAfter[index % 6]} ${index % 2 ? "md:row-start-3 md:self-start even" : "md:self-end"}`}>
               <h4 className={`${borders[index % 6]}`}>{item.start}</h4>
             </div>
             <div className="experience-marker">
