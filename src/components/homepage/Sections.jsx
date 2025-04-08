@@ -1,4 +1,4 @@
-import { Section } from "../Section";
+import { Section } from "../layout/Section";
 import { HomepageHero } from "./HomepageHero";
 import { Skills } from "./Skills";
 import { Work } from "./Work";
@@ -23,9 +23,9 @@ export const Sections = () => {
       {sections.map((section, i) => {
         const ThisComponent = componentMap[section.component];
         return (
-          <Section fullwidth>
+          <>
             <ThisComponent {...section.content} />
-          </Section>
+          </>
         );
       })}
     </>
