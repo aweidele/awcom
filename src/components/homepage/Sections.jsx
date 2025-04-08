@@ -6,6 +6,7 @@ import { Portfolio } from "./Portfolio";
 import { Experience } from "./Experience";
 
 import { sections } from "../../content/content";
+import { formatSectionName } from "../../../utils/formatSectionName";
 
 const componentMap = {
   homepageHero: HomepageHero,
@@ -15,18 +16,12 @@ const componentMap = {
   experience: Experience,
 };
 
-console.log(sections);
-
 export const Sections = () => {
   return (
     <>
       {sections.map((section, i) => {
         const ThisComponent = componentMap[section.component];
-        return (
-          <>
-            <ThisComponent {...section.content} />
-          </>
-        );
+        return <ThisComponent key={formatSectionName(section.title)} {...section.content} />;
       })}
     </>
   );

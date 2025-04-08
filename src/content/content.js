@@ -11,14 +11,14 @@ export const bgAfter = ["after:bg-p", "after:bg-p2", "after:bg-s", "after:bg-a1"
 
 export const sections = [
   {
-    title: "Home",
-    content: home,
-    component: "homepageHero",
-  },
-  {
     title: "My Skills",
     content: workExperience.skills,
     component: "skills",
+  },
+  {
+    title: "Home",
+    content: home,
+    component: "homepageHero",
   },
   {
     title: "Portfolio",

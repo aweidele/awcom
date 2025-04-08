@@ -1,6 +1,5 @@
 import { HomepageHero } from "../../components/homepage/HomepageHero";
 import content from "../../content/sections/home.json";
-console.log(content);
 
 export default {
   title: "Homepage/Homepage Hero",
@@ -12,3 +11,4 @@ export const HPHero = {
     ...content,
   },
 };
+HPHero.storyName = "Homepage Hero";

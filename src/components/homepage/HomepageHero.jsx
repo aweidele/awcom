@@ -2,7 +2,8 @@ import { Section } from "../layout/Section";
 import Grid from "../layout/Grid";
 import { DownArrow } from "../elements/Icons";
 import { SmallText } from "../elements/SmallText";
-import border from "../../assets/images/border.svg";
+import border from "/assets/images/border.svg";
+console.log(border);
 
 export const HomepageHero = ({ line1, line2, scrollText }) => {
   return (
@@ -26,6 +27,7 @@ export const HomepageHero = ({ line1, line2, scrollText }) => {
           </SmallText>
         </div>
       </div>
+      <hr className="w-full h-10 lg:h-[50px] left-0 -bottom-[25px] lg:-bottom-[32px] absolute border-0 bg-center" style={{ backgroundImage: `url(${border})` }} />
     </Section>
   );
 };
