@@ -26,7 +26,6 @@ export const SkillChips = ({ skills: skillIds }) => {
 };
 
 export const Portfolio = ({ portfolio }) => {
-  console.log(portfolio);
   return (
     <Section fullwidth={true}>
       {portfolio.map((work, i) => (
