@@ -51,4 +51,4 @@ const works = [
   },
 ];
 
-export const portfolio = ["walters", "umaf", "prescott", "nfip", "meadville"].map((item) => works.filter((work) => work.id === item)[0]);
+export const portfolio = { portfolio: ["walters", "umaf", "prescott", "nfip", "meadville"].map((item) => works.filter((work) => work.id === item)[0]) };

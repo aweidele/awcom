@@ -3,7 +3,6 @@ import Grid from "../layout/Grid";
 import { DownArrow } from "../elements/Icons";
 import { SmallText } from "../elements/SmallText";
 import border from "/assets/images/border.svg";
-console.log(border);
 
 export const HomepageHero = ({ line1, line2, scrollText }) => {
   return (
