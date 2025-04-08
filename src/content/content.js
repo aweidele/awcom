@@ -13,7 +13,7 @@ export const sections = [
   {
     title: "Home",
     content: home,
-    component: "home",
+    component: "homepageHero",
   },
   {
     title: "My Skills",
