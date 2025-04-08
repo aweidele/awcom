@@ -1,6 +1,8 @@
 import { Section } from "../layout/Section";
 import Grid from "../layout/Grid";
 import Heading from "../elements/Heading";
+import { Desktop } from "../elements/Desktop";
+import { Button } from "../elements/Button";
 
 import skills from "../../content/sections/content/skills.json";
 import { nl2array } from "../../../utils/fontsizes";
@@ -39,6 +41,18 @@ export const Portfolio = ({ portfolio }) => {
                   </p>
                 ))}
                 <SkillChips skills={work.skills} />
+                <div>
+                  <Button target={work.url} newWindow={true}>
+                    Launch Site
+                  </Button>
+                </div>
+              </div>
+              <div className="col-span-6 max-md:my-10">
+                {work.images && work.images.length && (
+                  <a href={work.url} target="_blank">
+                    <Desktop images={work.images} video={work.video} />
+                  </a>
+                )}
               </div>
             </Grid>
           </div>
