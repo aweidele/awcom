@@ -11,9 +11,9 @@ export const bgAfter = ["after:bg-p", "after:bg-p2", "after:bg-s", "after:bg-a1"
 
 export const sections = [
   {
-    title: "My Skills",
-    content: workExperience.skills,
-    component: "skills",
+    title: "Portfolio",
+    content: portfolio,
+    component: "portfolio",
   },
   {
     title: "Home",
@@ -21,9 +21,9 @@ export const sections = [
     component: "homepageHero",
   },
   {
-    title: "Portfolio",
-    content: portfolio,
-    component: "portfolio",
+    title: "My Skills",
+    content: workExperience.skills,
+    component: "skills",
   },
   {
     title: "Work Experience",
