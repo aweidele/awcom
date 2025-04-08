@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply font-serif text-base-m md:text-base;
+  @apply font-sans text-base-m md:text-base;
 }
 
 .circle-bg {
