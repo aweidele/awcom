@@ -1,0 +1,130 @@
+[
+  {
+    "skill": "HTML 5",
+    "id": "html",
+    "level": 100,
+    "highlight": true
+  },
+  {
+    "skill": "CSS 3/SASS",
+    "id": "css",
+    "level": 100,
+    "highlight": true
+  },
+  {
+    "skill": "Javascript ES6+",
+    "id": "javascript",
+    "level": 100,
+    "highlight": true
+  },
+  {
+    "skill": "Wordpress",
+    "id": "wordpress",
+    "level": 100,
+    "highlight": true
+  },
+  {
+    "skill": "React.js",
+    "id": "react",
+    "level": 85,
+    "highlight": true
+  },
+  {
+    "skill": "Tailwindcss",
+    "id": "tailwind",
+    "level": 85,
+    "highlight": true
+  },
+  {
+    "skill": "Storybook.js",
+    "id": "storybook",
+    "level": 80,
+    "highlight": true
+  },
+  {
+    "skill": "Drupal 8+",
+    "id": "drupal",
+    "level": 80,
+    "highlight": true
+  },
+  {
+    "skill": "PHP",
+    "id": "php",
+    "level": 90
+  },
+  {
+    "skill": "Twig",
+    "id": "twig",
+    "level": 90
+  },
+  {
+    "skill": "Adobe Experience Manager",
+    "id": "aem",
+    "level": 33
+  },
+  {
+    "skill": "Sitecore",
+    "id": "sitecore",
+    "level": 33
+  },
+  {
+    "skill": "API Integration",
+    "id": "api",
+    "level": 75
+  },
+  {
+    "skill": "Siteimprove",
+    "id": "siteimprove",
+    "level": 70
+  },
+  {
+    "skill": "Adobe Creative Suite",
+    "id": "adobe",
+    "level": 90
+  },
+  {
+    "skill": "Figma",
+    "id": "figma",
+    "level": 75
+  },
+  {
+    "skill": "Sketch",
+    "id": "sketch",
+    "level": 50
+  },
+  {
+    "skill": "Gulp",
+    "id": "gulp",
+    "level": 66
+  },
+  {
+    "skill": "Git",
+    "id": "git",
+    "level": 80
+  },
+  {
+    "skill": "Jira",
+    "id": "jira",
+    "level": 75
+  },
+  {
+    "skill": "Shopify",
+    "id": "shopify",
+    "level": 33
+  },
+  {
+    "skill": "MailChimp",
+    "id": "mailchimp",
+    "level": 33
+  },
+  {
+    "skill": "MySQL",
+    "id": "mysql",
+    "level": 70
+  },
+  {
+    "skill": "Google Web Developer",
+    "id": "gwd",
+    "level": 33
+  }
+]

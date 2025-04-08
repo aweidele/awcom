@@ -1,3 +1,5 @@
+import { Sections } from "../components/Sections";
+
 export const Homepage = () => {
-  return <div>Homepage</div>;
+  return <Sections />;
 };
