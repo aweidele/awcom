@@ -22,8 +22,8 @@ jobs:
           node-version: 20 # Use your Node.js version
       - run: npm install
 
-      - name: 🔨 Build React App
-        run: build-storybook # Change this if your build command is different
+      - name: 🔨 Build Storybook
+        run: npm run build-storybook # Change this if your build command is different
 
       - name: 🚀 Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
