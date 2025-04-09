@@ -3,6 +3,10 @@ import Grid from "../layout/Grid";
 import { DownArrow } from "../elements/Icons";
 import { SmallText } from "../elements/SmallText";
 import border from "/assets/images/border.svg";
+import { sections } from "../../content/content";
+import { formatSectionName } from "../../../utils/formatSectionName";
+
+const nextSection = formatSectionName(sections[1].title);
 
 export const HomepageHero = ({ line1, line2, scrollText }) => {
   return (
@@ -17,7 +21,7 @@ export const HomepageHero = ({ line1, line2, scrollText }) => {
             </h1>
           </Grid>
           <SmallText className="mt-5">
-            <a href="" className="text-center flex flex-col items-center gap-2.5">
+            <a href={`#${nextSection}`} className="text-center flex flex-col items-center gap-2.5">
               <span className="flex items-center justify-center w-7 md:w-[44px] h-7 md:h-[44px] border border-white bg-p-20 rounded-full">
                 <DownArrow className="w-3.5 h-2 md:w-7 md:h-4 fill-white" />
               </span>

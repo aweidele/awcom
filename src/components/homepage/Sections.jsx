@@ -7,6 +7,7 @@ import { Experience } from "./Experience";
 
 import { sections } from "../../content/content";
 import { formatSectionName } from "../../../utils/formatSectionName";
+import { Fragment } from "react";
 
 const componentMap = {
   homepageHero: HomepageHero,
@@ -21,7 +22,13 @@ export const Sections = () => {
     <>
       {sections.map((section, i) => {
         const ThisComponent = componentMap[section.component];
-        return <ThisComponent key={formatSectionName(section.title)} {...section.content} />;
+        const sectionId = formatSectionName(section.title);
+        return (
+          <Fragment key={sectionId}>
+            <a name={sectionId} id={sectionId} />
+            <ThisComponent {...section.content} />
+          </Fragment>
+        );
       })}
     </>
   );
