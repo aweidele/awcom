@@ -2,13 +2,16 @@ import { Section } from "./Section";
 import Heading from "../elements/Heading";
 import Grid from "./Grid";
 import { LinkedInLogo, BlueSkyLogo, GitHubLogo } from "../elements/Icons";
+import { MailForm } from "../elements/MailForm";
 
 export const Footer = () => {
   return (
     <Section tag="footer" className="bg-s2 text-white py-32">
       <Heading l={3}>Connect With Me</Heading>
       <Grid>
-        <div className="col-span-5">Mail Form Here</div>
+        <div className="col-span-5">
+          <MailForm />
+        </div>
         <div className="col-span-7 max-md:pt-10">
           <ul className="flex justify-center md:justify-end gap-2">
             <li>

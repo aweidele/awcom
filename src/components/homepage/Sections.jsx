@@ -21,6 +21,7 @@ export const Sections = () => {
     <>
       {sections.map((section, i) => {
         const ThisComponent = componentMap[section.component];
+        console.log(section.title, section.content);
         return <ThisComponent key={formatSectionName(section.title)} {...section.content} />;
       })}
     </>
