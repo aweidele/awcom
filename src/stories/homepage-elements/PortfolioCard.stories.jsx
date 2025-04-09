@@ -1,6 +1,5 @@
 import { PortfolioCard } from "../../components/elements/PortfolioCard";
 import { portfolio } from "../../content/sections/portfolio";
-console.log(portfolio);
 
 export default {
   title: "Homepage Elements/Portfolio",
