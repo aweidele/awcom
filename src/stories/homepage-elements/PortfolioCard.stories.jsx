@@ -1,10 +1,9 @@
-import { ArgTypes } from "@storybook/blocks";
 import { PortfolioCard } from "../../components/elements/PortfolioCard";
 import { portfolio } from "../../content/sections/portfolio";
 console.log(portfolio);
 
 export default {
-  title: "Homepage Elements/Portfolio Card",
+  title: "Homepage Elements/Portfolio",
   component: PortfolioCard,
   argTypes: {
     bgClass: { control: "select", options: ["bg-s", "bg-s2"] },
