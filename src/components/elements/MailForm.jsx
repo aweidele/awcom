@@ -36,13 +36,13 @@ export function MailForm() {
 
     return (
       <form onSubmit={sendEmail} className="mail-form text-reg">
-        <label for="from_name">Your Name</label>
+        <label htmlFor="from_name">Your Name</label>
         <input type="text" id="from_name" name="from_name" />
 
-        <label for="reply_to">Your Email</label>
+        <label htmlFor="reply_to">Your Email</label>
         <input type="email" id="reply_to" name="reply_to" />
 
-        <label for="message">Your Message</label>
+        <label htmlFor="message">Your Message</label>
         <textarea className="h-32" id="message" name="message"></textarea>
 
         <Button tag="button">Submit</Button>

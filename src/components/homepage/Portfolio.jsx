@@ -7,7 +7,7 @@ export const Portfolio = ({ portfolio }) => {
   return (
     <Section fullwidth={true}>
       {portfolio.map((work, i) => (
-        <PortfolioCard {...work} bgClass={bgClasses[i % 2]} />
+        <PortfolioCard key={work.id} {...work} bgClass={bgClasses[i % 2]} />
       ))}
     </Section>
   );
