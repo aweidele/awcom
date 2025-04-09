@@ -12,7 +12,7 @@ export const Footer = () => {
           <h3 className="font-semibold max-sm:w-full text-center">Check under the hood!</h3>
           <ul className="flex justify-center gap-5 items-center">
             <li>
-              <a href="https://github.com/aweidele/awcom/tree/sites/2024b-site" target="_blank" className="underline hover:text-p duration-300 flex gap-2 items-center">
+              <a href="https://github.com/aweidele/awcom/tree/sites/2025-site" target="_blank" className="underline hover:text-p duration-300 flex gap-2 items-center">
                 <GitHubLogo className="h-6 w-6 fill-current" />
                 <span>Github</span>
               </a>
