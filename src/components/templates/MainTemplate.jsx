@@ -1,9 +1,10 @@
 import { Footer } from "../layout/Footer";
+import { Header } from "../layout/Header";
 
 export const MainTemplate = ({ children }) => {
   return (
     <>
-      <header>Header</header>
+      <Header />
       <main>{children}</main>
       <Footer />
     </>
