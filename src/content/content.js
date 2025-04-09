@@ -1,6 +1,7 @@
 import home from "./sections/home.json";
 import { workExperience } from "./sections/skills-experience";
 import { portfolio } from "./sections/portfolio";
+import { formatSectionName } from "../../utils/formatSectionName";
 
 export const backgrounds = ["bg-p", "bg-p2", "bg-s", "bg-a1", "bg-s2", "bg-a2"];
 export const backgroundsDk = ["bg-p-dk", "bg-p2-dk", "bg-s-dk", "bg-a1-dk", "bg-s2-dk", "bg-a2-dk"];
@@ -31,3 +32,22 @@ export const sections = [
     component: "experience",
   },
 ];
+
+export const navigation = [
+  ...sections.map((section) => {
+    return {
+      title: section.title,
+      url: section.content === home ? "/" : `/#${formatSectionName(section.title)}`,
+    };
+  }),
+  {
+    title: "Projects",
+    url: "/projects",
+  },
+  {
+    title: "Blog",
+    url: "/blog",
+  },
+];
+
+console.log(navigation);
