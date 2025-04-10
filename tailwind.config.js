@@ -26,10 +26,12 @@ export const colors = {
   s: "#083D77",
   s2: "#2E4057",
   "s2-lt": "#d2e0f1",
+  "s2-lt2": "#afbfd5",
   a1: "#DA4167",
   a2: "#2CA58D",
   white: "#F2F4F8",
 };
+//afbfd5
 
 Object.keys(colors).forEach((key) => {
   const darkKey = `${key}-dk`;
@@ -61,7 +63,7 @@ export default {
         s2dk: darkenHexColor(colors.s2),
       },
       minHeight: {
-        home: "90vh",
+        home: "calc(100vh - 64px)",
         100: pxToRem(400),
       },
       maxWidth: {
