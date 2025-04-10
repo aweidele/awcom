@@ -40,14 +40,14 @@ export const navigation = [
       url: section.content === home ? "/" : `/#${formatSectionName(section.title)}`,
     };
   }),
-  {
-    title: "Projects",
-    url: "/projects",
-  },
-  {
-    title: "Blog",
-    url: "/blog",
-  },
+  // {
+  //   title: "Projects",
+  //   url: "/projects",
+  // },
+  // {
+  //   title: "Blog",
+  //   url: "/blog",
+  // },
 ];
 
 console.log(navigation);

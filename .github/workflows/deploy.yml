@@ -34,26 +34,10 @@ jobs:
           local-dir: ./dist/ # Ensure this is correct
           server-dir: /public_html/aaronweidele.com/docroot/ # Adjust your deployment path
 
-  build-and-deploy-storybook:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: 📥 Checkout Repository
-        uses: actions/checkout@v4
-
-      - name: Clear npm cache
-        run: npm cache clean --force
-
-      - name: 📦 Install Node.js and Dependencies
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20 # Use your Node.js version
-      - run: npm install
-
-      - name: 🔨 Build Storybook
+      - name: 📚 Build Storybook
         run: npm run build-storybook # Change this if your build command is different
 
-      - name: 🚀 Deploy via FTP
+      - name: 📚🚀 Deploy Storybook via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
@@ -61,3 +45,32 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./storybook-static/ # Ensure this is correct
           server-dir: /storybook.aaronweidele.com/ # Adjust your deployment path
+
+
+  # build-and-deploy-storybook:
+  #   runs-on: ubuntu-latest
+
+  #   steps:
+  #     - name: 📥 Checkout Repository
+  #       uses: actions/checkout@v4
+
+  #     - name: Clear npm cache
+  #       run: npm cache clean --force
+
+  #     - name: 📦 Install Node.js and Dependencies
+  #       uses: actions/setup-node@v4
+  #       with:
+  #         node-version: 20 # Use your Node.js version
+  #     - run: npm install
+
+  #     - name: 🔨 Build Storybook
+  #       run: npm run build-storybook # Change this if your build command is different
+
+  #     - name: 🚀 Deploy via FTP
+  #       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+  #       with:
+  #         server: ${{ secrets.FTP_SERVER }}
+  #         username: ${{ secrets.FTP_USERNAME }}
+  #         password: ${{ secrets.FTP_PASSWORD }}
+  #         local-dir: ./storybook-static/ # Ensure this is correct
+  #         server-dir: /storybook.aaronweidele.com/ # Adjust your deployment path
