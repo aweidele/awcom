@@ -1,22 +1,20 @@
-import { SkillCard } from "../../components/elements/SkillCard";
-import skills from "../../content/sections/content/skills.json";
-
-const ids = skills.filter((skill) => skill.highlight).map((skill) => skill.id);
+import { Header } from "../../components/layout/Header";
+import { MemoryRouter } from "react-router-dom";
 
 export default {
   title: "Layout/Header",
-  component: SkillCard,
-  argTypes: {
-    level: { control: { type: "number", min: 1, max: 100 } },
-    id: { control: "select", options: ids, name: "Icon" },
-  },
+  component: Header,
 };
 
-export const HeaderStory = {
-  args: {
-    skill: "React",
-    id: "react",
-    level: 80,
-  },
+const Template = ({ args }) => {
+  return (
+    <MemoryRouter>
+      <div className="h-[400px] bg-p2">
+        <Header />
+      </div>
+    </MemoryRouter>
+  );
 };
+
+export const HeaderStory = Template.bind({});
 HeaderStory.storyName = "Header";
