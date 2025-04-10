@@ -7,7 +7,7 @@ import { MailForm } from "../elements/MailForm";
 export const Footer = () => {
   return (
     <>
-      <Section className="bg-p2 text-xs py-5 sticky bottom-0 z-50">
+      <Section className="bg-p2 text-xs py-5 md:sticky bottom-0 z-50">
         <nav className="flex justify-center gap-5 items-center flex-wrap">
           <h3 className="font-semibold max-sm:w-full text-center">Check under the hood!</h3>
           <ul className="flex justify-center gap-5 items-center">
