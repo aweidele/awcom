@@ -3,6 +3,7 @@ import { RootLayout } from "./pages/RootLayout";
 import { Homepage } from "./pages/Homepage";
 import { Blog } from "./pages/Blog";
 import { Projects } from "./pages/Projects";
+import { LinkInBio } from "./pages/LinkInBio";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       {
         path: "projects",
         element: <Projects />,
+      },
+      {
+        path: "link-in-bio",
+        element: <LinkInBio />,
       },
     ],
   },
