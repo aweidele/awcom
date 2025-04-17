@@ -1,3 +1,13 @@
-export const InteriorHero = () => {
-  return <header>Interiro Hero</header>;
+import { Section } from "../layout/Section";
+import Heading from "./Heading";
+
+export const InteriorHero = ({ title, line1, line2 }) => {
+  return (
+    <Section tag="header" className="bg-p2 text-white relative z-10">
+      <div className="circle-bg"></div>
+      <div className="relative w-full py-20 md:py-40 text-center">
+        <Heading>{title}</Heading>
+      </div>
+    </Section>
+  );
 };
