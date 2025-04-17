@@ -1,3 +1,9 @@
+import { InteriorHero } from "../components/elements/InteriorHero";
+
 export const Projects = () => {
-  return <div>Projects</div>;
+  return (
+    <>
+      <InteriorHero title="Projects" />
+    </>
+  );
 };
