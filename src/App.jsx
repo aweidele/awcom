@@ -4,6 +4,7 @@ import { Homepage } from "./pages/Homepage";
 import { Blog } from "./pages/Blog";
 import { Projects } from "./pages/Projects";
 import { LinkInBio } from "./pages/LinkInBio";
+import { Project, projectLoader } from "./pages/Project";
 
 const router = createBrowserRouter([
   {
@@ -21,7 +22,18 @@ const router = createBrowserRouter([
       },
       {
         path: "projects",
-        element: <Projects />,
+        children: [
+          {
+            index: true,
+            element: <Projects />,
+          },
+          {
+            path: ":slug",
+            id: "project-slug",
+            element: <Project />,
+            loader: projectLoader,
+          },
+        ],
       },
       {
         path: "link-in-bio",
