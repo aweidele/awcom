@@ -30,6 +30,7 @@ export const colors = {
   a1: "#DA4167",
   a2: "#2CA58D",
   white: "#F2F4F8",
+  glight: "#ADC0D9",
 };
 //afbfd5
 

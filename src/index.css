@@ -70,3 +70,27 @@ body {
 .mail-form textarea {
   @apply bg-s2-dk w-full p-2;
 }
+
+.blog-post {
+  @apply text-[16px] leading-8;
+
+  p {
+    @apply my-[1.4em];
+  }
+
+  .wp-block-code {
+    @apply lg:w-4/5 m-auto text-xs leading-6 bg-glight p-4 border border-p overflow-auto my-[1.4em];
+  }
+
+  .is-layout-flex {
+    @apply flex gap-5;
+  }
+
+  .wp-block-column {
+    @apply flex-1;
+  }
+
+  a {
+    @apply text-p2-dk underline decoration-transparent hover:decoration-p2-dk transition-all duration-300;
+  }
+}

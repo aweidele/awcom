@@ -1,6 +1,7 @@
 import { NavLink, useRouteLoaderData } from "react-router-dom";
 import { InteriorHero } from "../components/elements/InteriorHero";
 import { Section } from "../components/layout/Section";
+import { ProjectPost } from "../components/elements/ProjectPost";
 
 export const Project = () => {
   const { project } = useRouteLoaderData("project-slug");
@@ -12,12 +13,7 @@ export const Project = () => {
           Back to projects
         </NavLink>
       </InteriorHero>
-      <Section className="py-16">
-        <img src={project.featured_image_url} />
-      </Section>
-      <Section>
-        <div dangerouslySetInnerHTML={{ __html: project.content.rendered }} />
-      </Section>
+      <ProjectPost {...project} />
     </>
   );
 };
