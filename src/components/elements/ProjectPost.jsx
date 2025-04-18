@@ -18,7 +18,7 @@ export const ProjectPost = ({ content, skills, acf }) => {
             ))}
           </ul>
         </div>
-        <div className="col-span-8">
+        <div className="col-span-10 lg:col-span-8">
           <div className="blog-post-content" dangerouslySetInnerHTML={{ __html: content.rendered }} />
         </div>
       </Grid>
