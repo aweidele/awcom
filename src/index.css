@@ -94,3 +94,7 @@ body {
     @apply text-p2-dk underline decoration-transparent hover:decoration-p2-dk transition-all duration-300;
   }
 }
+
+.blog-post-content :first-child {
+  @apply mt-0;
+}
