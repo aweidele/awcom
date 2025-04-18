@@ -1,4 +1,4 @@
-import { useRouteLoaderData } from "react-router-dom";
+import { NavLink, useRouteLoaderData } from "react-router-dom";
 import { InteriorHero } from "../components/elements/InteriorHero";
 import { Section } from "../components/layout/Section";
 
@@ -7,8 +7,17 @@ export const Project = () => {
   console.log("<Project />", project);
   return (
     <>
-      <InteriorHero line1="Project" title={project.title.rendered} />
-      <Section className="py-32"></Section>
+      <InteriorHero line1="Project" title={project.title.rendered}>
+        <NavLink to="/projects" className="text-xs translate-y-20">
+          Back to projects
+        </NavLink>
+      </InteriorHero>
+      <Section className="py-16">
+        <img src={project.featured_image_url} />
+      </Section>
+      <Section>
+        <div dangerouslySetInnerHTML={{ __html: project.content.rendered }} />
+      </Section>
     </>
   );
 };
