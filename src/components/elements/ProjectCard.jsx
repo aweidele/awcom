@@ -1,7 +1,7 @@
 import { ExpertiseTag } from "./ExpertiseTag";
 import { ExternalLink, StorybookLogo, GitHubLogo } from "./Icons";
 
-export const ProjectCard = ({ acf, featured_image_url, skills, title, slug, excerpt }) => {
+export const ProjectCard = ({ acf, featured_image_url, skills, title, excerpt }) => {
   console.log(acf);
   return (
     <div className="flex flex-row-reverse gap-10 my-5 border p-5">

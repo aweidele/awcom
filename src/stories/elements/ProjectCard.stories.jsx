@@ -2,9 +2,15 @@ import { ProjectCard } from "../../components/elements/ProjectCard";
 
 export default {
   title: "Page Elements/Project Card",
+  component: ProjectCard,
+  render: (args, { loaded: { todo } }) => <ProjectCard {...args} {...todo[0]} />,
 };
 
-const Template = ({ text, ...args }) => <ProjectCard {...args} />;
-export const ProjectCardStory = Template.bind({});
-ProjectCardStory.storyName = "Project Card";
-ProjectCardStory.args = { acf: [], featured_image_url: "", skills: [], title: "", slug: "", excerpt: "" };
+export const ProjectCardStory = {
+  loaders: [
+    async () => ({
+      todo: await (await fetch("https://blog.aaronweidele.com/wp-json/wp/v2/projects")).json(),
+    }),
+  ],
+};
+ProjectCardStory.storyName = "Project Card Full";
