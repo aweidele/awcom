@@ -1,6 +1,7 @@
 import { Button } from "./Button";
 import Grid from "../layout/Grid";
 import { Section } from "../layout/Section";
+import { ExpertiseTag } from "./ExpertiseTag";
 
 export const ProjectPost = ({ content, skills, acf }) => {
   console.log(acf);
@@ -14,12 +15,7 @@ export const ProjectPost = ({ content, skills, acf }) => {
           <h3 className="font-semibold">Relevant skills</h3>
           <ul className="mb-4 max-sm:columns-2 max-md:columns-3">
             {skills.map((skill) => (
-              <li key={skill.slug} className="text-xs flex gap-2 items-center">
-                <div className="w-6 h-6 rounded-full overflow-hidden border border-s2-lt2">
-                  <img src={skill.icon} alt={`${skill.name} Icon`} />
-                </div>
-                <span>{skill.name}</span>
-              </li>
+              <ExpertiseTag {...skill} showName={true} />
             ))}
           </ul>
         </div>
