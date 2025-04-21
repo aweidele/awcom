@@ -3,6 +3,7 @@ import { Section } from "../components/layout/Section";
 import Grid from "../components/layout/Grid";
 import { useLoaderData } from "react-router-dom";
 import Heading from "../components/elements/Heading";
+import { ExternalLink, GitHubLogo, StorybookLogo } from "../components/elements/Icons";
 
 export const Projects = () => {
   const { projects } = useLoaderData();
@@ -32,14 +33,41 @@ export const Projects = () => {
                     ))}
                   </ul>
                 </div>
-                <a href={acf.project_link} className="text-xs border border-p2 inline-flex p-1 gap-2">
-                  Launch project
-                </a>
+                <div className="flex justify-between items-center">
+                  <div>
+                    <a href={acf.project_link} className="text-xs border border-p2 hover:bg-p2 inline-flex py-1 px-2 items-center gap-2 transition-all">
+                      <span>Launch project</span>
+                      <ExternalLink className="w-2.5 h-2.5 fill-current" />
+                    </a>
+                  </div>
+                  {acf.links && (
+                    <ul className="flex gap-2.5">
+                      {acf.links.map((link) => (
+                        <li key={link.url}>
+                          <a href={link.url} target="_blank" className="inline-flex gap-1 text-xs hover:text-p2 items-center transition-all">
+                            {link.link_type === "github" && (
+                              <>
+                                <GitHubLogo className="w-4 h-4 fill-current" />
+                                <span>Github</span>
+                              </>
+                            )}
+                            {link.link_type === "storybook" && (
+                              <>
+                                <StorybookLogo className="w-4 h-4 fill-current" />
+                                <span>Storybook</span>
+                              </>
+                            )}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
               </div>
             </div>
             <div className="max-w-md shrink-0">
               {featured_image_url && (
-                <a href={acf.project_link} target="_blank" className="block aspect-project border">
+                <a href={acf.project_link} target="_blank" className="block aspect-project">
                   <img src={featured_image_url} alt={title.rendered} className="w-full h-full object-cover" />
                 </a>
               )}
