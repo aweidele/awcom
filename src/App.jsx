@@ -2,7 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { RootLayout } from "./pages/RootLayout";
 import { Homepage } from "./pages/Homepage";
 import { Blog } from "./pages/Blog";
-import { Projects } from "./pages/Projects";
+import { Projects, projectsLoader } from "./pages/Projects";
 import { LinkInBio } from "./pages/LinkInBio";
 import { Project, projectLoader } from "./pages/Project";
 
@@ -26,6 +26,7 @@ const router = createBrowserRouter([
           {
             index: true,
             element: <Projects />,
+            loader: projectsLoader,
           },
           {
             path: ":slug",
