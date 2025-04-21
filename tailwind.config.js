@@ -115,6 +115,9 @@ export default {
         tl: "45deg",
       },
       screens: { xs: "321px", desktopXl: "1440px" },
+      aspectRatio: {
+        project: "184 / 119",
+      },
     },
   },
   plugins: [],

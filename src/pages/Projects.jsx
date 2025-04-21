@@ -2,6 +2,7 @@ import { InteriorHero } from "../components/elements/InteriorHero";
 import { Section } from "../components/layout/Section";
 import Grid from "../components/layout/Grid";
 import { useLoaderData } from "react-router-dom";
+import Heading from "../components/elements/Heading";
 
 export const Projects = () => {
   const { projects } = useLoaderData();
@@ -10,8 +11,40 @@ export const Projects = () => {
     <>
       <InteriorHero title="Projects" />
       <Section className="py-32">
-        {projects.map(({ acf, featured_image_url, skills, title }) => (
-          <div>{title.rendered}</div>
+        {projects.map(({ acf, featured_image_url, skills, title, slug, excerpt }) => (
+          <div className="flex gap-10 my-5 border p-5" key={slug}>
+            <div className="flex flex-col justify-between">
+              <div>
+                <h3 className="text-sm font-semibold">{title.rendered}</h3>
+                <div className="text-reg" dangerouslySetInnerHTML={{ __html: excerpt.rendered }} />
+              </div>
+              <div>
+                <div className="flex gap-2.5">
+                  <h4 className="text-xs font-semibold">Expertise:</h4>
+                  <ul className="flex gap-2.5 mb-2.5">
+                    {skills.map((skill) => (
+                      <li key={skill.name}>
+                        <div className="w-6 h-6 rounded-full overflow-hidden border border-s2-lt2">
+                          <img src={skill.icon} alt={`${skill.name} Icon`} />
+                        </div>
+                        <span className="sr-only">{skill.name}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <a href={acf.project_link} className="text-xs border border-p2 inline-flex p-1 gap-2">
+                  Launch project
+                </a>
+              </div>
+            </div>
+            <div className="max-w-md shrink-0">
+              {featured_image_url && (
+                <a href={acf.project_link} target="_blank" className="block aspect-project border">
+                  <img src={featured_image_url} alt={title.rendered} className="w-full h-full object-cover" />
+                </a>
+              )}
+            </div>
+          </div>
         ))}
       </Section>
     </>
