@@ -35,7 +35,7 @@ export const Projects = () => {
                 </div>
                 <div className="flex justify-between items-center">
                   <div>
-                    <a href={acf.project_link} className="text-xs border border-p2 hover:bg-p2 inline-flex py-1 px-2 items-center gap-2 transition-all">
+                    <a href={acf.project_link} aria-label={`Launch Project: ${title.rendered}`} className="text-xs border border-p2 hover:bg-p2 inline-flex py-1 px-2 items-center gap-2 transition-all">
                       <span>Launch project</span>
                       <ExternalLink className="w-2.5 h-2.5 fill-current" />
                     </a>
@@ -44,7 +44,7 @@ export const Projects = () => {
                     <ul className="flex gap-2.5">
                       {acf.links.map((link) => (
                         <li key={link.url}>
-                          <a href={link.url} target="_blank" className="inline-flex gap-1 text-xs hover:text-p2 items-center transition-all">
+                          <a href={link.url} aria-label={`${link.link_type}: ${title.rendered}`} target="_blank" className="inline-flex gap-1 text-xs hover:text-p2 items-center transition-all">
                             {link.link_type === "github" && (
                               <>
                                 <GitHubLogo className="w-4 h-4 fill-current" />
