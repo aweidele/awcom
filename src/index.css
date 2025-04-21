@@ -90,7 +90,7 @@ body {
     @apply flex-1;
   }
 
-  a {
+  a:not(.btn) {
     @apply text-p2-dk underline decoration-transparent hover:decoration-p2-dk transition-all duration-300;
   }
 }
