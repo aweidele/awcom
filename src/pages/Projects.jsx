@@ -12,7 +12,7 @@ export const Projects = () => {
   return (
     <>
       <InteriorHero title="Projects" />
-      <Section className="py-32">
+      <Section className="py-24">
         {projects.map((project) => (
           <ProjectCard key={project.slug} {...project} />
         ))}
