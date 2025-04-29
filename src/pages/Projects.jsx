@@ -6,6 +6,9 @@ import Heading from "../components/elements/Heading";
 import { ExternalLink, GitHubLogo, StorybookLogo } from "../components/elements/Icons";
 import { ProjectCard } from "../components/elements/ProjectCard";
 
+import { portfolio } from "../content/sections/portfolio";
+import { Portfolio } from "../components/homepage/Portfolio";
+
 export const Projects = () => {
   const { projects } = useLoaderData();
   console.log(projects);
@@ -17,6 +20,7 @@ export const Projects = () => {
           <ProjectCard key={project.slug} {...project} />
         ))}
       </Section>
+      <Portfolio {...portfolio} />
     </>
   );
 };

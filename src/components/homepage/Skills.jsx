@@ -2,6 +2,7 @@ import { Section } from "../layout/Section";
 import Grid from "../layout/Grid";
 import Heading from "../elements/Heading";
 import { SkillCard } from "../elements/SkillCard";
+import { HomepageIntro } from "./homepageIntro/HomepageIntro";
 
 export const Skills = ({ skills }) => {
   skills.sort((a, b) => b.level - a.level);

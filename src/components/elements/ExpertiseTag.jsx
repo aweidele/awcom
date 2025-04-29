@@ -3,7 +3,7 @@ export const ExpertiseTag = ({ name, icon, tag = "li", showName = false }) => {
   return (
     <Tag key={name} className="text-xs flex gap-2 items-center">
       <div className="w-6 h-6 rounded-full overflow-hidden border border-s2-lt2">
-        <img src={icon} alt={`${name} Icon`} />
+        <img src={icon} alt={`${name} Icon`} title={name} />
       </div>
       <span className={showName ? "" : "sr-only"}>{name}</span>
     </Tag>
