@@ -1,7 +1,7 @@
 import { InteriorHero } from "../components/elements/InteriorHero";
 import { Section } from "../components/layout/Section";
 import Grid from "../components/layout/Grid";
-import { Await, useLoaderData } from "react-router-dom";
+import { Await, NavLink, useLoaderData } from "react-router-dom";
 import Heading from "../components/elements/Heading";
 import { ExternalLink, GitHubLogo, StorybookLogo } from "../components/elements/Icons";
 import { ProjectCard } from "../components/elements/ProjectCard";
@@ -15,7 +15,11 @@ export const Projects = () => {
   console.log(projects);
   return (
     <>
-      <InteriorHero title="Projects" />
+      <InteriorHero title="Projects">
+        <NavLink to="/" className="text-xs">
+          Return to aaronweidele.com
+        </NavLink>
+      </InteriorHero>
       <Section className="py-24">
         <Suspense fallback={<p>Loading projects</p>}>
           <Await resolve={projects}>
