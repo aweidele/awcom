@@ -1,13 +1,14 @@
 import { InteriorHero } from "../components/elements/InteriorHero";
 import { Section } from "../components/layout/Section";
 import Grid from "../components/layout/Grid";
-import { useLoaderData } from "react-router-dom";
+import { Await, useLoaderData } from "react-router-dom";
 import Heading from "../components/elements/Heading";
 import { ExternalLink, GitHubLogo, StorybookLogo } from "../components/elements/Icons";
 import { ProjectCard } from "../components/elements/ProjectCard";
 
 import { portfolio } from "../content/sections/portfolio";
 import { Portfolio } from "../components/homepage/Portfolio";
+import { Suspense } from "react";
 
 export const Projects = () => {
   const { projects } = useLoaderData();
@@ -16,9 +17,13 @@ export const Projects = () => {
     <>
       <InteriorHero title="Projects" />
       <Section className="py-24">
-        {projects.map((project) => (
-          <ProjectCard key={project.slug} {...project} />
-        ))}
+        <Suspense fallback={<p>Loading projects</p>}>
+          <Await resolve={projects}>
+            {projects.map((project) => (
+              <ProjectCard key={project.slug} {...project} />
+            ))}
+          </Await>
+        </Suspense>
       </Section>
       <Portfolio {...portfolio} />
     </>
