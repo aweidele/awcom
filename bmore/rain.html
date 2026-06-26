@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rain Animation</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #000; overflow: hidden; width: 100vw; height: 100vh; }
+    canvas { display: block; }
+  </style>
+</head>
+<body>
+  <canvas id="rain"></canvas>
+  <script>
+
+    // ─────────────────────────────────────────────
+    //  CONTROLS — tweak these two variables
+    // ─────────────────────────────────────────────
+
+    let ANGLE     = 15;    // degrees from vertical. negative = left lean, positive = right lean. range: -60 to 60
+    let INTENSITY = 5;     // rainfall density. range: 1 (drizzle) to 10 (downpour)
+
+    // ─────────────────────────────────────────────
+
+    const canvas = document.getElementById('rain');
+    const ctx    = canvas.getContext('2d');
+
+    let drops = [];
+
+    function resize() {
+      canvas.width  = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+
+    // Derive rendering parameters from ANGLE and INTENSITY
+    function getParams() {
+      const clampedAngle     = Math.max(-60, Math.min(60, ANGLE));
+      const clampedIntensity = Math.max(1,   Math.min(10, INTENSITY));
+
+      const angleRad  = clampedAngle * Math.PI / 180;
+      const count     = Math.round(clampedIntensity * 80);   // 80–800 drops
+      const speed     = 6 + clampedIntensity * 1.8;          // base fall speed
+      const length    = 10 + clampedIntensity * 3;           // drop streak length
+      const opacity   = 0.35 + clampedIntensity * 0.05;      // max opacity
+
+      return { angleRad, count, speed, length, opacity };
+    }
+
+    function spawnDrop(params, randomY = true) {
+      const { angleRad, speed, length, opacity } = params;
+      const vx = Math.sin(angleRad) * speed;
+      const vy = Math.cos(angleRad) * speed;
+
+      // Start drops across the top + left/right edges depending on lean
+      let x, y;
+      if (randomY) {
+        // Seed the canvas fully on first load
+        x = Math.random() * (canvas.width * 1.4) - canvas.width * 0.2;
+        y = Math.random() * canvas.height;
+      } else {
+        x = Math.random() * (canvas.width * 1.4) - canvas.width * 0.2;
+        y = -length;
+      }
+
+      return {
+        x, y, vx, vy,
+        length,
+        opacity: opacity * (0.5 + Math.random() * 0.5),
+        width: 0.5 + Math.random() * 0.8,
+        speed: speed * (0.7 + Math.random() * 0.6)
+      };
+    }
+
+    function initDrops() {
+      const params = getParams();
+      drops = [];
+      for (let i = 0; i < params.count; i++) {
+        drops.push(spawnDrop(params, true));
+      }
+    }
+
+    function drawSky() {
+      const grad = ctx.createLinearGradient(0, 0, 0, canvas.height);
+      grad.addColorStop(0, '#0d1117');
+      grad.addColorStop(1, '#1c2333');
+      ctx.fillStyle = grad;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+    }
+
+    function drawDrops() {
+      const params  = getParams();
+      const { angleRad, count, length } = params;
+
+      // Adjust drop count dynamically if INTENSITY changed
+      while (drops.length < count) drops.push(spawnDrop(params, false));
+      if (drops.length > count) drops.splice(count);
+
+      const cosA = Math.cos(angleRad);
+      const sinA = Math.sin(angleRad);
+
+      drops.forEach(d => {
+        // Recompute velocity in case ANGLE changed mid-run
+        const spd = d.speed;
+        d.vx = sinA * spd;
+        d.vy = cosA * spd;
+
+        d.x += d.vx;
+        d.y += d.vy;
+
+        // Recycle drops that leave the canvas
+        if (d.y > canvas.height + length || d.x < -200 || d.x > canvas.width + 200) {
+          const fresh = spawnDrop(params, false);
+          Object.assign(d, fresh);
+        }
+
+        // Draw streak
+        ctx.save();
+        ctx.globalAlpha = d.opacity;
+        ctx.strokeStyle = '#a8c8e8';
+        ctx.lineWidth   = d.width;
+        ctx.lineCap     = 'round';
+        ctx.beginPath();
+        ctx.moveTo(d.x, d.y);
+        ctx.lineTo(d.x - d.vx * (d.length / spd), d.y - d.vy * (d.length / spd));
+        ctx.stroke();
+        ctx.restore();
+      });
+    }
+
+    function animate() {
+      drawSky();
+      drawDrops();
+      requestAnimationFrame(animate);
+    }
+
+    window.addEventListener('resize', () => { resize(); initDrops(); });
+    resize();
+    initDrops();
+    requestAnimationFrame(animate);
+
+  </script>
+</body>
+</html>

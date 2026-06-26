@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Starry Night</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #000; overflow: hidden; width: 100vw; height: 100vh; }
+    canvas { display: block; }
+  </style>
+</head>
+<body>
+  <canvas id="sky"></canvas>
+  <script>
+    const canvas = document.getElementById('sky');
+    const ctx = canvas.getContext('2d');
+
+    function resize() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      initStars();
+    }
+
+    const NUM_STARS = 300;
+    let stars = [];
+    let shootingStars = [];
+
+    function rand(a, b) { return a + Math.random() * (b - a); }
+
+    function initStars() {
+      stars = [];
+      for (let i = 0; i < NUM_STARS; i++) {
+        stars.push({
+          x: rand(0, canvas.width),
+          y: rand(0, canvas.height),
+          r: rand(0.3, 1.8),
+          alpha: rand(0.4, 1),
+          twinkleSpeed: rand(0.005, 0.025),
+          twinklePhase: rand(0, Math.PI * 2),
+          color: Math.random() < 0.12
+            ? (Math.random() < 0.5 ? '#b3d4ff' : '#ffd6b3')
+            : '#ffffff'
+        });
+      }
+    }
+
+    function spawnShootingStar() {
+      const startX = rand(canvas.width * 0.05, canvas.width * 0.85);
+      const startY = rand(canvas.height * 0.02, canvas.height * 0.5);
+      const angle = rand(20, 50) * Math.PI / 180;
+      const speed = rand(8, 16);
+      shootingStars.push({
+        x: startX,
+        y: startY,
+        vx: Math.cos(angle) * speed,
+        vy: Math.sin(angle) * speed,
+        alpha: 1,
+        decay: rand(0.010, 0.020),
+        trail: []
+      });
+    }
+
+    function drawSky() {
+      const grad = ctx.createLinearGradient(0, 0, 0, canvas.height);
+      grad.addColorStop(0,   '#020817');
+      grad.addColorStop(0.5, '#07112e');
+      grad.addColorStop(1,   '#0d1a45');
+      ctx.fillStyle = grad;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+    }
+
+    function drawStars(t) {
+      stars.forEach(s => {
+        const twinkle = 0.55 + 0.45 * Math.sin(t * s.twinkleSpeed * 60 + s.twinklePhase);
+        ctx.save();
+        ctx.globalAlpha = s.alpha * twinkle;
+        ctx.fillStyle = s.color;
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+        ctx.fill();
+        if (s.r > 1.2) {
+          ctx.globalAlpha = s.alpha * twinkle * 0.25;
+          ctx.beginPath();
+          ctx.arc(s.x, s.y, s.r * 2.4, 0, Math.PI * 2);
+          ctx.fill();
+        }
+        ctx.restore();
+      });
+    }
+
+    function drawShootingStars() {
+      shootingStars = shootingStars.filter(ss => ss.alpha > 0.02);
+      shootingStars.forEach(ss => {
+        ss.trail.push({ x: ss.x, y: ss.y, a: ss.alpha });
+        if (ss.trail.length > 22) ss.trail.shift();
+
+        for (let i = 0; i < ss.trail.length - 1; i++) {
+          const t0 = ss.trail[i];
+          const t1 = ss.trail[i + 1];
+          const prog = i / ss.trail.length;
+          ctx.save();
+          ctx.globalAlpha = t0.a * prog * 0.65;
+          ctx.strokeStyle = '#ffffff';
+          ctx.lineWidth = 1.8 * prog;
+          ctx.lineCap = 'round';
+          ctx.beginPath();
+          ctx.moveTo(t0.x, t0.y);
+          ctx.lineTo(t1.x, t1.y);
+          ctx.stroke();
+          ctx.restore();
+        }
+
+        ctx.save();
+        ctx.globalAlpha = ss.alpha;
+        const grad = ctx.createLinearGradient(
+          ss.x - ss.vx * 7, ss.y - ss.vy * 7,
+          ss.x + ss.vx, ss.y + ss.vy
+        );
+        grad.addColorStop(0, 'rgba(255,255,255,0)');
+        grad.addColorStop(1, 'rgba(255,255,255,1)');
+        ctx.strokeStyle = grad;
+        ctx.lineWidth = 2.2;
+        ctx.lineCap = 'round';
+        ctx.beginPath();
+        ctx.moveTo(ss.x - ss.vx * 6, ss.y - ss.vy * 6);
+        ctx.lineTo(ss.x, ss.y);
+        ctx.stroke();
+
+        ctx.fillStyle = 'rgba(255,255,255,0.95)';
+        ctx.beginPath();
+        ctx.arc(ss.x, ss.y, 2, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.restore();
+
+        ss.x += ss.vx;
+        ss.y += ss.vy;
+        ss.alpha -= ss.decay;
+      });
+    }
+
+    let frame = 0;
+    let nextShoot = Math.round(rand(100, 220));
+
+    function animate(ts) {
+      const t = ts / 1000;
+      frame++;
+
+      // drawSky();
+      drawStars(t);
+      drawShootingStars();
+
+      if (frame >= nextShoot) {
+        spawnShootingStar();
+        nextShoot = frame + Math.round(rand(130, 320));
+      }
+
+      requestAnimationFrame(animate);
+    }
+
+    window.addEventListener('resize', resize);
+    resize();
+    requestAnimationFrame(animate);
+  </script>
+</body>
+</html>
