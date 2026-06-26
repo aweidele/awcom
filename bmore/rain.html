@@ -6,8 +6,8 @@
   <title>Rain Animation</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { background: #000; overflow: hidden; width: 100vw; height: 100vh; }
-    canvas { display: block; }
+    body { background: linear-gradient(180deg,rgba(163, 163, 163, 1) 0%, rgba(225, 230, 240, 1) 100%); overflow: hidden; width: 100vw; height: 100vh; }
+    canvas { display: block; background: transparent; }
   </style>
 </head>
 <body>
@@ -18,8 +18,8 @@
     //  CONTROLS — tweak these two variables
     // ─────────────────────────────────────────────
 
-    let ANGLE     = 15;    // degrees from vertical. negative = left lean, positive = right lean. range: -60 to 60
-    let INTENSITY = 5;     // rainfall density. range: 1 (drizzle) to 10 (downpour)
+    let ANGLE     = 20;    // degrees from vertical. negative = left lean, positive = right lean. range: -60 to 60
+    let INTENSITY = 7;     // rainfall density. range: 1 (drizzle) to 10 (downpour)
 
     // ─────────────────────────────────────────────
 
@@ -67,7 +67,7 @@
         x, y, vx, vy,
         length,
         opacity: opacity * (0.5 + Math.random() * 0.5),
-        width: 0.5 + Math.random() * 0.8,
+        width: 1 + Math.random() * 0.8,
         speed: speed * (0.7 + Math.random() * 0.6)
       };
     }
@@ -117,7 +117,7 @@
         // Draw streak
         ctx.save();
         ctx.globalAlpha = d.opacity;
-        ctx.strokeStyle = '#a8c8e8';
+        ctx.strokeStyle = '#4f647d';
         ctx.lineWidth   = d.width;
         ctx.lineCap     = 'round';
         ctx.beginPath();
@@ -129,7 +129,7 @@
     }
 
     function animate() {
-      drawSky();
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
       drawDrops();
       requestAnimationFrame(animate);
     }
