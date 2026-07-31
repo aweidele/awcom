@@ -1,0 +1,21 @@
+---
+interface Props {
+	title: string;
+	description: string;
+	highlight?: boolean;
+}
+
+const { title, description, highlight = false } = Astro.props;
+---
+
+<div
+	class:list={[
+		'rounded-lg border p-5 shadow-sm transition-colors',
+		highlight
+			? 'border-indigo-300 bg-indigo-50'
+			: 'border-slate-200 bg-white',
+	]}
+>
+	<h2 class="text-lg font-semibold text-slate-900">{title}</h2>
+	<p class="mt-2 text-sm text-slate-600">{description}</p>
+</div>
