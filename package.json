@@ -10,6 +10,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "check": "astro check",
     "storybook": "storybook dev -p 6006",
     "storybook:build": "storybook build"
   },
@@ -19,9 +20,11 @@
     "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
+    "@astrojs/check": "^0.9.10",
     "@storybook-astro/framework": "^1.9.0",
     "@storybook/builder-vite": "^10.5.5",
-    "storybook": "^10.5.5"
+    "storybook": "^10.5.5",
+    "typescript": "^6.0.3"
   },
   "allowScripts": {
     "esbuild@0.28.1": true

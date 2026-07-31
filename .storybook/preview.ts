@@ -1,7 +1,8 @@
 import '../src/styles/global.css';
 
-/** @type {import('@storybook-astro/framework').Preview} */
-export default {
+import type { Preview } from '@storybook-astro/framework';
+
+const preview: Preview = {
 	parameters: {
 		controls: {
 			matchers: {
@@ -11,3 +12,5 @@ export default {
 		},
 	},
 };
+
+export default preview;

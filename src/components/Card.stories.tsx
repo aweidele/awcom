@@ -1,4 +1,4 @@
-import Card from './Card.astro';
+import Card, { type Props as CardProps } from './Card.astro';
 
 export default {
 	title: 'Components/Card',
@@ -12,7 +12,7 @@ export const Default = {
 	args: {
 		title: 'Card title',
 		description: 'A short description of what this card shows.',
-	},
+	} satisfies CardProps,
 };
 
 export const Highlighted = {
@@ -20,5 +20,5 @@ export const Highlighted = {
 		title: 'Featured card',
 		description: 'The highlight prop swaps in the indigo treatment.',
 		highlight: true,
-	},
+	} satisfies CardProps,
 };
