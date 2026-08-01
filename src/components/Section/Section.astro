@@ -1,0 +1,47 @@
+---
+export interface SectionProps {
+  width: string;
+  bgColor?: string;
+  className?: string;
+}
+
+const { width, bgColor = "", className = "" } = Astro.props;
+
+const getWidthClass = (width: string): string => {
+  switch (width) {
+    case "x-wide":
+      return "max-w-384";
+    case "wide":
+      return "max-w-345";
+    default:
+      return "max-w-275.5";
+  }
+};
+
+const getColorClasses = (bgColor: string): string => {
+  switch (bgColor) {
+    case "primary":
+      return "bg-primary text-gray-lt";
+    case "secondary":
+      return "bg-secondary text-gray-lt";
+    case "secondary-dk":
+      return "bg-secondary-dk text-gray-lt";
+    case "accent-1":
+      return "bg-accent-1 text-gray-lt";
+    case "accent-1-md":
+      return "bg-accent-1-md text-gray-lt";
+    case "accent-1-dk":
+      return "bg-accent-1-dk text-gray-lt";
+    case "gray-dk":
+      return "bg-gray-dk text-gray-lt";
+    default:
+      return `bg-gray-lt text-gray-dk`;
+  }
+
+}
+
+const sectionInnerClass = [getWidthClass(width), "m-auto px-5"];
+---
+<section class={`${getColorClasses(bgColor)} ${className}`}>
+  <div class={sectionInnerClass.join(' ')}>Hello.</div>
+</section>
