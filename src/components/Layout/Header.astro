@@ -1,0 +1,9 @@
+---
+import LogoAstroComponent from "./Logo.astro"
+const { position = "fixed" } = Astro.props;
+---
+<header class={`${position} w-full top-0`}>
+  <div class="max-w-384 m-auto flex justify-between">
+    <LogoAstroComponent class="w-17 h-14.5" />
+  </div>
+</header>
