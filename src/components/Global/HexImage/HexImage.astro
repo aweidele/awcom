@@ -7,5 +7,7 @@ if( className ) classes.push(className);
 ---
 <div class={classes.join(" ")} style={`width: ${width}px`}>
   <HexOverlay width={width} strokeColor={strokeColor} />
-  <img src={image.src} class="w-full h-full object-cover clip-hex relative z-0" />
+  <div class="bg-white w-full h-full clip-hex relative z-0">
+    <img src={image.src} class="w-full h-full object-cover" />
+  </div>
 </div>
