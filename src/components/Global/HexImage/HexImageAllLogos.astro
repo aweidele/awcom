@@ -1,0 +1,15 @@
+---
+import HexImage from "./HexImage.astro";
+import * as Logos from "../../../logos";
+
+const keys = Object.keys(Logos);
+console.log(keys);
+---
+<div class="grid grid-cols-8 gap-4">
+  {Object.values(Logos).map((logo, i) => (
+    <div class="text-center">
+      <HexImage image={logo} width={100} className="mx-auto mb-2" />
+      <span class="text-xs">{keys[i]}</span>
+    </div>
+  ))}
+</div>

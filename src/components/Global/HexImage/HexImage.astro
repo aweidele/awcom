@@ -1,9 +1,11 @@
 ---
 import HexOverlay from "./HexOverlay.astro";
 
-const { width, image, strokeColor } = Astro.props;
+const { width, image, strokeColor, className = "" } = Astro.props;
+const classes = ["aspect-20/17 relative"];
+if( className ) classes.push(className);
 ---
-<div class="aspect-20/17 relative" style={`width: ${width}px`}>
+<div class={classes.join(" ")} style={`width: ${width}px`}>
   <HexOverlay width={width} strokeColor={strokeColor} />
-  <img src={image.src} class="w-full h-full object-cover clip-hex" />
+  <img src={image.src} class="w-full h-full object-cover clip-hex relative z-0" />
 </div>

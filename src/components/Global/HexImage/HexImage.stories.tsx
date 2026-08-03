@@ -1,4 +1,5 @@
 import HexImageAstroComponent from "./HexImage.astro";
+import HexImageAllLogosComponent from "./HexImageAllLogos.astro";
 import * as Logos from "../../../logos";
 
 export default {
@@ -28,4 +29,8 @@ export const HexImage = {
     image: "javascriptLogo",
     strokeColor: "#ae9e32"
   }
+};
+
+export const AllLogos = {
+  render: () => HexImageAllLogosComponent
 };

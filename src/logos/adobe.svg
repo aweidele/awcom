@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 400 400">
-  <!-- Generator: Adobe Illustrator 29.0.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 186)  -->
+  <!-- Generator: Adobe Illustrator 30.6.0, SVG Export Plug-In . SVG Version: 2.1.4 Build 109)  -->
   <defs>
     <style>
       .st0 {
@@ -8,13 +8,10 @@
       }
 
       .st1 {
-        fill: #f9f9f9;
+        fill: #fff;
       }
     </style>
   </defs>
   <rect class="st0" width="400" height="400"/>
-  <rect class="st1" x="61.5" y="77.4" width="277" height="245.1"/>
-  <path class="st0" d="M164,77.4H61.5v245.1l102.5-245.1Z"/>
-  <path class="st0" d="M236.1,77.4h102.4v245.1l-102.4-245.1Z"/>
-  <path class="st0" d="M200.1,167.8l65.2,154.8h-42.8l-19.5-49.3h-47.7l44.8-105.5Z"/>
+  <polygon class="st1" points="200.07 176.74 247.12 288.43 300 288.43 226.07 111.47 174.01 111.47 100 288.43 216.22 288.43 202.17 252.91 167.73 252.91 200.07 176.74 200.07 176.74"/>
 </svg>
