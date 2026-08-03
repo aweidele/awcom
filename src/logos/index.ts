@@ -9,7 +9,6 @@ export { default as drupalLogo } from "./drupal.svg";
 export { default as figmaLogo } from "./figma.svg";
 export { default as gitLogo } from "./git.svg";
 export { default as htmlLogo } from "./html.svg";
-export { default as html5Logo } from "./html5.svg";
 export { default as javascriptLogo } from "./javascript.svg";
 export { default as jiraLogo } from "./jira.svg";
 export { default as lottieLogo } from "./lottie.svg";
