@@ -1,7 +1,6 @@
 ---
-const { width = 116, className = "", strokeColor = "#000000" } = Astro.props;
-const height = width * 0.853;
+const { className = "", strokeColor = "#000000" } = Astro.props;
 ---
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 184 157" style={`width: ${width}px; height: ${height}px`}>
-  <polygon class="fill-none stroke-2" style=`stroke: ${strokeColor}` points="182 78.4997 136.9987 154.6288 47.0013 154.6288 2 78.4997 47.0013 2.3712 136.9987 2.3712 182 78.4997"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 184 157" class={`w-full ${className} fill-none stroke-2 absolute top-0 left-0`} style=`stroke: ${strokeColor}`>
+  <polygon points="182 78.4997 136.9987 154.6288 47.0013 154.6288 2 78.4997 47.0013 2.3712 136.9987 2.3712 182 78.4997" fill="none" vector-effect="non-scaling-stroke"/>
 </svg>
