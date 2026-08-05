@@ -1,9 +1,26 @@
 ---
+type HeadingLevel = 1 | 2 | 3 | 4 | 5 | 6;
+
 export interface Props {
-	level: 1 | 2 | 3 | 4 | 5 | 6;
+  level: HeadingLevel;
+  className?: string;
 }
 
-const { level } = Astro.props;
-const Tag = `h${level}`;
+const { level = 2, className } = Astro.props;
+const safeLevel = Math.min(6, Math.max(1, level)) as HeadingLevel;
+
+const Tag = `h${safeLevel}` as `h${HeadingLevel}`;
+
+const classes: Record<HeadingLevel, string> = {
+  1: "text-3xl",
+  2: "text-2xl",
+  3: "text-xl",
+  4: "text-lg",
+  5: "text-sm",
+  6: "text-xs",
+};
+
+const headingClass = className ? classes[safeLevel] + " " + className : classes[safeLevel];
 ---
-<Tag>Hello.</Tag>
+
+<Tag class={headingClass}>Hello.</Tag>

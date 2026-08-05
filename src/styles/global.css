@@ -14,9 +14,17 @@
   --color-gray-dk: #151E29;
 
   --font-sans: "Montserrat", sans-serif;
+
+  --text-xxs: 12px;
+  --text-xs: 14px;
+  --text-sm: 23px;
+  --text-lg: 37px;
+  --text-xl: 47px;
+  --text-2xl: 60px;
+  --text-3xl: 76px;
 }
 
-body {
+body,html {
   font-family: var(--font-sans);
 }
 
@@ -30,3 +38,15 @@ body {
     25.63% 98.82%
   );
 }
+
+/*
+  xxs: [12, 12, 12],
+  xs: [14, 14, 14],
+  sm: [23, 14, 37],
+  base: [29, 18, 46],
+  lg: [37, 23, 58],
+  xl: [47, 29, 72],
+  "2xl": [60, 37, 91],
+  "3xl": [76, 47, 114],
+  reg: [16, 16, 24],
+  */
