@@ -12,12 +12,12 @@ const safeLevel = Math.min(6, Math.max(1, level)) as HeadingLevel;
 const Tag = `h${safeLevel}` as `h${HeadingLevel}`;
 
 const classes: Record<HeadingLevel, string> = {
-  1: "text-3xl",
-  2: "text-2xl",
-  3: "text-xl",
-  4: "text-lg",
-  5: "text-sm",
-  6: "text-xs",
+  1: "text-3xl uppercase font-bold tracking-tight",
+  2: "text-2xl font-bold tracking-tight",
+  3: "text-xl tracking-tight",
+  4: "text-lg font-bold tracking-tight",
+  5: "text-sm uppercase font-bold",
+  6: "text-xs font-bold",
 };
 
 const headingClass = className ? classes[safeLevel] + " " + className : classes[safeLevel];
