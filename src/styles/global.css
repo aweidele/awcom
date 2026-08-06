@@ -39,6 +39,10 @@ body,html {
   );
 }
 
+.transition-300 {
+  @apply transition-all duration-300;
+}
+
 /*
   xxs: [12, 12, 12],
   xs: [14, 14, 14],

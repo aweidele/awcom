@@ -1,0 +1,24 @@
+---
+export interface NavLink {
+  label: string;
+  url: string;
+  target?: string;
+  active?: boolean;
+}
+
+const { navItems = [] } = Astro.props;
+
+const linkClass = "relative transition-300";
+---
+<nav>
+  <ul class="flex justify-end gap-6 font-bold">
+    {navItems.map( ( item:NavLink ) =>(
+    <li>
+      <a href={item.url} class={linkClass}>
+        {item.label}
+        {item?.active && <span class="bg-current w-full h-1 absolute -bottom-2 left-0"></span>}
+      </a>
+    </li>
+    ))}
+  </ul>
+</nav>

@@ -1,8 +1,8 @@
-import HeaderAstroComponent from "./Header.astro";
+import NavigationAstroComponent from "./Navigation.astro";
 
 export default {
-  title: 'Layout/Header',
-  component: HeaderAstroComponent,
+  title: 'Layout/Header/Elements',
+  component: NavigationAstroComponent,
   argTypes: {
     navItems: {
       control: { type: 'object' }
@@ -10,7 +10,7 @@ export default {
   }
 };
 
-export const Header = {
+export const Navigation = {
   args: {
     navItems: [
       { label: 'Home', url: '#' },
