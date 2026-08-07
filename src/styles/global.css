@@ -28,6 +28,10 @@ body,html {
   font-family: var(--font-sans);
 }
 
+button {
+  @apply cursor-pointer;
+}
+
 .clip-hex {
   clip-path: polygon(
     1.13% 50.22%,
@@ -41,6 +45,23 @@ body,html {
 
 .transition-300 {
   @apply transition-all duration-300;
+}
+
+@media (width < 48rem) {
+  .main-nav {
+    @apply  absolute w-screen h-screen top-0 right-0 bg-accent-1 flex justify-center items-center text-center;
+  }
+}
+
+.mobile-nav-toggle {
+  span {
+    &:first-child {
+      @apply -translate-y-2;
+    }
+    &:nth-child(3) {
+      @apply translate-y-2;
+    }
+  }
 }
 
 /*

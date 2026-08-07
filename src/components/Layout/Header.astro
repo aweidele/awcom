@@ -5,7 +5,7 @@ import Navigation, { type NavLink  } from './Navigation.astro';
 const { position = "fixed", navItems = [] } = Astro.props;
 ---
 <header class={`${position} z-10 w-full top-0`}>
-  <div class="max-w-384 m-auto flex justify-between items-center">
+  <div class="max-w-384 m-auto px-5 flex justify-between items-center">
     <LogoAstroComponent class="w-17 h-14.5" />
     <Navigation navItems={navItems} />
   </div>
