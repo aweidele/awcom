@@ -10,13 +10,13 @@ const { navItems = [] } = Astro.props;
 
 const linkClass = "relative transition-300";
 ---
-<button class="mobile-nav-toggle w-8 self-stretch relative">
+<button class="mobile-nav-toggle w-8 self-stretch relative z-100 md:hidden">
   <HamburgerLine />
   <HamburgerLine />
   <HamburgerLine />
   <span class="sr-only">Menu</span>
 </button>
-<nav class="main-nav">
+<nav class="main-nav transition-300">
   <ul class="flex gap-6 font-bold md:justify-end max-md:flex-col">
     {navItems.map( ( item:NavLink ) =>(
     <li>
@@ -28,3 +28,13 @@ const linkClass = "relative transition-300";
     ))}
   </ul>
 </nav>
+
+<script>
+  const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+  const mainHeader = mobileNavToggle?.closest('.main-header');
+
+  mobileNavToggle?.addEventListener('click', (e) => {
+    console.log(e);
+    mainHeader?.classList.toggle('nav-open');
+  });
+</script>

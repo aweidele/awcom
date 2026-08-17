@@ -48,13 +48,20 @@ button {
 }
 
 @media (width < 48rem) {
+  .main-header.nav-open {
+    @apply text-white;
+  }
   .main-nav {
-    @apply  absolute w-screen h-screen top-0 right-0 bg-accent-1 flex justify-center items-center text-center;
+    @apply  absolute z-90 w-screen h-screen top-0 right-0 bg-accent-1 text-white flex justify-center items-center text-center translate-x-full text-lg font-normal;
+    .main-header.nav-open & {
+      @apply translate-x-0;
+    }
   }
 }
 
 .mobile-nav-toggle {
   span {
+    @apply text-current;
     &:first-child {
       @apply -translate-y-2;
     }
