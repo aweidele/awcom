@@ -1,5 +1,5 @@
 {
-  "name": "awcom",
+  "name": "aaronweidele.com",
   "type": "module",
   "version": "0.0.1",
   "engines": {
@@ -24,8 +24,8 @@
   "devDependencies": {
     "@astrojs/check": "^0.9.10",
     "@storybook-astro/framework": "^1.9.0",
-    "@storybook/builder-vite": "^10.5.5",
-    "storybook": "^10.5.5",
+    "@storybook/builder-vite": "^10.6.2",
+    "storybook": "^10.6.2",
     "typescript": "^6.0.3"
   },
   "allowScripts": {
